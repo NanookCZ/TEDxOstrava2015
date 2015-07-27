@@ -21,7 +21,7 @@ class TEDx(models.Model):
 	event_start = models.DateField(blank = True, null = True, help_text='Start of the event.')
 
 	def __str__(self):
-		return u'self.title'
+		return "%s" %(self.title)
 
 class AboutApp(models.Model):
 	title = models.CharField(max_length = 50)
@@ -33,5 +33,5 @@ class AboutApp(models.Model):
 	logo = CloudinaryField('image', blank = True, null = True)
 
 	def __str__(self):
-		return u'self.title'
+		return "%s" %(self.title)
 

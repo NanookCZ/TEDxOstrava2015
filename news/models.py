@@ -33,7 +33,7 @@ class News(models.Model):
 	news_type = models.ForeignKey(Type)
 
 	def __str__(self):
-		return u'self.title'
+		return "%s" %(self.title)
 
 	class Meta:
 		verbose_name_plural = 'news'

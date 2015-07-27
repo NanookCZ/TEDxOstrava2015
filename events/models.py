@@ -22,7 +22,7 @@ class Theme(models.Model):
 	banner = CloudinaryField('image', blank = True, null = True)
 
 	def __str__(self):
-		return u'self.title'
+		return "%s" %(self.title)
 
 
 SHARE_MESSAGE = 'TEDxOstrava - Novinky'
@@ -53,6 +53,6 @@ class Event(models.Model):
 	share_message = models.CharField(max_length = 50, default = SHARE_MESSAGE)
 
 	def __str__(self):
-		return u'self.title'
+		return "%s" %(self.title)
 
 
