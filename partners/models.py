@@ -17,5 +17,5 @@ class Partner(models.Model):
 	partner_logo = CloudinaryField('image', blank = True, null = True)
 	partner_website = models.URLField(blank = True, null = True)
 
-	def __str__(self):
+	def __unicode__(self):
 		return "%s" %(self.title)

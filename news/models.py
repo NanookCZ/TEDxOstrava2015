@@ -14,7 +14,7 @@ class Type(models.Model):
 	title = models.CharField(max_length = 50)
 	icon = CloudinaryField('image', blank = True, null = True)
 
-	def __str__(self):
+	def __unicode__(self):
 		return "%s" %(self.title)
 
 class News(models.Model):
@@ -32,7 +32,7 @@ class News(models.Model):
 	main_news = models.BooleanField(default = False)
 	news_type = models.ForeignKey(Type)
 
-	def __str__(self):
+	def __unicode__(self):
 		return "%s" %(self.title)
 
 	class Meta:

@@ -20,7 +20,7 @@ class TEDx(models.Model):
 	tedx_logo = CloudinaryField('image', blank = True, null = True)
 	event_start = models.DateField(blank = True, null = True, help_text='Start of the event.')
 
-	def __str__(self):
+	def __unicode__(self):
 		return "%s" %(self.title)
 
 class AboutApp(models.Model):
@@ -32,6 +32,6 @@ class AboutApp(models.Model):
 	active = models.BooleanField(default = True)
 	logo = CloudinaryField('image', blank = True, null = True)
 
-	def __str__(self):
+	def __unicode__(self):
 		return "%s" %(self.title)
 

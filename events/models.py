@@ -21,7 +21,7 @@ class Theme(models.Model):
 	active = models.BooleanField(default = True)
 	banner = CloudinaryField('image', blank = True, null = True)
 
-	def __str__(self):
+	def __unicode__(self):
 		return "%s" %(self.title)
 
 
@@ -52,7 +52,7 @@ class Event(models.Model):
 	twitter_url = models.CharField(max_length = 50, blank = True, null = True)
 	share_message = models.CharField(max_length = 50, default = SHARE_MESSAGE)
 
-	def __str__(self):
+	def __unicode__(self):
 		return "%s" %(self.title)
 
 
