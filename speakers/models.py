@@ -29,5 +29,5 @@ class Speaker(models.Model):
 	added_by = models.ForeignKey(User, blank = True, null = True)
 
 	def __str__(self):
-		return "%s %s" %(self.first_name, self.last_name)
+		return "%s %s" %u'(self.first_name, self.last_name)'
 
