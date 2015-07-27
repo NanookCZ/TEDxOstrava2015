@@ -1,0 +1,68 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_static %}
+
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/dashboard.css" %}" />{% endblock %}
+
+{% block coltype %}colMS{% endblock %}
+
+{% block bodyclass %}{{ block.super }} dashboard{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block content %}
+<div class="banner hidden-sm hidden-xs">
+<img class="img-responsive" src="https://trello-attachments.s3.amazonaws.com/54b8ff42b5f46a60ad33f838/1920x450/85f4cedcc9a93109adcdf2e2bd26e12d/banner.png" />
+<a href="https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide" target="new"><button class="read-more">Read more</button></a>
+</div>
+
+
+<h4 class="welcome">Welcome, {{request.user.first_name }} {{ request.user.last_name }}!</h4>
+
+<div class="row">
+    <div class="col-md-3 col-sm-6">
+        <div class="tile-stats tile-white stat-tile">
+            <a href="../admin/speakers/speaker/"><h3>Publish speakers</h3></a>
+            <p>Each week new speaker published</p>
+            <span class="daily-visitors">
+                <img class="img-responsive text-right tedx-icon" src="https://trello-attachments.s3.amazonaws.com/54b8ff42b5f46a60ad33f838/100x100/30d01fbdc58cc66ee45d535ec9dbe4d7/speaker.png">
+            </span>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <div class="tile-stats tile-white stat-tile">
+            <a href="../admin/partners/partner/"><h3>Add new partners</h3></a>
+            <p>Add partners to TEDx</p>
+            <span class="daily-visitors">
+                <img class="img-responsive text-right tedx-icon" src="https://trello-attachments.s3.amazonaws.com/54b8ff42b5f46a60ad33f838/100x100/1d9d4adccbfcc93684f16f3910ea3468/partner.png">
+            </span>
+        </div>
+    </div> 
+    <div class="col-md-3 col-sm-6">
+        <div class="tile-stats tile-white stat-tile">
+            <a href="../admin/news/news/"><h3>Publish news to app</h3></a>
+            <p>Add news directly publish to app</p>
+            <span class="daily-visitors">
+                <img class="img-responsive text-right tedx-icon" src="https://trello-attachments.s3.amazonaws.com/54b8ff42b5f46a60ad33f838/100x100/03d99604b32a15454ac525f9796cf630/news.png">
+            </span>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <div class="tile-stats tile-white stat-tile gray">
+            <h3 class="gray">Show participants</h3>
+            <p class="gray">Manage your guest</p>
+            <span class="daily-visitors">
+                <img class="img-responsive text-right tedx-icon" src="https://trello-attachments.s3.amazonaws.com/54b8ff42b5f46a60ad33f838/100x100/fa4525a882dc551b710ba57832766a68/participants.png">
+            </span>
+        </div>
+    </div>
+</div>
+<div id="user_gruop"></div>
+
+{% endblock %}
+
+</div>
+
+
+{% block sidebar %}
+
+{% endblock %}

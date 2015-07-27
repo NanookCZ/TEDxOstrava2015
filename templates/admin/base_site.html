@@ -1,0 +1,275 @@
+{% extends "admin/base.html" %}
+{% load admin_static %}
+
+<head> content here, some extra meta tags or favicon #}
+{% block extrahead %}
+<link rel="icon" type="image/png" sizes="192x192"  href="https://trello-attachments.s3.amazonaws.com/54b8ff42b5f46a60ad33f838/144x144/e45d899febedcf7206fda157480c8ab1/android-icon-144x144.png">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:700italic,400,600,700&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+<title>Tedx Admin</title>
+{% endblock %}
+
+
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/my_project.css' %}" media="all">
+
+<style>
+body {
+	font-family: 'Open Sans', sans-serif !important;
+	overflow-x: hidden;
+}
+
+.welcome {
+	font-size: 26px;
+	font-weight: bold;
+	margin-top: 25px;
+}
+
+.tile-stats.tile-white:hover,
+.tile-stats.tile-white.stat-tile {
+  background-color: #fafafa;
+}
+
+.tile-stats.tile-white .num, .tile-stats.tile-white h3, .tile-stats.tile-white p {
+  color: #303641;
+}
+
+.tile-stats.stat-tile h3 {
+  padding: 20px 20px 0px 20px;
+}
+
+.tile-stats.tile-white .num, .tile-stats.tile-white h3, .tile-stats.tile-white p {
+  color: #303641;
+}
+
+.tile-stats.stat-tile p {
+  padding: 0px 20px 20px 20px;
+  margin-bottom: 20px;
+}
+
+.tile-stats p {
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+
+.navbar.navbar-inverse.navbar-suit-top,
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus,
+ul.nav.nav-suit-menu.nav-pills {
+	background: #ff2b06;
+
+}
+.suit-menu-horizontal .nav-suit-menu>li a {
+	color: #fff;
+	text-shadow: none;
+}
+
+.suit-menu-horizontal .nav-suit-menu>li {
+	  border: none;
+}
+
+.suit-menu-horizontal .nav-suit-menu>li:last-child {
+	border: none;
+}
+
+.suit-menu-horizontal .nav-suit-menu>li.active>a, .suit-menu-horizontal .nav-suit-menu>li.active>a:hover, .suit-menu-horizontal .nav-suit-menu>li.active:hover>a {
+	border-top: none;
+	padding: 10px;
+}
+
+ul.nav.nav-suit-menu.nav-pills {
+	border-top: 1px solid #fff;
+}
+.navbar-nav > li > .dropdown-menu,
+span.glyphicon.glyphicon-search.form-control-feedback {
+	display: none;
+}
+.navbar-suit-top .form-control {
+	background: #fff;
+}
+
+ul.nav.navbar-nav.navbar-right,
+.navbar-inverse .navbar-nav>li>a {
+	color: #fff;
+}
+
+.banner {
+	  margin-top: -20px;
+  margin-left: -50px;
+}
+
+.logo {
+	margin-left: -35px;
+}
+
+.footer {
+	  background-color: #2f3133;
+	  text-shadow: none;
+}
+.footer .tools a,
+.footer .branding .version{
+	display: none;
+}
+
+.col-xs-12.col-sm-4.copyright {
+	  font-size: 14px;
+  color: #fff;
+}
+
+.tile-stats.tile-white.stat-tile {
+	  position: relative;
+	  margin-bottom: 25px;
+}
+
+.tedx-icon {
+	left: 145px;
+  position: relative;
+}
+
+.tile-stats.tile-white .gray, .tile-stats.tile-white .gray{
+	color: #b5b1b1;
+}
+
+li#user-tools {
+	display: none;
+}
+
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+	max-width: 103%;
+}
+
+.banner {
+	position: relative;
+}
+
+.read-more {
+	position: absolute;
+	color: red;
+  bottom: 60px;
+  position: absolute;
+  right: 105px;
+  background: transparent;
+  border: 1px solid red;
+  padding: 10px 14px;
+}
+
+.sveta {
+	color: #fff;
+
+}
+.sveta:hover {
+	color: #fff;
+}
+
+.nav-suit-sub-menu>li.active>a {
+	border-bottom: 3px solid #ff2b06;
+}
+
+.btn-success, .btn-primary {
+	background: #ff2b06;
+	border: none;
+	border: 1px solid #ff2b06;
+}
+
+.btn-success:hover,
+.btn-primary:hover {
+	background: #ff2b06;
+	border: 1px solid #ff2b06;
+}
+
+span.daily-visitors {display: block;width: 100%;min-height: 100px;}
+span.daily-visitors img {display:block;float:right;position:static!important;left:0!important;}
+
+@media screen and (max-width: 768px) {
+   .read-more {
+   	bottom: 30px;
+   	    right: 79px;
+   }
+
+   .suit-menu-horizontal,
+   .nav-suit-menu>li,
+   .suit-menu-horizontal,
+   .nav-suit-menu>li:last-child,
+    {
+   	    border-left: 1px solid transparent;
+   }
+
+   .suit-menu-horizontal,
+   .nav-suit-menu>li:last-child {
+   	    border-right: 1px solid transparent;
+   }
+   .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+   	border: none;
+   }
+
+   .col-xs-12.col-sm-4.copyright {
+   	display: none;
+   }
+}
+
+
+</style>
+
+{% endblock %}
+
+
+{# Additional JS files in footer, right before </body> #}
+{#{% block extrajs %}#}
+{#  <script type="text/javascript" src="{% static 'js/my_project.js' %}"></script>#}
+{#{% endblock %}#}
+
+{% block branding %}<img class="logo" src="https://trello-attachments.s3.amazonaws.com/54b8ff42b5f46a60ad33f838/180x40/70b01346df3a41b47010e27c3dbeb1f5/logo.png" />{% endblock %}
+
+{% block content-center %}
+<div class="banner">
+<img class="img-responsive" src="https://trello-attachments.s3.amazonaws.com/54b8ff42b5f46a60ad33f838/1920x450/85f4cedcc9a93109adcdf2e2bd26e12d/banner.png" />
+<div class="blocks" style="width: 500px;">
+
+	
+</div>
+</div>
+
+
+{{ block.super }}
+{% endblock %}
+
+
+
+{# Footer links (left side) #}
+{#{% block footer_links %}#}
+{#  <a href="/docs/" class="icon"><i class="icon-question-sign"></i>Documentation</a>#}
+{#{% endblock %}#}
+
+{# Additional header content like notifications or language switcher #}
+{#{% block header_content %}#}
+{#    {{ block.super }}#}
+{#    <div class="header-content">#}
+{#        <!-- First icon column -->#}
+{#        <div class="header-column icon">#}
+{#            <i class="icon-home"></i><br>#}
+{#            <i class="icon-cog"></i>#}
+{#        </div>#}
+{#        <div class="header-column" style="margin-right: 20px">#}
+{#            <a href="/" class="grey">Front-end</a><br>#}
+{#            <a href="" class="grey">One more link</a>#}
+{#        </div>#}
+{#        <!-- Second icon column -->#}
+{#        <div class="header-column icon">#}
+{#            <i class="icon-comment"></i>#}
+{#        </div>#}
+{#        <div class="header-column">#}
+{#            <a href="" class="grey">5 new messages</a>#}
+{#        </div>#}
+{#    </div>#}
+{#{% endblock %}#}
+
+{# Footer branding name (center) #}
+{% block footer_branding %}
+<a href="http://new.thebrainity.com/" target="new"><img src="https://trello-attachments.s3.amazonaws.com/54b8ff42b5f46a60ad33f838/350x151/1ba51796ea1289440be93ad1cc89a5e7/b_logo.png" height="40" width="100"></a>
+{% endblock %}
+
+<div class="hidden-md hidden-sm hidden-xs">
+{% block copyright %}
+Copyright &copy; 2015 Brainity<br>Developed by <a class="sveta" href="http://margetova.eu/#/form/whoyouare" target="_blank">Svetlana Margetova</a> 
+{% endblock %}
+</div>
