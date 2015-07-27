@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# -*- coding: windows-1250 -*-
 from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
@@ -29,5 +29,5 @@ class Speaker(models.Model):
 	added_by = models.ForeignKey(User, blank = True, null = True)
 
 	def __str__(self):
-		return "%s %s" %u'(self.first_name, self.last_name)'
+		return "%s %s" %(self.first_name, self.last_name)
 
