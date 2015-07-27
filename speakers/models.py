@@ -3,6 +3,11 @@
 from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+from cloudinary.models import CloudinaryField
+
 
 SHARE_MESSAGE = u'Nový rečník'
 class Speaker(models.Model):
@@ -18,7 +23,7 @@ class Speaker(models.Model):
 	twitter_url = models.CharField(max_length = 50, blank = True, null = True)
 	share_message = models.CharField(max_length = 25, default = SHARE_MESSAGE)
 	position = models.CharField(max_length = 50, blank = True, null = True)
-	speaker_photo = models.ImageField(upload_to='images/', blank = True, null = True)
+	speaker_photo = CloudinaryField('image', blank = True, null = True)
 	speaker_city = models.CharField(max_length = 50, blank = True, null = True)
 	speaker_country = models.CharField(max_length = 50, blank = True, null = True)
 	added_by = models.ForeignKey(User, blank = True, null = True)

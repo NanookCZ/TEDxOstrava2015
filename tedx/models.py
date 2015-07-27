@@ -3,6 +3,11 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+from cloudinary.models import CloudinaryField
+
 
 class TEDx(models.Model):
 	title = models.CharField(max_length = 50)
@@ -12,7 +17,7 @@ class TEDx(models.Model):
 	updated_date = models.DateTimeField(auto_now_add = False, auto_now = True)
 	active = models.BooleanField(default = True)
 	is_published = models.BooleanField(default = False)
-	tedx_logo = models.ImageField(upload_to='images/', blank = True, null = True)
+	tedx_logo = CloudinaryField('image', blank = True, null = True)
 	event_start = models.DateField(blank = True, null = True, help_text='Start of the event.')
 
 	def __str__(self):
@@ -25,7 +30,7 @@ class AboutApp(models.Model):
 	created_date = models.DateTimeField(auto_now_add = True, auto_now = False)
 	updated_date = models.DateTimeField(auto_now_add = False, auto_now = True)
 	active = models.BooleanField(default = True)
-	logo = models.ImageField(upload_to='images/', blank = True, null = True)
+	logo = CloudinaryField('image', blank = True, null = True)
 
 	def __str__(self):
 		return u'self.title'

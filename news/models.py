@@ -28,7 +28,7 @@ class News(models.Model):
 	publication_date = models.DateField(null = True, blank = True)
 	active = models.BooleanField(default = True)
 	is_published = models.BooleanField(default = False)
-	news_image = models.ImageField(upload_to='images/', blank = True, null = True)
+	news_image = CloudinaryField('image', blank = True, null = True)
 	main_news = models.BooleanField(default = False)
 	news_type = models.ForeignKey(Type)
 

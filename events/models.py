@@ -7,6 +7,11 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
 from speakers.models import Speaker
 from partners.models import Partner
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+from cloudinary.models import CloudinaryField
+
 
 class Theme(models.Model):
 	title = models.CharField(max_length = 50)
@@ -14,7 +19,7 @@ class Theme(models.Model):
 	created_date = models.DateTimeField(auto_now_add = True, auto_now = False)
 	updated_date = models.DateTimeField(auto_now_add = False, auto_now = True)
 	active = models.BooleanField(default = True)
-	banner = models.ImageField(upload_to='images/', blank = True, null = True)
+	banner = CloudinaryField('image', blank = True, null = True)
 
 	def __str__(self):
 		return u'self.title'
