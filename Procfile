@@ -1,0 +1,1 @@
+web: gunicorn tedxostrava.wsgi --log-file -
