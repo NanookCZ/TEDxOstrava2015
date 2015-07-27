@@ -39,6 +39,11 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'events',
+    'speakers',
+    'partners',
+    'news',
+    'tedx',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -168,4 +173,11 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
     ),
+}
+
+JWT_AUTH = {
+    'JWT_RESPONSE_PAYLOAD_HANDLER':
+        'tedxostrava.utils.jwt_response_payload_handler',
+
+      'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=3300),
 }
