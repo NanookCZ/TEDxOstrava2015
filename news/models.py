@@ -11,7 +11,7 @@ class Type(models.Model):
 	icon = models.ImageField(upload_to = 'images/', blank = True, null = True)
 
 	def __str__(self):
-		return u'self.title'
+		return "%s" %(self.title)
 
 class News(models.Model):
 	title = models.CharField(max_length = 50)
