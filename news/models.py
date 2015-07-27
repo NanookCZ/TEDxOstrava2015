@@ -4,11 +4,12 @@ from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
 from speakers.models import Speaker
+from cloudinary.models import CloudinaryField
 
 
 class Type(models.Model):
 	title = models.CharField(max_length = 50)
-	icon = models.ImageField(upload_to = 'images/', blank = True, null = True)
+	icon = CloudinaryField('image', blank = True, null = True)
 
 	def __str__(self):
 		return "%s" %(self.title)
