@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: windows-1250 -*-
+# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
@@ -28,6 +28,6 @@ class Speaker(models.Model):
 	speaker_country = models.CharField(max_length = 50, blank = True, null = True)
 	added_by = models.ForeignKey(User, blank = True, null = True)
 
-	def __str__(self):
+	def __unicode__(self):
 		return "%s %s" %(self.first_name, self.last_name)
 
