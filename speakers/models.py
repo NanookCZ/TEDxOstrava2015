@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
 
-SHARE_MESSAGE = 'Nový rečník'
+SHARE_MESSAGE = u'Nový rečník'
 class Speaker(models.Model):
 	first_name = models.CharField(max_length = 25)
 	last_name = models.CharField(max_length = 25)
