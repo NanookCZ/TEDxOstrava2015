@@ -142,11 +142,11 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "media")
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static", "static_dirs"),
-)
+#STATICFILES_DIRS = (
+ #   os.path.join(BASE_DIR, "static", "static_dirs"),
+#)
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static", "static_root")
+#STATIC_ROOT = os.path.join(BASE_DIR, "static", "static_root")
 
 
 # Parse database configuration from $DATABASE_URL
@@ -162,12 +162,12 @@ ALLOWED_HOSTS = ['*']
 # Static asset configuration
 import os
 #BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-#STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = 'staticfiles'
 #STATIC_URL = '/static/'
 
-#STATICFILES_DIRS = (
-#    os.path.join(BASE_DIR, 'static'),
-#)
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
