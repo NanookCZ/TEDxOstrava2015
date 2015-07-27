@@ -4,6 +4,9 @@ from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
 from speakers.models import Speaker
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 from cloudinary.models import CloudinaryField
 
 
