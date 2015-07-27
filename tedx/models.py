@@ -1,3 +1,6 @@
+
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
 
@@ -13,7 +16,7 @@ class TEDx(models.Model):
 	event_start = models.DateField(blank = True, null = True, help_text='Start of the event.')
 
 	def __str__(self):
-		return self.title
+		return u'self.title'
 
 class AboutApp(models.Model):
 	title = models.CharField(max_length = 50)
@@ -25,5 +28,5 @@ class AboutApp(models.Model):
 	logo = models.ImageField(upload_to='images/', blank = True, null = True)
 
 	def __str__(self):
-		return self.title
+		return u'self.title'
 

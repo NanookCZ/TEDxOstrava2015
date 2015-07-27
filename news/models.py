@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
@@ -9,7 +11,7 @@ class Type(models.Model):
 	icon = models.ImageField(upload_to = 'images/', blank = True, null = True)
 
 	def __str__(self):
-		return self.title
+		return u'self.title'
 
 class News(models.Model):
 	title = models.CharField(max_length = 50)
@@ -27,7 +29,7 @@ class News(models.Model):
 	news_type = models.ForeignKey(Type)
 
 	def __str__(self):
-		return self.title
+		return u'self.title'
 
 	class Meta:
 		verbose_name_plural = 'news'
