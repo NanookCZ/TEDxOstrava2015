@@ -28,6 +28,7 @@ class NewsSerializer(serializers.HyperlinkedModelSerializer):
 		model = News
 		fields = [
 			'id',
+			'title',
 			'url',
 			'title',
 			'description',
