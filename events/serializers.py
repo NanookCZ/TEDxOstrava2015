@@ -38,6 +38,7 @@ class EventSerializer(serializers.HyperlinkedModelSerializer):
 		fields = [
 			#'url',
 			'id',
+			'title',
 			'event_start',
 			'event_end',
 			'event_start_time',
