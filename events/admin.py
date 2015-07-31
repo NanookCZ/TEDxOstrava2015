@@ -4,5 +4,5 @@ from .models import Event, Theme
 
 
 admin.site.register(Event)
-admin.site.register(Theme, ThemeAdmin)
+admin.site.register(Theme)
 # Register your models here.
