@@ -11,6 +11,8 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 from cloudinary.models import CloudinaryField
+from i18n_model.models import I18nModel
+
 
 
 class Theme(models.Model):
@@ -24,6 +26,9 @@ class Theme(models.Model):
 	def __unicode__(self):
 		return "%s" %(self.title)
 
+class ThemeI18N(I18nModel):
+    class Meta:
+        translation_fields = ('title')
 
 SHARE_MESSAGE = 'TEDxOstrava - Novinky'
 class Event(models.Model):

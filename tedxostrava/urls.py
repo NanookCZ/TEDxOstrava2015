@@ -2,6 +2,7 @@
 from django.conf.urls import include, url
 from django.contrib import admin
 
+
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
@@ -11,6 +12,7 @@ from speakers.views import SpeakerListAPIView, SpeakerDetailAPIView
 from tedx.views import TEDxListAPIView, AboutAppListAPIView
 from news.views import NewsListAPIView, TypeListAPIView, NewsDetailAPIView
 from django.views.generic.base import RedirectView
+
 
 
 router = routers.DefaultRouter()

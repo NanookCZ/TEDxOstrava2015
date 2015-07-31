@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'i18N_model',
     'suit',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -49,7 +50,9 @@ INSTALLED_APPS = (
     'news',
     'tedx',
     'cloudinary',
+    
 )
+
 
 
 cloudinary.config( 
@@ -197,5 +200,5 @@ JWT_AUTH = {
     'JWT_RESPONSE_PAYLOAD_HANDLER':
         'tedxostrava.utils.jwt_response_payload_handler',
 
-      'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=3300),
+      'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=33300),
 }
