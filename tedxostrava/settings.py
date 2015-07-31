@@ -154,6 +154,7 @@ from django.utils.translation import ugettext
 ugettext = lambda s: s
 LANGUAGES = (
     ('cs', ugettext('Czech')),
+    ('en', ugettext('English')),
 )
 
 LANGUAGE_CODE = 'en-us'
