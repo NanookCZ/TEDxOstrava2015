@@ -16,7 +16,7 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Theme(models.Model):
-	title = models.CharField(_('title', max_length = 50, help_text=_('This is the theme title'))
+	title = models.CharField(_('title'), max_length = 50, help_text=_('This is the theme title'))
 	description = models.TextField(blank = True, null = True)
 	created_date = models.DateTimeField(auto_now_add = True, auto_now = False)
 	updated_date = models.DateTimeField(auto_now_add = False, auto_now = True)
@@ -26,7 +26,7 @@ class Theme(models.Model):
 	class Meta:
 		verbose_name = _('theme')
 		verbose_name_plural = _('themes')
-	
+
 	def __unicode__(self):
 		return "%s" %(self.title)
 
