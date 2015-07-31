@@ -49,10 +49,13 @@ INSTALLED_APPS = (
     'news',
     'tedx',
     'cloudinary',
-    'i18N_model',
 )
 
+USE_I18N = True
 
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
 
 cloudinary.config( 
   cloud_name = "hydqixw1j", 
@@ -69,6 +72,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 )
 
 ROOT_URLCONF = 'tedxostrava.urls'
@@ -112,6 +116,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.core.context_processors.i18n',
             ],
         },
     },
@@ -134,9 +139,22 @@ DATABASES = {
         'PORT': '5432',                      # Set to empty string for default.
     }
 }
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
+""" 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
+from django.utils.translation import ugettext
+ugettext = lambda s: s
+LANGUAGES = (
+    ('cs', ugettext('Czech')),
+)
 
 LANGUAGE_CODE = 'en-us'
 

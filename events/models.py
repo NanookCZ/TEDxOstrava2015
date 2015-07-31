@@ -11,23 +11,26 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 from cloudinary.models import CloudinaryField
-from i18n_model.models import I18nModel
+from django.utils.translation import ugettext_lazy as _
+
 
 
 class Theme(models.Model):
-	title = models.CharField(max_length = 50)
+	title = models.CharField(_('title', max_length = 50, help_text=_('This is the theme title'))
 	description = models.TextField(blank = True, null = True)
 	created_date = models.DateTimeField(auto_now_add = True, auto_now = False)
 	updated_date = models.DateTimeField(auto_now_add = False, auto_now = True)
 	active = models.BooleanField(default = True)
 	banner = CloudinaryField('image', blank = True, null = True)
 
+	class Meta:
+		verbose_name = _('theme')
+		verbose_name_plural = _('themes')
+	
 	def __unicode__(self):
 		return "%s" %(self.title)
 
-class ThemeI18N(I18nModel):
-    class Meta:
-        translation_fields = ('title')
+
 
 SHARE_MESSAGE = 'TEDxOstrava - Novinky'
 class Event(models.Model):

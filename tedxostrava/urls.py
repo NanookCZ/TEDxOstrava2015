@@ -12,7 +12,8 @@ from speakers.views import SpeakerListAPIView, SpeakerDetailAPIView
 from tedx.views import TEDxListAPIView, AboutAppListAPIView
 from news.views import NewsListAPIView, TypeListAPIView, NewsDetailAPIView
 from django.views.generic.base import RedirectView
-
+from django.conf.urls.i18n import i18n_patterns
+from django.utils.translation import ugettext_lazy as 
 
 
 router = routers.DefaultRouter()
@@ -34,4 +35,5 @@ urlpatterns = [
     url(r'^api/events/themes', ThemeListAPIView.as_view(), name='theme_list_api'),
     url(r'^api/tedx', TEDxListAPIView.as_view(), name='tedx_list_api'),
     url(r'^api/about', AboutAppListAPIView.as_view(), name='about_list_api'),
+    url(r'^i18n/', include('django.conf.urls.i18n')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
