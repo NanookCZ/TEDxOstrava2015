@@ -13,13 +13,13 @@ from tedx.views import TEDxListAPIView, AboutAppListAPIView
 from news.views import NewsListAPIView, TypeListAPIView, NewsDetailAPIView
 from django.views.generic.base import RedirectView
 from django.conf.urls.i18n import i18n_patterns
-from django.utils.translation import ugettext_lazy as _
+
 
 router = routers.DefaultRouter()
 
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls), name='admin'),
+    #url(r'^admin/', include(admin.site.urls), name='admin'),
     url(r'^$', RedirectView.as_view(url='admin/', permanent=False), name='index'),
     url(r'^api/auth/token/$', 'rest_framework_jwt.views.obtain_jwt_token'),
     url(r'^api/auth/', include('rest_framework.urls', namespace='rest_framework')),
@@ -37,6 +37,7 @@ urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-urlpatterns += i18n_patterns['',
+urlpatterns += i18n_patterns('',
     url(r'^admin/', include(admin.site.urls), name='admin'),
-]
+)
+
