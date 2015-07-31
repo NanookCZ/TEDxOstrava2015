@@ -13,7 +13,6 @@ from tedx.views import TEDxListAPIView, AboutAppListAPIView
 from news.views import NewsListAPIView, TypeListAPIView, NewsDetailAPIView
 from django.views.generic.base import RedirectView
 from django.conf.urls.i18n import i18n_patterns
-from django.utils.translation import ugettext_lazy as 
 
 
 router = routers.DefaultRouter()
