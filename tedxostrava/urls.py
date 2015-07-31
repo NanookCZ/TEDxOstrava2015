@@ -13,7 +13,7 @@ from tedx.views import TEDxListAPIView, AboutAppListAPIView
 from news.views import NewsListAPIView, TypeListAPIView, NewsDetailAPIView
 from django.views.generic.base import RedirectView
 from django.conf.urls.i18n import i18n_patterns
-
+from django.utils.translation import ugettext_lazy as _
 
 router = routers.DefaultRouter()
 
@@ -36,3 +36,8 @@ urlpatterns = [
     url(r'^api/about', AboutAppListAPIView.as_view(), name='about_list_api'),
     url(r'^i18n/', include('django.conf.urls.i18n')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += i18n_patterns['',
+    (_(r'^dual-lang/'), include('duallang.urls')),
+    url(r'^admin/', include(admin.site.urls), name='admin'),
+]
