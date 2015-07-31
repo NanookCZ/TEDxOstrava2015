@@ -35,7 +35,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    'i18N_model',
     'suit',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -50,7 +49,7 @@ INSTALLED_APPS = (
     'news',
     'tedx',
     'cloudinary',
-    
+    'i18N_model',
 )
 
 

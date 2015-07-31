@@ -14,7 +14,6 @@ from cloudinary.models import CloudinaryField
 from i18n_model.models import I18nModel
 
 
-
 class Theme(models.Model):
 	title = models.CharField(max_length = 50)
 	description = models.TextField(blank = True, null = True)
