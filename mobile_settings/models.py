@@ -5,7 +5,17 @@ import cloudinary.uploader
 import cloudinary.api
 from cloudinary.models import CloudinaryField
 from django.utils.translation import ugettext_lazy as _
-from events.models import Language 
+
+class Language(models.Model):
+	code = models.CharField(max_length=5)
+	name = models.CharField(max_length=16)
+
+	def __unicode__(self):
+		return "%s" %(self.code)
+
+	class Meta:
+		verbose_name = 'Language'
+		verbose_name_plural = 'Languages'
 
 class Menu(models.Model):
 	title = models.CharField(_('title'), max_length = 50)

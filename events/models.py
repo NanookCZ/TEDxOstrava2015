@@ -12,21 +12,12 @@ import cloudinary.uploader
 import cloudinary.api
 from cloudinary.models import CloudinaryField
 from django.utils.translation import ugettext_lazy as _
+from mobile_settings.models import Language
 
 
-class Language(models.Model):
-	code = models.CharField(max_length=5)
-	name = models.CharField(max_length=16)
-
-	def __unicode__(self):
-		return "%s" %(self.code)
-
-	class Meta:
-		verbose_name = 'Language'
-		verbose_name_plural = 'Languages'
 
 class Theme(models.Model):
-	language = models.ForeignKey("Language", blank = True, null = True, verbose_name=_("Language"))
+	language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"))
 	title = models.CharField(_('title'), max_length = 50)
 	description = models.TextField(_('description'), blank = True, null = True)
 	created_date = models.DateTimeField(_('created_date'), auto_now_add = True, auto_now = False)
@@ -45,7 +36,7 @@ class Theme(models.Model):
 
 SHARE_MESSAGE = 'TEDxOstrava - Novinky'
 class Event(models.Model):
-	language = models.ForeignKey("Language", blank = True, null = True, verbose_name=_("Language"))
+	language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"))
 	title = models.CharField(_('title'), max_length = 50)
 	event_start = models.DateField(_('event_start'), blank = True, null = True, help_text='Start of the event.')
 	event_end = models.DateField(_('event_end'), blank = True, null = True, help_text='End of the event.')
@@ -65,8 +56,8 @@ class Event(models.Model):
 	updated_date = models.DateTimeField(_('updated_date'), auto_now_add = False, auto_now = True)
 	event_theme = models.ForeignKey(Theme, blank = True, null = True, verbose_name=_("Theme"))
 	active = models.BooleanField(_('active'), default = True)
-	speakers = models.ManyToManyField(Speaker, _('speakers'), blank = True, null = True)
-	partners = models.ManyToManyField(Partner, _('partners'), blank = True, null = True)
+	speakers = models.ManyToManyField(Speaker, verbose_name=_("Speaker"), blank = True, null = True)
+	partners = models.ManyToManyField(Partner, verbose_name=_("Partner"), blank = True, null = True)
 	facebook_url = models.CharField(_('facebook_url'), max_length = 50, blank = True, null = True)
 	twitter_url = models.CharField(_('twitter_url'), max_length = 50, blank = True, null = True)
 	share_message = models.CharField(_('share_message'), max_length = 50, default = SHARE_MESSAGE)

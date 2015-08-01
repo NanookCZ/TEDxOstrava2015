@@ -8,7 +8,7 @@ import cloudinary.uploader
 import cloudinary.api
 from cloudinary.models import CloudinaryField
 from django.utils.translation import ugettext_lazy as _
-from events.models import Language 
+from mobile_settings.models import Language
 
 
 class TEDx(models.Model):
