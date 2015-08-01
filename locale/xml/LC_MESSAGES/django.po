@@ -16,7 +16,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: events/models.py:18
 msgid "code"
@@ -35,7 +34,7 @@ msgstr ""
 #: events/models.py:26 events/models.py:45 news/models.py:16 news/models.py:28
 #: partners/models.py:14 tedx/models.py:16 tedx/models.py:36
 msgid "title"
-msgstr "Nadpis"
+msgstr ""
 
 #: events/models.py:27 events/models.py:51 news/models.py:29
 #: speakers/models.py:25 tedx/models.py:17 tedx/models.py:37
@@ -61,11 +60,11 @@ msgstr ""
 
 #: events/models.py:34
 msgid "theme"
-msgstr "Tema"
+msgstr ""
 
 #: events/models.py:35
 msgid "themes"
-msgstr "Temy"
+msgstr ""
 
 #: events/models.py:46 tedx/models.py:24
 msgid "event_start"
@@ -120,10 +119,8 @@ msgid "longtitude"
 msgstr ""
 
 #: events/models.py:62
-#, fuzzy
-#| msgid "theme"
 msgid "event_theme"
-msgstr "Tema"
+msgstr ""
 
 #: events/models.py:64
 msgid "speakers"
