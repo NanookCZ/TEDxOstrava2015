@@ -15,8 +15,8 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Language(models.Model):
-	code = models.CharField(_('code'), max_length=5)
-	name = models.CharField(_('name'), max_length=16)
+	code = models.CharField(max_length=5)
+	name = models.CharField(max_length=16)
 
 	def __unicode__(self):
 		return "%s" %(self.code)
