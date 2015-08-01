@@ -13,7 +13,7 @@ from mobile_settings.models import Language
 
 SHARE_MESSAGE = u'Nový rečník'
 class Speaker(models.Model):
-	language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"))
+	#language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"))
 	first_name = models.CharField(_('first_name'), max_length = 25)
 	last_name = models.CharField(_('last_name'), max_length = 25)
 	created_date = models.DateTimeField(_('created_date'), auto_now_add = True, auto_now = False)
