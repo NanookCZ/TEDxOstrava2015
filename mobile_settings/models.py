@@ -21,7 +21,7 @@ class Menu(models.Model):
 	title = models.CharField(_('title'), max_length = 50)
 	icon = CloudinaryField('image', blank = True, null = True)
 	active = models.BooleanField(default = True)
-	language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"))
+	language = models.ForeignKey("Language", blank = True, null = True, verbose_name=_("Language"))
 
 	def __unicode__(self):
 		return "%s" %(self.title)
