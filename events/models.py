@@ -18,7 +18,7 @@ class Language(models.Model):
 	code = models.CharField(max_length=5)
 	name = models.CharField(max_length=16)
 
-class ThemeTranslation(models.Model):
+class Theme(models.Model):
 	language = models.ForeignKey("Language", blank = True, null = True)
 	title = models.CharField(_('title'), max_length = 50, help_text=_('This is the theme title'))
 	description = models.TextField(blank = True, null = True)
