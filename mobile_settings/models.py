@@ -23,7 +23,7 @@ class Menu(models.Model):
 	language = models.ForeignKey("Language", blank = True, null = True, verbose_name=_("Language"))
 	title = models.CharField(_('title'), max_length = 55)
 	icon = CloudinaryField('image', blank = True, null = True)
-	active = models.BooleanField(default = True, _('active'))
+	active = models.BooleanField(default = True)
 
 	class Meta:
 		verbose_name = 'Menu'
