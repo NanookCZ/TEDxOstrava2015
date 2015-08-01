@@ -5,13 +5,13 @@ import cloudinary.uploader
 import cloudinary.api
 from cloudinary.models import CloudinaryField
 from django.utils.translation import ugettext_lazy as _
-#from events.models import Language 
+from events.models import Language 
 
 class Menu(models.Model):
 	title = models.CharField(_('title'), max_length = 50)
 	icon = CloudinaryField('image', blank = True, null = True)
 	active = models.BooleanField(default = True)
-	#language = models.ForeignKey(Language, blank = True, null = True)
+	language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"))
 
 	def __unicode__(self):
 		return "%s" %(self.title)

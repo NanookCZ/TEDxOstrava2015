@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='speaker',
             name='added_by',
-            field=models.ForeignKey(to_field='added_by', blank=True, to=settings.AUTH_USER_MODEL, null=True),
+            field=models.ForeignKey(verbose_name='User', blank=True, to=settings.AUTH_USER_MODEL, null=True),
         ),
         migrations.AlterField(
             model_name='speaker',

@@ -9,10 +9,10 @@ import cloudinary.uploader
 import cloudinary.api
 from cloudinary.models import CloudinaryField
 from django.utils.translation import ugettext_lazy as _
-#from events.models import Language 
+from events.models import Language 
 
 class Type(models.Model):
-	#language = models.ForeignKey(Language, blank = True, null = True)
+	language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"))
 	title = models.CharField(_('title'), max_length = 50)
 	icon = CloudinaryField('image', blank = True, null = True)
 
@@ -24,12 +24,12 @@ class Type(models.Model):
 		verbose_name_plural = _('Types')
 
 class News(models.Model):
-	#language = models.ForeignKey(Language, blank = True, null = True)
+	language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"))
 	title = models.CharField(_('title'), max_length = 50)
 	description = models.TextField(_('description'))
 	link = models.URLField(null = True, blank = True)
-	speaker = models.ForeignKey(Speaker, _('speaker'), blank = True, null = True)
-	author = models.ForeignKey(User, _('author'))
+	speaker = models.ForeignKey(Speaker, verbose_name=_("Speaker"), blank = True, null = True)
+	author = models.ForeignKey(User, verbose_name=_("User"))
 	created_date = models.DateTimeField(_('created_date'), auto_now_add = True, auto_now = False)
 	updated_date = models.DateTimeField(_('updated_date'), auto_now_add = False, auto_now = True)
 	publication_date = models.DateField(_('publication_date'), null = True, blank = True)
@@ -37,7 +37,7 @@ class News(models.Model):
 	is_published = models.BooleanField(_('is_published'), default = False)
 	news_image = CloudinaryField(_('news_image'), 'image', blank = True, null = True)
 	main_news = models.BooleanField(_('main_news'), default = False)
-	news_type = models.ForeignKey(Type, _('news_type'))
+	news_type = models.ForeignKey(Type, verbose_name=_("Type"))
 
 	def __unicode__(self):
 		return "%s" %(self.title)

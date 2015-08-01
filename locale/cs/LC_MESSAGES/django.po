@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-01 18:28+0200\n"
+"POT-Creation-Date: 2015-08-01 19:43+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,18 +18,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: events/models.py:18
-msgid "code"
-msgstr ""
-
-#: events/models.py:19
-msgid "name"
-msgstr ""
-
-
-
-#: events/models.py:26 events/models.py:45 news/models.py:16 news/models.py:28
-#: partners/models.py:14 tedx/models.py:16 tedx/models.py:36
+#: events/models.py:26 events/models.py:45 mobile_settings/models.py:11
+#: news/models.py:16 news/models.py:28 partners/models.py:15 tedx/models.py:16
+#: tedx/models.py:36
 msgid "title"
 msgstr "Nadpis"
 
@@ -39,18 +30,19 @@ msgid "description"
 msgstr ""
 
 #: events/models.py:28 events/models.py:60 news/models.py:33
-#: partners/models.py:15 speakers/models.py:19 tedx/models.py:19
+#: partners/models.py:16 speakers/models.py:19 tedx/models.py:19
 #: tedx/models.py:39
 msgid "created_date"
 msgstr ""
 
 #: events/models.py:29 events/models.py:61 news/models.py:34
-#: speakers/models.py:20 tedx/models.py:20 tedx/models.py:40
+#: partners/models.py:17 speakers/models.py:20 tedx/models.py:20
+#: tedx/models.py:40
 msgid "updated_date"
 msgstr ""
 
 #: events/models.py:30 events/models.py:63 news/models.py:36
-#: partners/models.py:17 speakers/models.py:21 tedx/models.py:21
+#: partners/models.py:18 speakers/models.py:21 tedx/models.py:21
 #: tedx/models.py:41
 msgid "active"
 msgstr ""
@@ -141,6 +133,10 @@ msgstr ""
 msgid "share_message"
 msgstr ""
 
+#: mobile_settings/models.py:20 mobile_settings/models.py:21
+msgid "Menu"
+msgstr ""
+
 #: news/models.py:23
 msgid "Type"
 msgstr ""
@@ -181,19 +177,19 @@ msgstr ""
 msgid "News"
 msgstr ""
 
-#: partners/models.py:18
+#: partners/models.py:19
 msgid "partner_logo"
 msgstr ""
 
-#: partners/models.py:19
+#: partners/models.py:20
 msgid "partner_website"
 msgstr ""
 
-#: partners/models.py:25
+#: partners/models.py:26
 msgid "Partner"
 msgstr ""
 
-#: partners/models.py:26
+#: partners/models.py:27
 msgid "Partners"
 msgstr ""
 
@@ -270,11 +266,11 @@ msgstr ""
 msgid "About app"
 msgstr ""
 
-#: tedxostrava/settings.py:156
+#: tedxostrava/settings.py:140
 msgid "Czech"
 msgstr ""
 
-#: tedxostrava/settings.py:157
+#: tedxostrava/settings.py:141
 msgid "English"
 msgstr ""
 
@@ -1524,6 +1520,10 @@ msgstr ""
 
 #: venv/lib/python2.7/site-packages/i18n_model/models.py:182
 msgid "source"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/i18n_model/models.py:250
+msgid "language"
 msgstr ""
 
 #: venv/lib/python2.7/site-packages/i18n_model/models.py:274

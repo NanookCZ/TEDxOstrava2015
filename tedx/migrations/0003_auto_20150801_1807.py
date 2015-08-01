@@ -8,7 +8,7 @@ import cloudinary.models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('events', '0003_auto_20150801_1657'),
+        ('events', '0003_auto_20150801_1807'),
         ('tedx', '0002_auto_20150801_0555'),
     ]
 
@@ -37,7 +37,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='aboutapp',
             name='language',
-            field=models.ForeignKey(to_field='language', blank=True, to='events.Language', null=True),
+            field=models.ForeignKey(verbose_name='Language', blank=True, to='events.Language', null=True),
         ),
         migrations.AddField(
             model_name='tedx',
@@ -47,7 +47,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='tedx',
             name='language',
-            field=models.ForeignKey(to_field='language', blank=True, to='events.Language', null=True),
+            field=models.ForeignKey(verbose_name='Language', blank=True, to='events.Language', null=True),
         ),
         migrations.AlterField(
             model_name='aboutapp',

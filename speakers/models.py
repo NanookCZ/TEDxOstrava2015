@@ -13,7 +13,7 @@ from django.utils.translation import ugettext_lazy as _
 
 SHARE_MESSAGE = u'Nový rečník'
 class Speaker(models.Model):
-	#language = models.ForeignKey("Language", blank = True, null = True)
+	#language = models.ForeignKey("Language", blank = True, null = True, verbose_name=_("Language"))
 	first_name = models.CharField(_('first_name'), max_length = 25)
 	last_name = models.CharField(_('last_name'), max_length = 25)
 	created_date = models.DateTimeField(_('created_date'), auto_now_add = True, auto_now = False)
@@ -29,7 +29,7 @@ class Speaker(models.Model):
 	speaker_photo = CloudinaryField(_('speaker_photo'), 'image', blank = True, null = True)
 	speaker_city = models.CharField(_('speaker_city'), max_length = 50, blank = True, null = True)
 	speaker_country = models.CharField(_('speaker_country'), max_length = 50, blank = True, null = True)
-	added_by = models.ForeignKey(User, _('added_by'), blank = True, null = True)
+	added_by = models.ForeignKey(User, verbose_name=_("User"), blank = True, null = True)
 
 	def __unicode__(self):
 		return "%s %s" %(self.first_name, self.last_name)

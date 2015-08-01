@@ -16,10 +16,14 @@ class Migration(migrations.Migration):
             name='event',
             options={'verbose_name': 'Event', 'verbose_name_plural': 'Events'},
         ),
+        migrations.AlterModelOptions(
+            name='language',
+            options={'verbose_name': 'Language', 'verbose_name_plural': 'Languages'},
+        ),
         migrations.AddField(
             model_name='event',
             name='language',
-            field=models.ForeignKey(to_field='language', blank=True, to='events.Language', null=True),
+            field=models.ForeignKey(verbose_name='Language', blank=True, to='events.Language', null=True),
         ),
         migrations.AlterField(
             model_name='event',
@@ -69,7 +73,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='event',
             name='event_theme',
-            field=models.ForeignKey(to_field='event_theme', blank=True, to='events.Theme', null=True),
+            field=models.ForeignKey(verbose_name='Theme', blank=True, to='events.Theme', null=True),
         ),
         migrations.AlterField(
             model_name='event',
@@ -79,7 +83,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='event',
             name='hosted_by',
-            field=models.ForeignKey(to=settings.AUTH_USER_MODEL, to_field='hosted_by'),
+            field=models.ForeignKey(verbose_name='User', to=settings.AUTH_USER_MODEL),
         ),
         migrations.AlterField(
             model_name='event',
@@ -142,16 +146,6 @@ class Migration(migrations.Migration):
             field=models.CharField(max_length=10, null=True, verbose_name='zip_code', blank=True),
         ),
         migrations.AlterField(
-            model_name='language',
-            name='code',
-            field=models.CharField(max_length=5, verbose_name='code'),
-        ),
-        migrations.AlterField(
-            model_name='language',
-            name='name',
-            field=models.CharField(max_length=16, verbose_name='name'),
-        ),
-        migrations.AlterField(
             model_name='theme',
             name='active',
             field=models.BooleanField(default=True, verbose_name='active'),
@@ -169,7 +163,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='theme',
             name='language',
-            field=models.ForeignKey(to_field='language', blank=True, to='events.Language', null=True),
+            field=models.ForeignKey(verbose_name='Language', blank=True, to='events.Language', null=True),
         ),
         migrations.AlterField(
             model_name='theme',

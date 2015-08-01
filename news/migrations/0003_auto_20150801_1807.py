@@ -9,7 +9,7 @@ import cloudinary.models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('events', '0003_auto_20150801_1657'),
+        ('events', '0003_auto_20150801_1807'),
         ('news', '0002_auto_20150801_0555'),
     ]
 
@@ -34,12 +34,12 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='news',
             name='language',
-            field=models.ForeignKey(to_field='language', blank=True, to='events.Language', null=True),
+            field=models.ForeignKey(verbose_name='Language', blank=True, to='events.Language', null=True),
         ),
         migrations.AddField(
             model_name='type',
             name='language',
-            field=models.ForeignKey(to_field='language', blank=True, to='events.Language', null=True),
+            field=models.ForeignKey(verbose_name='Language', blank=True, to='events.Language', null=True),
         ),
         migrations.AlterField(
             model_name='news',
@@ -49,7 +49,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='news',
             name='author',
-            field=models.ForeignKey(to=settings.AUTH_USER_MODEL, to_field='author'),
+            field=models.ForeignKey(verbose_name='User', to=settings.AUTH_USER_MODEL),
         ),
         migrations.AlterField(
             model_name='news',
@@ -74,7 +74,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='news',
             name='news_type',
-            field=models.ForeignKey(to='news.Type', to_field='news_type'),
+            field=models.ForeignKey(verbose_name='Type', to='news.Type'),
         ),
         migrations.AlterField(
             model_name='news',
@@ -84,7 +84,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='news',
             name='speaker',
-            field=models.ForeignKey(to_field='speaker', blank=True, to='speakers.Speaker', null=True),
+            field=models.ForeignKey(verbose_name='Speaker', blank=True, to='speakers.Speaker', null=True),
         ),
         migrations.AlterField(
             model_name='news',
