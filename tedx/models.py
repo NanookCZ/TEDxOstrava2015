@@ -12,7 +12,7 @@ from events.models import Language
 
 
 class TEDx(models.Model):
-	language = models.ForeignKey(_('language'), "Language", blank = True, null = True)
+	language = models.ForeignKey(Language, _('language'), blank = True, null = True)
 	title = models.CharField(_('title'), max_length = 50)
 	description = models.TextField(_('description'), blank = True, null = True)
 	website = models.URLField(_('website'), null = True, blank = True)
@@ -27,12 +27,12 @@ class TEDx(models.Model):
 		return "%s" %(self.title)
 
 	class Meta:
-		versobe_name = _('TEDx')
+		verbose_name = _('TEDx')
 		verbose_name_plural = _('TEDx')
 
 
 class AboutApp(models.Model):
-	language = models.ForeignKey(_('language'), "Language", blank = True, null = True)
+	language = models.ForeignKey(Language, _('language'), blank = True, null = True)
 	title = models.CharField(_('title'), max_length = 50)
 	description = models.TextField(_('description'))
 	website = models.URLField(_('website'), null = True, blank = True)
@@ -45,6 +45,6 @@ class AboutApp(models.Model):
 		return "%s" %(self.title)
 
 	class Meta:
-		versobe_name = _('About app')
+		verbose_name = _('About app')
 		verbose_name_plural = _('About app')
 

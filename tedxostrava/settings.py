@@ -49,6 +49,7 @@ INSTALLED_APPS = (
     'news',
     'tedx',
     'cloudinary',
+    'mobile_settings',
 )
 
 USE_I18N = True
