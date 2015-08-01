@@ -13,6 +13,7 @@ from django.utils.translation import ugettext_lazy as _
 from mobile_settings.models import Language
 
 class Theme(models.Model):
+	language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"))
 	title = models.CharField(max_length = 50)
 	description = models.TextField(blank = True, null = True)
 	created_date = models.DateTimeField(auto_now_add = True, auto_now = False)
@@ -20,12 +21,17 @@ class Theme(models.Model):
 	active = models.BooleanField(default = True)
 	banner = CloudinaryField('image', blank = True, null = True)
 
-	def __str__(self):
-		return self.title
+	def __unicode__(self):
+		return "%s" %(self.title)
+
+	class Meta:
+		verbose_name = _("Theme")
+		verbose_name_plural = _("Themes")
 
 
 SHARE_MESSAGE = 'TEDxOstrava - Check our news'
 class Event(models.Model):
+	language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"))
 	title = models.CharField(max_length = 50)
 	event_start = models.DateField(blank = True, null = True, help_text='Start of the event.')
 	event_end = models.DateField(blank = True, null = True, help_text='End of the event.')
@@ -51,5 +57,10 @@ class Event(models.Model):
 	twitter_url = models.CharField(max_length = 50, blank = True, null = True)
 	share_message = models.CharField(max_length = 50, default = SHARE_MESSAGE)
 
-	def __str__(self):
-		return self.title
+	def __unicode__(self):
+		return "%s" %(self.title)
+
+
+	class Meta:
+		verbose_name = _("Event")
+		verbose_name_plural = _("Events")
