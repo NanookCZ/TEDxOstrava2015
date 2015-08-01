@@ -14,8 +14,12 @@ from cloudinary.models import CloudinaryField
 from django.utils.translation import ugettext_lazy as _
 
 
+class Language(models.Model):
+	code = models.CharField(max_length=5)
+	name = models.CharField(max_length=16)
 
-class Theme(models.Model):
+class ThemeTranslation(models.Model):
+	language = models.ForeignKey("Language", blank = True, null = True)
 	title = models.CharField(_('title'), max_length = 50, help_text=_('This is the theme title'))
 	description = models.TextField(blank = True, null = True)
 	created_date = models.DateTimeField(auto_now_add = True, auto_now = False)
