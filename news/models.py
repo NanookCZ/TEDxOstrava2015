@@ -9,10 +9,10 @@ import cloudinary.uploader
 import cloudinary.api
 from cloudinary.models import CloudinaryField
 from django.utils.translation import ugettext_lazy as _
-from events.models import Language 
+#from events.models import Language 
 
 class Type(models.Model):
-	language = models.ForeignKey(Language, _('language'), blank = True, null = True)
+	#language = models.ForeignKey(Language, blank = True, null = True)
 	title = models.CharField(_('title'), max_length = 50)
 	icon = CloudinaryField('image', blank = True, null = True)
 
@@ -24,7 +24,7 @@ class Type(models.Model):
 		verbose_name_plural = _('Types')
 
 class News(models.Model):
-	language = models.ForeignKey(Language, _('language'), blank = True, null = True)
+	#language = models.ForeignKey(Language, blank = True, null = True)
 	title = models.CharField(_('title'), max_length = 50)
 	description = models.TextField(_('description'))
 	link = models.URLField(null = True, blank = True)

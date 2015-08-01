@@ -22,7 +22,7 @@ class Language(models.Model):
 		return "%s" %(self.code)
 
 class Theme(models.Model):
-	language = models.ForeignKey("Language", _('language'), blank = True, null = True)
+	#language = models.ForeignKey(Language, blank = True, null = True)
 	title = models.CharField(_('title'), max_length = 50)
 	description = models.TextField(_('description'), blank = True, null = True)
 	created_date = models.DateTimeField(_('created_date'), auto_now_add = True, auto_now = False)
@@ -41,7 +41,7 @@ class Theme(models.Model):
 
 SHARE_MESSAGE = 'TEDxOstrava - Novinky'
 class Event(models.Model):
-	language = models.ForeignKey("Language", _('language'), blank = True, null = True)
+	#language = models.ForeignKey("Language", blank = True, null = True)
 	title = models.CharField(_('title'), max_length = 50)
 	event_start = models.DateField(_('event_start'), blank = True, null = True, help_text='Start of the event.')
 	event_end = models.DateField(_('event_end'), blank = True, null = True, help_text='End of the event.')

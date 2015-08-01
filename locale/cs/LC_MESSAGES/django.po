@@ -26,11 +26,7 @@ msgstr ""
 msgid "name"
 msgstr ""
 
-#: events/models.py:25 events/models.py:44 news/models.py:15 news/models.py:27
-#: partners/models.py:13 speakers/models.py:16 tedx/models.py:15
-#: tedx/models.py:35 venv/lib/python2.7/site-packages/i18n_model/models.py:250
-msgid "language"
-msgstr ""
+
 
 #: events/models.py:26 events/models.py:45 news/models.py:16 news/models.py:28
 #: partners/models.py:14 tedx/models.py:16 tedx/models.py:36

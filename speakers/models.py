@@ -13,7 +13,7 @@ from django.utils.translation import ugettext_lazy as _
 
 SHARE_MESSAGE = u'Nový rečník'
 class Speaker(models.Model):
-	#language = models.ForeignKey(_('language'), "Language", blank = True, null = True)
+	#language = models.ForeignKey("Language", blank = True, null = True)
 	first_name = models.CharField(_('first_name'), max_length = 25)
 	last_name = models.CharField(_('last_name'), max_length = 25)
 	created_date = models.DateTimeField(_('created_date'), auto_now_add = True, auto_now = False)

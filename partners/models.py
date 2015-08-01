@@ -11,7 +11,7 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Partner(models.Model):
-	#language = models.ForeignKey(Language, _('language'), blank = True, null = True)
+	#language = models.ForeignKey(Language, blank = True, null = True)
 	title = models.CharField(_('title'), max_length = 100)
 	created_date = models.DateTimeField(_('created_date'), auto_now_add = True, auto_now = False)
 	updated_date = models.DateTimeField(_('updated_date'), auto_now_add = False, auto_now = True)
