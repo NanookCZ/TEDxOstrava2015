@@ -7,7 +7,7 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('mobile_settings', '0002_auto_20150801_1940'),
+        ('mobile_settings', '0003_auto_20150802_0714'),
         ('speakers', '0002_remove_speaker_language'),
     ]
 

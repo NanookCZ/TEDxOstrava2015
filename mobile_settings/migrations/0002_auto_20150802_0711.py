@@ -7,12 +7,16 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('news', '0003_type_language'),
+        ('mobile_settings', '0001_initial'),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='news',
+            model_name='language',
+            name='name',
+        ),
+        migrations.RemoveField(
+            model_name='menu',
             name='language',
         ),
     ]

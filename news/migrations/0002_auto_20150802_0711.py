@@ -12,6 +12,10 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RemoveField(
+            model_name='news',
+            name='language',
+        ),
+        migrations.RemoveField(
             model_name='type',
             name='language',
         ),
