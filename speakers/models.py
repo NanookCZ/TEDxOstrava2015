@@ -26,7 +26,7 @@ class Speaker(models.Model):
 	twitter_url = models.CharField(max_length = 50, blank = True, null = True)
 	share_message = models.CharField(_('share_message'), max_length = 25, default = SHARE_MESSAGE)
 	position = models.CharField(_('position'), max_length = 50, blank = True, null = True)
-	speaker_photo = CloudinaryField(_('speaker_photo'), 'image', blank = True, null = True)
+	#speaker_photo = CloudinaryField(_('speaker_photo'), 'image', blank = True, null = True)
 	speaker_city = models.CharField(_('speaker_city'), max_length = 50, blank = True, null = True)
 	speaker_country = models.CharField(_('speaker_country'), max_length = 50, blank = True, null = True)
 	added_by = models.ForeignKey(User, verbose_name=_("User"), blank = True, null = True)
