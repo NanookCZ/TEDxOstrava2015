@@ -20,7 +20,7 @@ class TEDx(models.Model):
 	updated_date = models.DateTimeField(_('updated_date'), auto_now_add = False, auto_now = True)
 	active = models.BooleanField(_('active'), default = True)
 	is_published = models.BooleanField(default = False)
-	tedx_logo = CloudinaryField(_('tedx_logo'), 'image', blank = True, null = True)
+	tedx_logo = CloudinaryField('image', blank = True, null = True)
 	event_start = models.DateField(_('event_start'), blank = True, null = True)
 
 	def __unicode__(self):
@@ -39,7 +39,7 @@ class AboutApp(models.Model):
 	created_date = models.DateTimeField(_('created_date'), auto_now_add = True, auto_now = False)
 	updated_date = models.DateTimeField(_('updated_date'), auto_now_add = False, auto_now = True)
 	active = models.BooleanField(_('active'), default = True)
-	logo = CloudinaryField(_('logo'), 'image', blank = True, null = True)
+	logo = CloudinaryField('image', blank = True, null = True)
 
 	def __unicode__(self):
 		return "%s" %(self.title)
