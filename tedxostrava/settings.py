@@ -215,5 +215,5 @@ JWT_AUTH = {
     'JWT_RESPONSE_PAYLOAD_HANDLER':
         'tedxostrava.utils.jwt_response_payload_handler',
 
-      'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=33300),
+      'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=933300),
 }
