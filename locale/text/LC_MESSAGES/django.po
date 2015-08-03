@@ -21,7 +21,7 @@ msgstr ""
 #: news/models.py:15 news/models.py:27 partners/models.py:14
 #: speakers/models.py:16 tedx/models.py:15 tedx/models.py:35
 msgid "Language"
-msgstr ""
+msgstr "Jazyk"
 
 #: events/models.py:17 events/models.py:35 mobile_settings/models.py:24
 #: news/models.py:16 news/models.py:28 partners/models.py:15 tedx/models.py:16
@@ -107,7 +107,7 @@ msgstr ""
 
 #: events/models.py:54 news/models.py:31 speakers/models.py:38
 msgid "Speaker"
-msgstr ""
+msgstr "Recnik"
 
 #: events/models.py:55 partners/models.py:26
 msgid "Partner"
@@ -119,7 +119,7 @@ msgstr ""
 
 #: events/models.py:65
 msgid "Event"
-msgstr ""
+msgstr "Akce"
 
 #: events/models.py:66
 msgid "Events"
@@ -127,7 +127,7 @@ msgstr ""
 
 #: mobile_settings/apps.py:6
 msgid "Mobile settings"
-msgstr ""
+msgstr "Mobilni nastaveni"
 
 #: mobile_settings/models.py:12
 msgid "code"
