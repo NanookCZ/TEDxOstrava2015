@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-01 19:43+0200\n"
+"POT-Creation-Date: 2015-08-03 12:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,137 +17,132 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: events/models.py:26 events/models.py:45 mobile_settings/models.py:11
+#: events/models.py:16 events/models.py:34 mobile_settings/models.py:23
+#: news/models.py:15 news/models.py:27 partners/models.py:14
+#: speakers/models.py:16 tedx/models.py:15 tedx/models.py:35
+msgid "Language"
+msgstr ""
+
+#: events/models.py:17 events/models.py:35 mobile_settings/models.py:24
 #: news/models.py:16 news/models.py:28 partners/models.py:15 tedx/models.py:16
 #: tedx/models.py:36
 msgid "title"
 msgstr ""
 
-#: events/models.py:27 events/models.py:51 news/models.py:29
+#: events/models.py:18 events/models.py:41 news/models.py:29
 #: speakers/models.py:25 tedx/models.py:17 tedx/models.py:37
 msgid "description"
 msgstr ""
 
-#: events/models.py:28 events/models.py:60 news/models.py:33
+#: events/models.py:19 events/models.py:50 news/models.py:33
 #: partners/models.py:16 speakers/models.py:19 tedx/models.py:19
 #: tedx/models.py:39
 msgid "created_date"
 msgstr ""
 
-#: events/models.py:29 events/models.py:61 news/models.py:34
+#: events/models.py:20 events/models.py:51 news/models.py:34
 #: partners/models.py:17 speakers/models.py:20 tedx/models.py:20
 #: tedx/models.py:40
 msgid "updated_date"
 msgstr ""
 
-#: events/models.py:30 events/models.py:63 news/models.py:36
+#: events/models.py:21 events/models.py:53 news/models.py:36
 #: partners/models.py:18 speakers/models.py:21 tedx/models.py:21
 #: tedx/models.py:41
 msgid "active"
 msgstr ""
 
-#: events/models.py:34
-msgid "theme"
+#: events/models.py:28 events/models.py:52
+msgid "Theme"
 msgstr ""
 
-#: events/models.py:35
-msgid "themes"
+#: events/models.py:29
+msgid "Themes"
 msgstr ""
 
-#: events/models.py:46 tedx/models.py:24
+#: events/models.py:36 tedx/models.py:24
 msgid "event_start"
 msgstr ""
 
-#: events/models.py:47
+#: events/models.py:37
 msgid "event_end"
 msgstr ""
 
-#: events/models.py:48
+#: events/models.py:38
 msgid "event_start_time"
 msgstr ""
 
-#: events/models.py:49
+#: events/models.py:39
 msgid "event_end_time"
 msgstr ""
 
-#: events/models.py:50
-msgid "hosted_by"
+#: events/models.py:40 news/models.py:32 speakers/models.py:32
+#: venv/lib/python2.7/site-packages/suit/templates/admin/object_history.html:28
+msgid "User"
 msgstr ""
 
-#: events/models.py:52
+#: events/models.py:42
 msgid "about_ted"
 msgstr ""
 
-#: events/models.py:53
+#: events/models.py:43
 msgid "street_address"
 msgstr ""
 
-#: events/models.py:54
+#: events/models.py:44
 msgid "street_number"
 msgstr ""
 
-#: events/models.py:55
+#: events/models.py:45
 msgid "city"
 msgstr ""
 
-#: events/models.py:56
+#: events/models.py:46
 msgid "state"
 msgstr ""
 
-#: events/models.py:57
+#: events/models.py:47
 msgid "zip_code"
 msgstr ""
 
-#: events/models.py:58
-msgid "latitude"
+#: events/models.py:54 news/models.py:31 speakers/models.py:38
+msgid "Speaker"
 msgstr ""
 
-#: events/models.py:59
-msgid "longtitude"
+#: events/models.py:55 partners/models.py:26
+msgid "Partner"
 msgstr ""
 
-#: events/models.py:62
-msgid "event_theme"
-msgstr ""
-
-#: events/models.py:64
-msgid "speakers"
-msgstr ""
-
-#: events/models.py:65
-msgid "partners"
-msgstr ""
-
-#: events/models.py:66
-msgid "facebook_url"
-msgstr ""
-
-#: events/models.py:67
-msgid "twitter_url"
-msgstr ""
-
-#: events/models.py:68 speakers/models.py:27
+#: events/models.py:58 speakers/models.py:27
 msgid "share_message"
 msgstr ""
 
-#: mobile_settings/models.py:20 mobile_settings/models.py:21
-msgid "Menu"
+#: events/models.py:65
+msgid "Event"
 msgstr ""
 
-#: news/models.py:23
+#: events/models.py:66
+msgid "Events"
+msgstr ""
+
+#: mobile_settings/apps.py:6
+msgid "Mobile settings"
+msgstr ""
+
+#: mobile_settings/models.py:12
+msgid "code"
+msgstr ""
+
+#: mobile_settings/models.py:13
+msgid "name"
+msgstr ""
+
+#: news/models.py:23 news/models.py:40
 msgid "Type"
 msgstr ""
 
 #: news/models.py:24
 msgid "Types"
-msgstr ""
-
-#: news/models.py:31
-msgid "speaker"
-msgstr ""
-
-#: news/models.py:32
-msgid "author"
 msgstr ""
 
 #: news/models.py:35
@@ -158,32 +153,16 @@ msgstr ""
 msgid "is_published"
 msgstr ""
 
-#: news/models.py:38
-msgid "news_image"
-msgstr ""
-
 #: news/models.py:39
 msgid "main_news"
-msgstr ""
-
-#: news/models.py:40
-msgid "news_type"
 msgstr ""
 
 #: news/models.py:46 news/models.py:47
 msgid "News"
 msgstr ""
 
-#: partners/models.py:19
-msgid "partner_logo"
-msgstr ""
-
 #: partners/models.py:20
 msgid "partner_website"
-msgstr ""
-
-#: partners/models.py:26
-msgid "Partner"
 msgstr ""
 
 #: partners/models.py:27
@@ -214,24 +193,12 @@ msgstr ""
 msgid "position"
 msgstr ""
 
-#: speakers/models.py:29
-msgid "speaker_photo"
-msgstr ""
-
 #: speakers/models.py:30
 msgid "speaker_city"
 msgstr ""
 
 #: speakers/models.py:31
 msgid "speaker_country"
-msgstr ""
-
-#: speakers/models.py:32
-msgid "added_by"
-msgstr ""
-
-#: speakers/models.py:38
-msgid "Speaker"
 msgstr ""
 
 #: speakers/models.py:39
@@ -247,16 +214,8 @@ msgstr ""
 msgid "website"
 msgstr ""
 
-#: tedx/models.py:23
-msgid "tedx_logo"
-msgstr ""
-
 #: tedx/models.py:30 tedx/models.py:31
 msgid "TEDx"
-msgstr ""
-
-#: tedx/models.py:42
-msgid "logo"
 msgstr ""
 
 #: tedx/models.py:48 tedx/models.py:49
@@ -1842,10 +1801,6 @@ msgstr ""
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/object_history.html:27
 msgid "Date/time"
-msgstr ""
-
-#: venv/lib/python2.7/site-packages/suit/templates/admin/object_history.html:28
-msgid "User"
 msgstr ""
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/object_history.html:29
