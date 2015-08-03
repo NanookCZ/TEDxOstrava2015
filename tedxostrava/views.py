@@ -10,7 +10,7 @@ from mobile_settings.models import Menu
 
 DOMAIN_NAME = 'https://tedxostrava.herokuapp.com'
 @api_view(["GET"])
-def tedx_api_home(request):
+def tedx_api_home_czech(request):
 	data = {
 		"events" : {
 			"count" : Event.objects.all().count(),
