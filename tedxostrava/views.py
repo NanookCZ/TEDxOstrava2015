@@ -45,7 +45,7 @@ def tedx_api_home(request):
 			"url" : DOMAIN_NAME + api_reverse("about_list_api")
 			},
 		"menu" : {
-			"count" : Menu.ojbects.all().count(),
+			"count" : Menu.obojects.all().count(),
 			"url" : DOMAIN_NAME + api_reverse("menu_list_api")
 		},
 
