@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'^$', RedirectView.as_view(url='admin/', permanent=False), name='index'),
     url(r'^api/auth/token/$', 'rest_framework_jwt.views.obtain_jwt_token'),
     url(r'^api/auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^api/cs/$', 'tedxostrava.views.tedx_api_home', name="api_home"),
+    url(r'^api/cs/$', 'tedxostrava.views.tedx_api_home_czech', name="api_home"),
     url(r'^api/cs/events', EventListAPIView.as_view(), name='event_list_api'),
     url(r'^api/cs/partners', PartnerListAPIView.as_view(), name='partner_list_api'),
     url(r'^api/cs/speakers/$', SpeakerListAPIView.as_view(), name='speaker_list_api'),
