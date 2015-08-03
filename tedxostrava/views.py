@@ -6,6 +6,7 @@ from speakers.models import Speaker
 from news.models import News, Type
 from partners.models import Partner
 from tedx.models import TEDx, AboutApp
+from mobile_settings.models import Menu
 
 DOMAIN_NAME = 'https://tedxostrava.herokuapp.com'
 @api_view(["GET"])
@@ -43,6 +44,10 @@ def tedx_api_home(request):
 			"count" : AboutApp.objects.all().count(),
 			"url" : DOMAIN_NAME + api_reverse("about_list_api")
 			},
+		"menu" : {
+			"count" : Menu.ojbects.all().count(),
+			"url" : DOMAIN_NAME + api_reverse("menu_list_api")
+		},
 
 
 	}
