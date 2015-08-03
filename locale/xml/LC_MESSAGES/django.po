@@ -127,7 +127,7 @@ msgstr ""
 
 #: mobile_settings/apps.py:6
 msgid "Mobile settings"
-msgstr ""
+msgstr "Mobilni nastaveni"
 
 #: mobile_settings/models.py:12
 msgid "code"
