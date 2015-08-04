@@ -9,7 +9,7 @@ from mobile_settings.models import Language
 
 class TypeListAPIView(generics.ListAPIView):
 	language = Language.objects.get(code = 'CS')
-	queryset = Type.objects.all(language = language)
+	queryset = Type.objects.filter(language = language)
 	serializer_class = TypeSerializer
 	paginate_by = 10
 
@@ -32,7 +32,7 @@ class NewsDetailAPIView(generics.RetrieveAPIView):
 
 class TypeListEAPIView(generics.ListAPIView):
 	language = Language.objects.get(code = 'EN')
-	queryset = Type.objects.all(language = language)
+	queryset = Type.objects.filter(language = language)
 	serializer_class = TypeSerializer
 	paginate_by = 10
 
