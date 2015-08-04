@@ -29,7 +29,7 @@ class TEDxListEAPIView(generics.ListAPIView):
 
 
 
-class AboutAppListEAPIView(generics.ListAPIView):
+class AboutAppEListEAPIView(generics.ListAPIView):
 	language = Language.objects.get(code = 'EN')
 	queryset = AboutApp.objects.filter(active = True, language = language)
 	serializer_class = AboutAppSerializer
