@@ -10,3 +10,9 @@ class PartnerListAPIView(generics.ListAPIView):
 	queryset = Partner.objects.filter(active = True, language = language)
 	serializer_class = PartnerSerializer
 	paginate_by = 10
+
+class PartnerListEAPIView(generics.ListAPIView):
+	language = Language.objects.get(code = 'EN')
+	queryset = Partner.objects.filter(active = True, language = language)
+	serializer_class = PartnerSerializer
+	paginate_by = 10

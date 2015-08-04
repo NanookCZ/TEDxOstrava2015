@@ -21,3 +21,19 @@ class SpeakerDetailAPIView(generics.RetrieveAPIView):
 		id = self.kwargs.pop('id')
 		obj = get_object_or_404(Speaker, id = id)
 		return obj
+
+class SpeakerListEAPIView(generics.ListAPIView):
+	language = Language.objects.get(code = 'EN')
+	queryset = Speaker.objects.filter(active = True, published = True, language = language)
+	serializer_class = SpeakerSerializer
+	paginate_by = 10
+
+class SpeakerDetailEAPIView(generics.RetrieveAPIView):
+	language = Language.objects.get(code = 'EN')
+	queryset = Speaker.objects.filter(active = True, language = language)
+	serializer_class = SpeakerSerializer
+
+	def get_object(self, *args, **kwargs):
+		id = self.kwargs.pop('id')
+		obj = get_object_or_404(Speaker, id = id)
+		return obj

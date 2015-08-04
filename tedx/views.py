@@ -19,3 +19,18 @@ class AboutAppListAPIView(generics.ListAPIView):
 	queryset = AboutApp.objects.filter(active = True, language = language)
 	serializer_class = AboutAppSerializer
 	paginate_by = 10
+
+
+class TEDxListEAPIView(generics.ListAPIView):
+	language = Language.objects.get(code = 'EN')
+	queryset = TEDx.objects.filter(language = language, active = True, is_published = True, event_start__lte = datetime.datetime.now())
+	serializer_class = TEDxSerializer
+	paginate_by = 10
+
+
+
+class AboutAppListEAPIView(generics.ListAPIView):
+	language = Language.objects.get(code = 'EN')
+	queryset = AboutApp.objects.filter(active = True, language = language)
+	serializer_class = AboutAppSerializer
+	paginate_by = 10
