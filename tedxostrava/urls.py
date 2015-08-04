@@ -9,7 +9,7 @@ from rest_framework import routers
 from events.views import ThemeListAPIView, EventListAPIView, ThemeListEAPIView, EventListEAPIView
 from partners.views import PartnerListAPIView, PartnerListEAPIView
 from speakers.views import SpeakerListAPIView, SpeakerDetailAPIView, SpeakerListEAPIView, SpeakerDetailEAPIView
-from tedx.views import TEDxListAPIView, AboutAppListAPIView, TEDxListEAPIView, AboutAppEListAPIView
+from tedx.views import TEDxListAPIView, AboutAppListAPIView, TEDxListEAPIView, AboutAppListEAPIView
 from news.views import NewsListAPIView, TypeListAPIView, NewsDetailAPIView, NewsListEAPIView, TypeListEAPIView, NewsDetailEAPIView
 from mobile_settings.views import MenuListAPIView, MenuListEAPIView
 from django.views.generic.base import RedirectView
