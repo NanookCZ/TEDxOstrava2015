@@ -8,7 +8,7 @@ from partners.models import Partner
 from tedx.models import TEDx, AboutApp
 from mobile_settings.models import Menu
 
-DOMAIN_NAME = 'https://tedxostrava.herokuapp.com'
+DOMAIN_NAME = 'https://demoevent.herokuapp.com'
 @api_view(["GET"])
 def tedx_api_home_czech(request):
 	data = {
