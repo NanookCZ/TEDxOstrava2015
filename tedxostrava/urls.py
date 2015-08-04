@@ -46,7 +46,7 @@ urlpatterns = [
     url(r'^api/en/types/', TypeListEAPIView.as_view(), name='type_list_api_e'),
     url(r'^api/en/events/themes', ThemeListEAPIView.as_view(), name='theme_list_api_e'),
     url(r'^api/en/tedx', TEDxListEAPIView.as_view(), name='tedx_list_api_e'),
-    url(r'^api/en/about', AboutAppEListAPIView.as_view(), name='about_list_api_e'),
+    url(r'^api/en/about', AboutAppListEAPIView.as_view(), name='about_list_api_e'),
     url(r'^api/en/menu', MenuListEAPIView.as_view(), name='menu_list_api_e'),
     url(r'^i18n/', include('django.conf.urls.i18n')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
