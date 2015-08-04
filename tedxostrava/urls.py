@@ -6,12 +6,12 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
-from events.views import ThemeListAPIView, EventListAPIView
-from partners.views import PartnerListAPIView
-from speakers.views import SpeakerListAPIView, SpeakerDetailAPIView
-from tedx.views import TEDxListAPIView, AboutAppListAPIView
-from news.views import NewsListAPIView, TypeListAPIView, NewsDetailAPIView
-from mobile_settings.views import MenuListAPIView
+from events.views import ThemeListAPIView, EventListAPIView, ThemeListEAPIView, EventListEAPIView
+from partners.views import PartnerListAPIView, PartnerListEAPIView
+from speakers.views import SpeakerListAPIView, SpeakerDetailAPIView, SpeakerListEAPIView, SpeakerDetailEAPIView
+from tedx.views import TEDxListAPIView, AboutAppListAPIView, TEDxListEAPIView, AboutAppEListAPIView
+from news.views import NewsListAPIView, TypeListAPIView, NewsDetailAPIView, NewsListEAPIView, TypeListEAPIView, NewsDetailEAPIView
+from mobile_settings.views import MenuListAPIView, MenuListEAPIView
 from django.views.generic.base import RedirectView
 from django.conf.urls.i18n import i18n_patterns
 
