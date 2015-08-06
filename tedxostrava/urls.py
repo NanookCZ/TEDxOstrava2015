@@ -49,6 +49,7 @@ urlpatterns = [
     url(r'^api/en/about', AboutAppListEAPIView.as_view(), name='about_list_api_e'),
     url(r'^api/en/menu', MenuListEAPIView.as_view(), name='menu_list_api_e'),
     url(r'^i18n/', include('django.conf.urls.i18n')),
+    url(r'^docs/', include('rest_framework_swagger.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += i18n_patterns('',

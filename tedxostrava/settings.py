@@ -50,6 +50,7 @@ INSTALLED_APPS = (
     'tedx',
     'cloudinary',
     'mobile_settings',
+    'rest_framework_swagger',
 )
 
 USE_I18N = True
@@ -209,6 +210,7 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
     ),
+    'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',),
 }
 
 JWT_AUTH = {
