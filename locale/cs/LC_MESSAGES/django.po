@@ -1485,7 +1485,7 @@ msgstr ""
 
 #: venv/lib/python2.7/site-packages/i18n_model/models.py:250
 msgid "language"
-msgstr ""
+msgstr "Jazyk"
 
 #: venv/lib/python2.7/site-packages/i18n_model/models.py:274
 #, python-format

@@ -13,8 +13,8 @@ class Language(models.Model):
 	name = models.CharField(_("name"), max_length = 50, default = 'English')
 
 	class Meta:
-		verbose_name = 'Language'
-		verbose_name_plural = 'Languages'
+		verbose_name = _('Language')
+		verbose_name_plural = _('Languages')
 
 	def __unicode__(self):
 		return "%s" %(self.code)

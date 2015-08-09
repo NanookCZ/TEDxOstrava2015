@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-03 12:00+0200\n"
+"POT-Creation-Date: 2015-08-09 16:49+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,9 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: events/models.py:16 events/models.py:34 mobile_settings/models.py:23
-#: news/models.py:15 news/models.py:27 partners/models.py:14
-#: speakers/models.py:16 tedx/models.py:15 tedx/models.py:35
+#: events/models.py:16 events/models.py:34 mobile_settings/models.py:16
+#: mobile_settings/models.py:23 news/models.py:15 news/models.py:27
+#: partners/models.py:14 speakers/models.py:16 tedx/models.py:15
+#: tedx/models.py:35
 msgid "Language"
 msgstr "Jazyk"
 
@@ -54,11 +55,11 @@ msgstr ""
 
 #: events/models.py:28 events/models.py:52
 msgid "Theme"
-msgstr ""
+msgstr "Tema"
 
 #: events/models.py:29
 msgid "Themes"
-msgstr ""
+msgstr "Temy"
 
 #: events/models.py:36 tedx/models.py:24
 msgid "event_start"
@@ -136,6 +137,12 @@ msgstr ""
 #: mobile_settings/models.py:13
 msgid "name"
 msgstr ""
+
+#: mobile_settings/models.py:17
+#, fuzzy
+#| msgid "Language"
+msgid "Languages"
+msgstr "Jazyky"
 
 #: news/models.py:23 news/models.py:40
 msgid "Type"
@@ -222,11 +229,11 @@ msgstr ""
 msgid "About app"
 msgstr ""
 
-#: tedxostrava/settings.py:140
+#: tedxostrava/settings.py:141
 msgid "Czech"
 msgstr ""
 
-#: tedxostrava/settings.py:141
+#: tedxostrava/settings.py:142
 msgid "English"
 msgstr ""
 
