@@ -10,6 +10,7 @@
 {% block breadcrumbs %}{% endblock %}
 
 {% block content %}
+{% if request.path == '../cs/admin/' %}
 <div class="banner hidden-sm hidden-xs">
 <img class="img-responsive" src="https://trello-attachments.s3.amazonaws.com/54b8ff42b5f46a60ad33f838/1920x450/85f4cedcc9a93109adcdf2e2bd26e12d/banner.png" />
 <a href="https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide" target="new"><button class="read-more">Read more</button></a>
@@ -57,7 +58,8 @@
     </div>
 </div>
 <div id="user_gruop"></div>
-
+{% else %}
+nic
 {% endblock %}
 
 </div>

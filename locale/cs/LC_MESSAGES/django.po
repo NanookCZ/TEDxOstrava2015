@@ -51,64 +51,64 @@ msgstr "Datum úpravy"
 #: partners/models.py:18 speakers/models.py:21 tedx/models.py:21
 #: tedx/models.py:41
 msgid "active"
-msgstr ""
+msgstr "Aktivní"
 
 #: events/models.py:28 events/models.py:52
 #, fuzzy
 #| msgid "theme"
 msgid "Theme"
-msgstr "Tema"
+msgstr "Téma"
 
 #: events/models.py:29
 #, fuzzy
 #| msgid "themes"
 msgid "Themes"
-msgstr "Temy"
+msgstr "Témy"
 
 #: events/models.py:36 tedx/models.py:24
 msgid "event_start"
-msgstr ""
+msgstr "Začatí akce"
 
 #: events/models.py:37
 msgid "event_end"
-msgstr ""
+msgstr "Konec akce"
 
 #: events/models.py:38
 msgid "event_start_time"
-msgstr ""
+msgstr "Čas začatí akce"
 
 #: events/models.py:39
 msgid "event_end_time"
-msgstr ""
+msgstr "Čas konce akce"
 
 #: events/models.py:40 news/models.py:32 speakers/models.py:32
 #: venv/lib/python2.7/site-packages/suit/templates/admin/object_history.html:28
 msgid "User"
-msgstr ""
+msgstr "Uživatel"
 
 #: events/models.py:42
 msgid "about_ted"
-msgstr ""
+msgstr "O TEDxe"
 
 #: events/models.py:43
 msgid "street_address"
-msgstr ""
+msgstr "Ulica"
 
 #: events/models.py:44
 msgid "street_number"
-msgstr ""
+msgstr "Číslo ulice"
 
 #: events/models.py:45
 msgid "city"
-msgstr ""
+msgstr "Město"
 
 #: events/models.py:46
 msgid "state"
-msgstr ""
+msgstr "Štát"
 
 #: events/models.py:47
 msgid "zip_code"
-msgstr ""
+msgstr "PSČ"
 
 #: events/models.py:54 news/models.py:31 speakers/models.py:38
 msgid "Speaker"
@@ -120,7 +120,7 @@ msgstr "Partner"
 
 #: events/models.py:58 speakers/models.py:27
 msgid "share_message"
-msgstr ""
+msgstr "Zdílení"
 
 #: events/models.py:65
 msgid "Event"
@@ -136,79 +136,79 @@ msgstr "Mobilní nastavění"
 
 #: mobile_settings/models.py:12
 msgid "code"
-msgstr ""
+msgstr "Kód"
 
 #: mobile_settings/models.py:13
 msgid "name"
-msgstr ""
+msgstr "Jméno"
 
 #: news/models.py:23 news/models.py:40
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 #: news/models.py:24
 msgid "Types"
-msgstr ""
+msgstr "Typy"
 
 #: news/models.py:35
 msgid "publication_date"
-msgstr ""
+msgstr "Datum publikace"
 
 #: news/models.py:37
 msgid "is_published"
-msgstr ""
+msgstr "Je publikován"
 
 #: news/models.py:39
 msgid "main_news"
-msgstr ""
+msgstr "Hlavní novinka"
 
 #: news/models.py:46 news/models.py:47
 msgid "News"
-msgstr ""
+msgstr "Novinky"
 
 #: partners/models.py:20
 msgid "partner_website"
-msgstr ""
+msgstr "Webstránka partnera"
 
 #: partners/models.py:27
 msgid "Partners"
-msgstr ""
+msgstr "Partneri"
 
 #: speakers/models.py:17
 msgid "first_name"
-msgstr ""
+msgstr "Krestní jméno"
 
 #: speakers/models.py:18
 msgid "last_name"
-msgstr ""
+msgstr "Příjmení"
 
 #: speakers/models.py:22
 msgid "published"
-msgstr ""
+msgstr "Publikován"
 
 #: speakers/models.py:23
 msgid "interests"
-msgstr ""
+msgstr "Zájmy"
 
 #: speakers/models.py:24
 msgid "talk_name"
-msgstr ""
+msgstr "Název přednášky"
 
 #: speakers/models.py:28
 msgid "position"
-msgstr ""
+msgstr "Pozice"
 
 #: speakers/models.py:30
 msgid "speaker_city"
-msgstr ""
+msgstr "Město řečníka"
 
 #: speakers/models.py:31
 msgid "speaker_country"
-msgstr ""
+msgstr "Krajina řečníka"
 
 #: speakers/models.py:39
 msgid "Speakers"
-msgstr ""
+msgstr "Řečníci"
 
 #: static/templates/admin/base_site.html:3
 #: venv/lib/python2.7/site-packages/suit/templates/admin/base_site.html:5
@@ -217,7 +217,7 @@ msgstr ""
 
 #: tedx/models.py:18 tedx/models.py:38
 msgid "website"
-msgstr ""
+msgstr "webová stránka"
 
 #: tedx/models.py:30 tedx/models.py:31
 msgid "TEDx"
@@ -225,24 +225,24 @@ msgstr ""
 
 #: tedx/models.py:48 tedx/models.py:49
 msgid "About app"
-msgstr ""
+msgstr "O aplikaci"
 
 #: tedxostrava/settings.py:140
 msgid "Czech"
-msgstr ""
+msgstr "Český"
 
 #: tedxostrava/settings.py:141
 msgid "English"
-msgstr ""
+msgstr "Anglicky"
 
 #: venv/lib/python2.7/site-packages/cloudinary/forms.py:45
 #: venv/lib/python2.7/site-packages/cloudinary/forms.py:97
 msgid "No file selected!"
-msgstr ""
+msgstr "Nevybrán žádny soubor"
 
 #: venv/lib/python2.7/site-packages/django/contrib/messages/apps.py:7
 msgid "Messages"
-msgstr ""
+msgstr "Zpráva"
 
 #: venv/lib/python2.7/site-packages/django/contrib/sitemaps/apps.py:7
 msgid "Site Maps"
@@ -262,20 +262,20 @@ msgstr ""
 
 #: venv/lib/python2.7/site-packages/django/core/validators.py:20
 msgid "Enter a valid value."
-msgstr ""
+msgstr "Zadejte správnou hodnotu"
 
 #: venv/lib/python2.7/site-packages/django/core/validators.py:87
 #: venv/lib/python2.7/site-packages/django/forms/fields.py:712
 msgid "Enter a valid URL."
-msgstr ""
+msgstr "Zadejte správnou URL"
 
 #: venv/lib/python2.7/site-packages/django/core/validators.py:130
 msgid "Enter a valid integer."
-msgstr ""
+msgstr "Zadejte správne číslo"
 
 #: venv/lib/python2.7/site-packages/django/core/validators.py:141
 msgid "Enter a valid email address."
-msgstr ""
+msgstr "Zadejte správnou emailovu adresu"
 
 #: venv/lib/python2.7/site-packages/django/core/validators.py:215
 msgid ""
@@ -356,11 +356,11 @@ msgstr ""
 
 #: venv/lib/python2.7/site-packages/django/db/models/fields/__init__.py:108
 msgid "This field cannot be null."
-msgstr ""
+msgstr "Toto pole nemôže byť nulové."
 
 #: venv/lib/python2.7/site-packages/django/db/models/fields/__init__.py:109
 msgid "This field cannot be blank."
-msgstr ""
+msgstr "Toto pole nemôže byť prázdné."
 
 #: venv/lib/python2.7/site-packages/django/db/models/fields/__init__.py:110
 #, python-format
@@ -723,7 +723,7 @@ msgstr[1] ""
 #: venv/lib/python2.7/site-packages/django/forms/formsets.py:368
 #: venv/lib/python2.7/site-packages/django/forms/formsets.py:370
 msgid "Order"
-msgstr ""
+msgstr "Zoradit"
 
 #: venv/lib/python2.7/site-packages/django/forms/formsets.py:372
 #: venv/lib/python2.7/site-packages/suit/templates/admin/delete_confirmation.html:12
@@ -731,7 +731,7 @@ msgstr ""
 #: venv/lib/python2.7/site-packages/suit/templates/admin/filer/folder/directory_table.html:42
 #: venv/lib/python2.7/site-packages/suit/templates/admin/submit_line.html:10
 msgid "Delete"
-msgstr ""
+msgstr "Vymazat"
 
 #: venv/lib/python2.7/site-packages/django/forms/models.py:716
 #, python-format
@@ -783,23 +783,23 @@ msgstr ""
 #: venv/lib/python2.7/site-packages/suit/templates/admin/filer/folder/directory_table.html:43
 #: venv/lib/python2.7/site-packages/suit/templates/admin/index.html:23
 msgid "Change"
-msgstr ""
+msgstr "Změnit"
 
 #: venv/lib/python2.7/site-packages/django/forms/widgets.py:347
 msgid "Clear"
-msgstr ""
+msgstr "Vyčistiť"
 
 #: venv/lib/python2.7/site-packages/django/forms/widgets.py:555
 msgid "Unknown"
-msgstr ""
+msgstr "Neznámý"
 
 #: venv/lib/python2.7/site-packages/django/forms/widgets.py:556
 msgid "Yes"
-msgstr ""
+msgstr "Ano"
 
 #: venv/lib/python2.7/site-packages/django/forms/widgets.py:557
 msgid "No"
-msgstr ""
+msgstr "Ne"
 
 #: venv/lib/python2.7/site-packages/django/template/defaultfilters.py:865
 msgid "yes,no,maybe"
@@ -864,7 +864,7 @@ msgstr ""
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:6
 msgid "Monday"
-msgstr ""
+msgstr "Pondelí"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:6
 msgid "Tuesday"
@@ -1520,24 +1520,24 @@ msgstr ""
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/base.html:55
 msgid "Welcome,"
-msgstr ""
+msgstr "Vítejte,"
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/base.html:60
 msgid "View site"
-msgstr ""
+msgstr "Navštíviť stránku"
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/base.html:64
 msgid "Documentation"
-msgstr ""
+msgstr "Dokumentace"
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/base.html:67
 msgid "Change password"
-msgstr ""
+msgstr "Změniť heslo"
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/base.html:70
 #: venv/lib/python2.7/site-packages/suit/templates/admin/base.html:75
 msgid "Log out"
-msgstr ""
+msgstr "Odhlásit se"
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/base.html:112
 #: venv/lib/python2.7/site-packages/suit/templates/admin/change_form.html:51
@@ -1547,7 +1547,7 @@ msgstr ""
 #: venv/lib/python2.7/site-packages/suit/templates/admin/object_history.html:7
 #: venv/lib/python2.7/site-packages/suit/templates/suit/menu.html:10
 msgid "Home"
-msgstr ""
+msgstr "Domú"
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/base_site.html:9
 msgid "Django administration"
@@ -1555,17 +1555,17 @@ msgstr ""
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/change_form.html:22
 msgid "You have unsaved changes"
-msgstr ""
+msgstr "Máte neuložené změny"
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/change_form.html:57
 #: venv/lib/python2.7/site-packages/suit/templates/admin/index.html:29
 msgid "Add"
-msgstr ""
+msgstr "Přidať"
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/change_form.html:68
 #: venv/lib/python2.7/site-packages/suit/templates/admin/object_history.html:15
 msgid "History"
-msgstr ""
+msgstr "Historie"
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/change_form.html:70
 #: venv/lib/python2.7/site-packages/suit/templates/admin/edit_inline/stacked.html:15
@@ -1577,7 +1577,7 @@ msgstr ""
 #: venv/lib/python2.7/site-packages/suit/templates/admin/change_list.html:54
 #: venv/lib/python2.7/site-packages/suit/templates/admin/login.html:23
 msgid "Please correct the error below."
-msgstr ""
+msgstr "Prosím, upravte chyby."
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/change_form.html:115
 #: venv/lib/python2.7/site-packages/suit/templates/admin/change_list.html:54
