@@ -143,9 +143,11 @@ msgstr "Kód"
 msgid "name"
 msgstr "Jméno"
 
+
+
+
+
 #: mobile_settings/models.py:17
-#, fuzzy
-#| msgid "Language"
 msgid "Languages"
 msgstr "Jazyky"
 
