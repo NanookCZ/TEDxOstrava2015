@@ -15,27 +15,27 @@ def tedx_api_home_czech(request):
 	data = {
 		"events" : {
 			"count" : Event.objects.all().count(),
-			"url" : '/' + api_reverse("event_list_api"),
+			"url" : DOMAIN_NAME + api_reverse("event_list_api"),
 			},
 		"themes" : {
 			"count" : Theme.objects.all().count(),
-			"url" : '/'+ api_reverse("theme_list_api")
+			"url" : DOMAIN_NAME + api_reverse("theme_list_api")
 			},
 		"speakers" : {
 			"count" : Speaker.objects.all().count(),
-			"url" : '/' + api_reverse("speaker_list_api")
+			"url" : DOMAIN_NAME + api_reverse("speaker_list_api")
 			},
 		"news" : {
 			"count" : News.objects.all().count(),
-			"url" : '/' + api_reverse("news_list_api")
+			"url" : DOMAIN_NAME + api_reverse("news_list_api")
 			},
 		"types" : {
 			"count" : Type.objects.all().count(),
-			"url" : '/' + api_reverse("type_list_api")
+			"url" : DOMAIN_NAME + api_reverse("type_list_api")
 			},
 		"partners" : {
 			"count" : Partner.objects.all().count(),
-			"url" : '/' + api_reverse("partner_list_api")
+			"url" : DOMAIN_NAME + api_reverse("partner_list_api")
 			},
 		"tedx" : {
 			"count" : TEDx.objects.all().count(),
@@ -43,11 +43,11 @@ def tedx_api_home_czech(request):
 			},
 		"about" : {
 			"count" : AboutApp.objects.all().count(),
-			"url" : '../' + api_reverse("about_list_api")
+			"url" : DOMAIN_NAME + api_reverse("about_list_api")
 			},
 		"menu" : {
 			"count" : Menu.objects.all().count(),
-			"url" : '../' + api_reverse("menu_list_api")
+			"url" : DOMAIN_NAME + api_reverse("menu_list_api")
 		},
 
 
