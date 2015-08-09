@@ -8,10 +8,8 @@ from partners.models import Partner
 from tedx.models import TEDx, AboutApp
 from mobile_settings.models import Menu
 from django.contrib.sites.models import Site
-current_site = Site.objects.get_current()
 
-DOMAIN_NAME = current_site.domain
-
+DOMAIN_NAME = 'https://demoevent.herokuapp.com'
 @api_view(["GET"])
 def tedx_api_home_czech(request):
 	data = {
