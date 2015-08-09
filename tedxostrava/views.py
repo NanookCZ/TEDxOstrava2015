@@ -56,7 +56,7 @@ def tedx_api_home_czech(request):
 
 	return RestResponse(data)
 
-
+DOMAIN_NAME = 'https://demoevent.herokuapp.com'
 @api_view(["GET"])
 def tedx_api_home_english(request):
 	data = {
