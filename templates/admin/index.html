@@ -13,6 +13,54 @@
 {% if request.path == '/cs/admin/' %}
 <div class="banner hidden-sm hidden-xs">
 <img class="img-responsive" src="https://trello-attachments.s3.amazonaws.com/54b8ff42b5f46a60ad33f838/1920x450/85f4cedcc9a93109adcdf2e2bd26e12d/banner.png" />
+<a href="https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide" target="new"><button class="read-more">Čtěte více</button></a>
+</div>
+
+
+<h4 class="welcome">Vítejte, {{request.user.first_name }} {{ request.user.last_name }}!</h4>
+
+<div class="row">
+    <div class="col-md-3 col-sm-6">
+        <div class="tile-stats tile-white stat-tile">
+            <a href="../admin/speakers/speaker/"><h3>Publikování řečníků</h3></a>
+            <p>Každý týden nový řečník</p>
+            <span class="daily-visitors">
+                <img class="img-responsive text-right tedx-icon" src="https://trello-attachments.s3.amazonaws.com/54b8ff42b5f46a60ad33f838/100x100/30d01fbdc58cc66ee45d535ec9dbe4d7/speaker.png">
+            </span>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <div class="tile-stats tile-white stat-tile">
+            <a href="../admin/partners/partner/"><h3>Nové partnery</h3></a>
+            <p>Přidejte partnery</p>
+            <span class="daily-visitors">
+                <img class="img-responsive text-right tedx-icon" src="https://trello-attachments.s3.amazonaws.com/54b8ff42b5f46a60ad33f838/100x100/1d9d4adccbfcc93684f16f3910ea3468/partner.png">
+            </span>
+        </div>
+    </div> 
+    <div class="col-md-3 col-sm-6">
+        <div class="tile-stats tile-white stat-tile">
+            <a href="../admin/news/news/"><h3>Publikujte novinky do aplikace</h3></a>
+            <p>Novinky přímo v mobilu</p>
+            <span class="daily-visitors">
+                <img class="img-responsive text-right tedx-icon" src="https://trello-attachments.s3.amazonaws.com/54b8ff42b5f46a60ad33f838/100x100/03d99604b32a15454ac525f9796cf630/news.png">
+            </span>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <div class="tile-stats tile-white stat-tile gray">
+            <h3 class="gray">Řízení účastníků</h3>
+            <p class="gray">Spravujte své hosty</p>
+            <span class="daily-visitors">
+                <img class="img-responsive text-right tedx-icon" src="https://trello-attachments.s3.amazonaws.com/54b8ff42b5f46a60ad33f838/100x100/fa4525a882dc551b710ba57832766a68/participants.png">
+            </span>
+        </div>
+    </div>
+</div>
+<div id="user_gruop"></div>
+{% else %}
+<div class="banner hidden-sm hidden-xs">
+<img class="img-responsive" src="https://trello-attachments.s3.amazonaws.com/54b8ff42b5f46a60ad33f838/1920x450/85f4cedcc9a93109adcdf2e2bd26e12d/banner.png" />
 <a href="https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide" target="new"><button class="read-more">Read more</button></a>
 </div>
 
@@ -58,8 +106,6 @@
     </div>
 </div>
 <div id="user_gruop"></div>
-{% else %}
-nic
 {% endif %}
 {% endblock %}
 
