@@ -7,6 +7,7 @@ from news.models import News, Type
 from partners.models import Partner
 from tedx.models import TEDx, AboutApp
 from mobile_settings.models import Menu
+from django.http import HttpResponse
 
 print(request.META['HTTP_HOST'])
 
