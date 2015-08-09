@@ -55,14 +55,10 @@ msgid "active"
 msgstr "Aktivní"
 
 #: events/models.py:28 events/models.py:52
-#, fuzzy
-#| msgid "theme"
 msgid "Theme"
 msgstr "Téma"
 
 #: events/models.py:29
-#, fuzzy
-#| msgid "themes"
 msgid "Themes"
 msgstr "Témy"
 
