@@ -138,11 +138,11 @@ WSGI_APPLICATION = 'tedxostrava.wsgi.application'
 from django.utils.translation import ugettext
 ugettext = lambda s: s
 LANGUAGES = (
-    ('cs', ugettext('Czech')),
     ('en', ugettext('English')),
+    ('cs', ugettext('Czech')),
 )
 
-DEFAULT_LANGUAGE = 2
+
 
 LANGUAGE_CODE = 'en-us'
 
