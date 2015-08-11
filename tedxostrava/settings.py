@@ -142,6 +142,8 @@ LANGUAGES = (
     ('en', ugettext('English')),
 )
 
+DEFAULT_LANGUAGE = 2
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
