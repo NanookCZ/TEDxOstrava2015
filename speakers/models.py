@@ -11,6 +11,7 @@ from django.utils.translation import ugettext_lazy as _
 from mobile_settings.models import Language
 
 
+
 SHARE_MESSAGE = u'Share...'
 class Speaker(models.Model):
 	language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"))
