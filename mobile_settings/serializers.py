@@ -1,4 +1,4 @@
-from .models import Menu
+from .models import Menu, MobileText
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework import routers, serializers, viewsets, permissions
 from rest_framework.reverse import reverse
@@ -14,3 +14,4 @@ class MenuSerializer(serializers.HyperlinkedModelSerializer):
 			'active',
 
 		]
+

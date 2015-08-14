@@ -58,4 +58,5 @@ class EventSerializer(serializers.HyperlinkedModelSerializer):
 			'active',
 			'hosted_by',
 			'partners',
+			'share_message',
 		]

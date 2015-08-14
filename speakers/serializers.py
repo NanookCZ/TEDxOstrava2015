@@ -28,6 +28,7 @@ class SpeakerSerializer(serializers.HyperlinkedModelSerializer):
 			'speaker_photo',
 			'speaker_city',
 			'speaker_country',
+			'share_message',
 			
 
 		]
