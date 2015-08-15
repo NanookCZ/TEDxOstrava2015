@@ -22,7 +22,7 @@ class NewsSerializer(serializers.HyperlinkedModelSerializer):
 	url = NewsUrlHyperlinkedIdentityField(view_name = 'news_detail_api')
 	speaker = SpeakerSerializer(many = False, read_only = True)
 	news_type = TypeSerializer(many = False, read_only = True)
-	title = serializers.CharField(source = 'news_type.title', read_only = True)
+	news_title = serializers.CharField(source = 'news_type.title', read_only = True)
 	icon = serializers.CharField(source = 'news_type.icon', read_only = True)
 	class Meta:
 		model = News
@@ -38,7 +38,7 @@ class NewsSerializer(serializers.HyperlinkedModelSerializer):
 			'is_published',
 			'news_image',
 			'news_type',
-			'title',
+			'news_title',
 			'icon',
 
 
