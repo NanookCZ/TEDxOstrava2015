@@ -60,11 +60,11 @@ msgstr "Téma"
 
 #: events/models.py:29
 msgid "Themes"
-msgstr "Témy"
+msgstr "Témata"
 
 #: events/models.py:36 tedx/models.py:24
 msgid "event_start"
-msgstr "Začatí akce"
+msgstr "Začátek akce"
 
 #: events/models.py:37
 msgid "event_end"
@@ -72,11 +72,11 @@ msgstr "Konec akce"
 
 #: events/models.py:38
 msgid "event_start_time"
-msgstr "Čas začatí akce"
+msgstr "Čas začátku akce"
 
 #: events/models.py:39
 msgid "event_end_time"
-msgstr "Čas konce akce"
+msgstr "Čas ukončení akce"
 
 #: events/models.py:40 news/models.py:32 speakers/models.py:32
 #: venv/lib/python2.7/site-packages/suit/templates/admin/object_history.html:28
@@ -85,15 +85,15 @@ msgstr "Uživatel"
 
 #: events/models.py:42
 msgid "about_ted"
-msgstr "O TEDxe"
+msgstr "O TEDxu"
 
 #: events/models.py:43
 msgid "street_address"
-msgstr "Ulica"
+msgstr "Ulice"
 
 #: events/models.py:44
 msgid "street_number"
-msgstr "Číslo ulice"
+msgstr "Číslo popisné"
 
 #: events/models.py:45
 msgid "city"
@@ -101,7 +101,7 @@ msgstr "Město"
 
 #: events/models.py:46
 msgid "state"
-msgstr "Štát"
+msgstr "Stát"
 
 #: events/models.py:47
 msgid "zip_code"
@@ -117,7 +117,7 @@ msgstr "Partner"
 
 #: events/models.py:58 speakers/models.py:27
 msgid "share_message"
-msgstr "Zdílení"
+msgstr "Sdílení"
 
 #: events/models.py:65
 msgid "Event"
@@ -125,11 +125,11 @@ msgstr "Akce"
 
 #: events/models.py:66
 msgid "Events"
-msgstr "Akcie"
+msgstr "Akce"
 
 #: mobile_settings/apps.py:6
 msgid "Mobile settings"
-msgstr "Mobilní nastavění"
+msgstr "Mobilní nastavení"
 
 #: mobile_settings/models.py:12
 msgid "code"
@@ -157,11 +157,11 @@ msgstr "Typy"
 
 #: news/models.py:35
 msgid "publication_date"
-msgstr "Datum publikace"
+msgstr "Datum zveřejění"
 
 #: news/models.py:37
 msgid "is_published"
-msgstr "Je publikován"
+msgstr "Publikováno"
 
 #: news/models.py:39
 msgid "main_news"
@@ -173,15 +173,15 @@ msgstr "Novinky"
 
 #: partners/models.py:20
 msgid "partner_website"
-msgstr "Webstránka partnera"
+msgstr "Webová stránka partnera"
 
 #: partners/models.py:27
 msgid "Partners"
-msgstr "Partneri"
+msgstr "Partneři"
 
 #: speakers/models.py:17
 msgid "first_name"
-msgstr "Krestní jméno"
+msgstr "Jméno"
 
 #: speakers/models.py:18
 msgid "last_name"
@@ -189,7 +189,7 @@ msgstr "Příjmení"
 
 #: speakers/models.py:22
 msgid "published"
-msgstr "Publikován"
+msgstr "Publikováno" 
 
 #: speakers/models.py:23
 msgid "interests"
@@ -209,7 +209,7 @@ msgstr "Město řečníka"
 
 #: speakers/models.py:31
 msgid "speaker_country"
-msgstr "Krajina řečníka"
+msgstr "Kraj řečníka"
 
 #: speakers/models.py:39
 msgid "Speakers"
@@ -222,7 +222,7 @@ msgstr ""
 
 #: tedx/models.py:18 tedx/models.py:38
 msgid "website"
-msgstr "webová stránka"
+msgstr "Webová stránka"
 
 #: tedx/models.py:30 tedx/models.py:31
 msgid "TEDx"
@@ -234,7 +234,7 @@ msgstr "O aplikaci"
 
 #: tedxostrava/settings.py:141
 msgid "Czech"
-msgstr "Český"
+msgstr "Česky"
 
 #: tedxostrava/settings.py:142
 msgid "English"
@@ -276,11 +276,11 @@ msgstr "Zadejte správnou URL"
 
 #: venv/lib/python2.7/site-packages/django/core/validators.py:130
 msgid "Enter a valid integer."
-msgstr "Zadejte správne číslo"
+msgstr "Zadejte správné číslo"
 
 #: venv/lib/python2.7/site-packages/django/core/validators.py:141
 msgid "Enter a valid email address."
-msgstr "Zadejte správnou emailovu adresu"
+msgstr "Zadejte správnou e-mailovu adresu"
 
 #: venv/lib/python2.7/site-packages/django/core/validators.py:215
 msgid ""
@@ -361,11 +361,11 @@ msgstr ""
 
 #: venv/lib/python2.7/site-packages/django/db/models/fields/__init__.py:108
 msgid "This field cannot be null."
-msgstr "Toto pole nemôže byť nulové."
+msgstr "Toto pole nemůže být prázdné."
 
 #: venv/lib/python2.7/site-packages/django/db/models/fields/__init__.py:109
 msgid "This field cannot be blank."
-msgstr "Toto pole nemôže byť prázdné."
+msgstr "Toto pole nemôže být prázdné."
 
 #: venv/lib/python2.7/site-packages/django/db/models/fields/__init__.py:110
 #, python-format
@@ -728,7 +728,7 @@ msgstr[1] ""
 #: venv/lib/python2.7/site-packages/django/forms/formsets.py:368
 #: venv/lib/python2.7/site-packages/django/forms/formsets.py:370
 msgid "Order"
-msgstr "Zoradit"
+msgstr "Seřadit"
 
 #: venv/lib/python2.7/site-packages/django/forms/formsets.py:372
 #: venv/lib/python2.7/site-packages/suit/templates/admin/delete_confirmation.html:12
@@ -792,7 +792,7 @@ msgstr "Změnit"
 
 #: venv/lib/python2.7/site-packages/django/forms/widgets.py:347
 msgid "Clear"
-msgstr "Vyčistiť"
+msgstr "Vyčistit"
 
 #: venv/lib/python2.7/site-packages/django/forms/widgets.py:555
 msgid "Unknown"
@@ -869,155 +869,109 @@ msgstr ""
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:6
 msgid "Monday"
-msgstr "Pondelí"
+msgstr "Pondělí"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:6
 msgid "Tuesday"
-msgstr ""
+msgstr "Úterý"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:6
 msgid "Wednesday"
-msgstr ""
+msgstr "Středa"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:6
 msgid "Thursday"
-msgstr ""
+msgstr "Čtvrtek"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:6
 msgid "Friday"
-msgstr ""
+msgstr "Pátek"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:7
 msgid "Saturday"
-msgstr ""
+msgstr "Sobota"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:7
 msgid "Sunday"
-msgstr ""
+msgstr "Neděle"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:10
 msgid "Mon"
-msgstr ""
+msgstr "Po"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:10
 msgid "Tue"
-msgstr ""
+msgstr "Út"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:10
 msgid "Wed"
-msgstr ""
+msgstr "St"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:10
 msgid "Thu"
-msgstr ""
+msgstr "Čt"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:10
 msgid "Fri"
-msgstr ""
+msgstr "Pá"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:11
 msgid "Sat"
-msgstr ""
+msgstr "So"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:11
 msgid "Sun"
-msgstr ""
+msgstr "Ne"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:18
 msgid "January"
-msgstr ""
+msgstr "Leden"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:18
 msgid "February"
-msgstr ""
+msgstr "Únor"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:18
 msgid "March"
-msgstr ""
+msgstr "Březen"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:18
 msgid "April"
-msgstr ""
+msgstr "Duben"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:18
 msgid "May"
-msgstr ""
+msgstr "Květen"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:18
 msgid "June"
-msgstr ""
+msgstr "Červen"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:19
 msgid "July"
-msgstr ""
+msgstr "Červenec"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:19
 msgid "August"
-msgstr ""
+msgstr "Srpen"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:19
 msgid "September"
-msgstr ""
+msgstr "Září"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:19
 msgid "October"
-msgstr ""
+msgstr "Říjen"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:19
 msgid "November"
-msgstr ""
+msgstr "Listopad"
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:20
 msgid "December"
-msgstr ""
+msgstr "Prosinec"
 
-#: venv/lib/python2.7/site-packages/django/utils/dates.py:23
-msgid "jan"
-msgstr ""
 
-#: venv/lib/python2.7/site-packages/django/utils/dates.py:23
-msgid "feb"
-msgstr ""
-
-#: venv/lib/python2.7/site-packages/django/utils/dates.py:23
-msgid "mar"
-msgstr ""
-
-#: venv/lib/python2.7/site-packages/django/utils/dates.py:23
-msgid "apr"
-msgstr ""
-
-#: venv/lib/python2.7/site-packages/django/utils/dates.py:23
-msgid "may"
-msgstr ""
-
-#: venv/lib/python2.7/site-packages/django/utils/dates.py:23
-msgid "jun"
-msgstr ""
-
-#: venv/lib/python2.7/site-packages/django/utils/dates.py:24
-msgid "jul"
-msgstr ""
-
-#: venv/lib/python2.7/site-packages/django/utils/dates.py:24
-msgid "aug"
-msgstr ""
-
-#: venv/lib/python2.7/site-packages/django/utils/dates.py:24
-msgid "sep"
-msgstr ""
-
-#: venv/lib/python2.7/site-packages/django/utils/dates.py:24
-msgid "oct"
-msgstr ""
-
-#: venv/lib/python2.7/site-packages/django/utils/dates.py:24
-msgid "nov"
-msgstr ""
-
-#: venv/lib/python2.7/site-packages/django/utils/dates.py:24
-msgid "dec"
-msgstr ""
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:31
 msgctxt "abbrev. month"
@@ -1529,7 +1483,7 @@ msgstr "Vítejte,"
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/base.html:60
 msgid "View site"
-msgstr "Navštíviť stránku"
+msgstr "Navštívit stránku"
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/base.html:64
 msgid "Documentation"
@@ -1537,7 +1491,7 @@ msgstr "Dokumentace"
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/base.html:67
 msgid "Change password"
-msgstr "Změniť heslo"
+msgstr "Změnit heslo"
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/base.html:70
 #: venv/lib/python2.7/site-packages/suit/templates/admin/base.html:75
@@ -1552,7 +1506,7 @@ msgstr "Odhlásit se"
 #: venv/lib/python2.7/site-packages/suit/templates/admin/object_history.html:7
 #: venv/lib/python2.7/site-packages/suit/templates/suit/menu.html:10
 msgid "Home"
-msgstr "Domú"
+msgstr "Domů"
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/base_site.html:9
 msgid "Django administration"
@@ -1565,7 +1519,7 @@ msgstr "Máte neuložené změny"
 #: venv/lib/python2.7/site-packages/suit/templates/admin/change_form.html:57
 #: venv/lib/python2.7/site-packages/suit/templates/admin/index.html:29
 msgid "Add"
-msgstr "Přidať"
+msgstr "Přidat"
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/change_form.html:68
 #: venv/lib/python2.7/site-packages/suit/templates/admin/object_history.html:15
