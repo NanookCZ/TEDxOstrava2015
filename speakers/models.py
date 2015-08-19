@@ -30,6 +30,7 @@ class Speaker(models.Model):
 	share_message = models.CharField(_('share_message'), max_length = 25, default = SHARE_MESSAGE)
 	position = models.CharField(_('position'), max_length = 50, blank = True, null = True)
 	speaker_photo = CloudinaryField('image', blank = True, null = True)
+	speaker_url = models.URLField(blank = True, null = True)
 	speaker_city = models.CharField(_('speaker_city'), max_length = 50, blank = True, null = True)
 	speaker_country = models.CharField(_('speaker_country'), max_length = 50, blank = True, null = True)
 	added_by = models.ForeignKey(User, verbose_name=_("User"), blank = True, null = True)
@@ -38,14 +39,9 @@ class Speaker(models.Model):
 		return "%s %s" %(self.first_name, self.last_name)
 
 	def save(self, *args, **kwargs):
-        if self.speaker_photo:
-            image = Img.open(StringIO.StringIO(self.speaker_photo.read()))
-            image.thumbnail((200,200), Img.ANTIALIAS)
-            output = StringIO.StringIO()
-            image.save(output, format='JPEG', quality=75)
-            output.seek(0)
-            self.speaker_photo= InMemoryUploadedFile(output,'ImageField', "%s.jpg" %self.speaker_photo.name, 'image/jpeg', output.len, None)
-        super(Speaker, self).save(*args, **kwargs)
+		if self.speaker_photo:
+			self.speaker_url = cloudinary.CloudinaryImage(self.speaker_photo).build_url(width = 100, height = 150, crop = 'fill')
+		super(Speaker, self).save(*args, **kwargs)
 
 	
 
