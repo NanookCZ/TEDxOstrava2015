@@ -35,6 +35,13 @@ class Speaker(models.Model):
 	def __unicode__(self):
 		return "%s %s" %(self.first_name, self.last_name)
 
+	def transform_image(self):
+		return cloudinary.CloudinaryImage(self.speaker_photo).image(
+        width = 90, height = 98, 
+        crop = 'fill', gravity = 'face',
+        radius = 'max')
+
+
 	class Meta:
 		verbose_name = _('Speaker')
 		verbose_name_plural = _('Speakers')
