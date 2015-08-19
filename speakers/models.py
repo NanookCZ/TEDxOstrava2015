@@ -36,15 +36,14 @@ class Speaker(models.Model):
 	def __unicode__(self):
 		return "%s %s" %(self.first_name, self.last_name)
 
-	def create_url(self):
-		url = ''
-		url1 = ''
-		if self.speaker_photo:
-			for i in str(self.speaker_photo)[0:12]:
-				url = i
-			for j in str(self.speaker_photo)[12:]:
-				url1 = j
-		get_url = url + '/test' + url1
+	def create_url(self, *args, **kwargs):
+		url = []
+		url1 = []
+		for i in self.speaker_photo[0:12]:
+			url.append(i)
+		for j in str(self.speaker_photo)[12:]:
+			url1.append(j)
+		get_url = url[0] + '/test' + url1[0]
 		return "%s" %(get_url)
 
 
