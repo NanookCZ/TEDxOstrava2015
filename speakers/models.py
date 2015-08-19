@@ -9,6 +9,7 @@ import cloudinary.api
 from cloudinary.models import CloudinaryField
 from django.utils.translation import ugettext_lazy as _
 from mobile_settings.models import Language
+from cloudinary.utils import cloudinary_url
 
 
 
@@ -37,7 +38,8 @@ class Speaker(models.Model):
 		return "%s %s" %(self.first_name, self.last_name)
 
 	def create_url(self, *args, **kwargs):
-		return "%s%s" %(self.speaker_photo, '/test')
+		return cloudinary.CloudinaryImage(self.speaker_photo).build_url(width = 100, height = 150, crop = 'fill')
+		#return "%s%s" %(self.speaker_photo, '/test')
 
 
 	
