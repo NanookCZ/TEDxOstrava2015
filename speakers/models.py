@@ -36,13 +36,10 @@ class Speaker(models.Model):
 		return "%s %s" %(self.first_name, self.last_name)
 
 	def transform_image(self):
-		new_image = cloudinary.CloudinaryImage(self.speaker_photo).image(
-        width = 90, height = 98, 
-        crop = 'fill', gravity = 'face',
-        radius = 'max')
-        self.speaker_photo = new_image
-        self.speaker_photo.save()
-        return self.speaker_photo
+		new_image = cloudinary.CloudinaryImage(self.speaker_photo).image( width = 90, height = 98, crop = 'fill', gravity = 'face', radius = 'max')
+		self.speaker_photo = new_image
+		self.speaker_photo.save()
+		return self.speaker_photo
 
 
 	class Meta:
