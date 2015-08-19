@@ -19,7 +19,6 @@ class SpeakerUrlHyperlinkedIdentityField(serializers.HyperlinkedIdentityField):
 
 class SpeakerSerializer(serializers.HyperlinkedModelSerializer):
 	url = SpeakerUrlHyperlinkedIdentityField(view_name = 'speaker_detail_api')
-	speaker_photo = serializers.URLField(source = 'test', read_only = True)
 	class Meta:
 		model = Speaker
 		fields = [

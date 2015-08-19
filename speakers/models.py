@@ -35,14 +35,12 @@ class Speaker(models.Model):
 	def __unicode__(self):
 		return "%s %s" %(self.first_name, self.last_name)
 
-	def transform_image(self):
+	def save(self, *args, **kwargs):
 		new_image = cloudinary.CloudinaryImage(self.speaker_photo).image( width = 90, height = 98, crop = 'fill', gravity = 'face', radius = 'max')
 		self.speaker_photo = new_image
-		self.speaker_photo.save()
-		return self.speaker_photo
+		super(Speaker, self).save(*args, **kwargs)
 
-	def test(self):
-		return str(cloudinary.CloudinaryImage(self.speaker_photo).build_url(width = 100, height = 150, crop = 'fill'))
+	
 
 	class Meta:
 		verbose_name = _('Speaker')
