@@ -41,6 +41,8 @@ class Speaker(models.Model):
 		self.speaker_photo.save()
 		return self.speaker_photo
 
+	def test(self):
+		return cloudinary.CloudinaryImage(self.speaker_photo).build_url(width = 100, height = 150, crop = 'fill')
 
 	class Meta:
 		verbose_name = _('Speaker')
