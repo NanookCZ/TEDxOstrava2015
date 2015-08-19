@@ -36,7 +36,7 @@ class Speaker(models.Model):
 		return "%s %s" %(self.first_name, self.last_name)
 
 	def save(self, *args, **kwargs):
-		new_image = cloudinary.CloudinaryImage(self.speaker_photo).image( width = 90, height = 98, crop = 'fill', gravity = 'face', radius = 'max')
+		new_image = cloudinary.CloudinaryImage(self.speaker_photo).build_url(width = 100, height = 150, crop = 'fill')
 		self.speaker_photo = new_image
 		super(Speaker, self).save(*args, **kwargs)
 
