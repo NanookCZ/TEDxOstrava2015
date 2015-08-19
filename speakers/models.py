@@ -38,8 +38,7 @@ class Speaker(models.Model):
 		return "%s %s" %(self.first_name, self.last_name)
 
 	def create_url(self, *args, **kwargs):
-		return "%s" %(cloudinary_url(self.speaker_photo, width = 100, height = 150, crop = "fill"))
-		#return "%s%s" %(self.speaker_photo, '/test')
+		return "%s%s%s" %('http://res.cloudinary.com/hydqixw1j/image/upload/', self.speaker_photo, '.png')
 
 
 	
