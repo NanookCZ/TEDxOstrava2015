@@ -37,14 +37,14 @@ class Speaker(models.Model):
 		return "%s %s" %(self.first_name, self.last_name)
 
 	def create_url(self):
-		url = []
+		url = ''
+		url1 = ''
 		if self.speaker_photo:
-			for i in self.speaker_photo[0:12]:
-				url.append(i)
-			url.append('/test')
-			for j in self.speaker_photo[12:]:
-				url.append(j)
-		get_url = url[0]
+			for i in str(self.speaker_photo)[0:12]:
+				url = i
+			for j in str(self.speaker_photo)[12:]:
+				url1 = j
+		get_url = url + '/test' + url1
 		return "%s" %s(get_url)
 
 
