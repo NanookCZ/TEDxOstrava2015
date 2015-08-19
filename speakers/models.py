@@ -37,7 +37,7 @@ class Speaker(models.Model):
 		return "%s %s" %(self.first_name, self.last_name)
 
 	def create_url(self, *args, **kwargs):
-		return self.speaker_photo + '/test'
+		return "%s%s" %(self.speaker_photo, '/test')
 
 
 	
