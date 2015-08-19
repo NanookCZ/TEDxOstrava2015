@@ -9,9 +9,7 @@ import cloudinary.api
 from cloudinary.models import CloudinaryField
 from django.utils.translation import ugettext_lazy as _
 from mobile_settings.models import Language
-from PIL import Image as Img
-import StringIO
-from django.core.files.uploadedfile import InMemoryUploadedFile
+
 
 
 SHARE_MESSAGE = u'Share...'
@@ -46,7 +44,8 @@ class Speaker(models.Model):
 			url.append('/test')
 			for j in self.speaker_photo[12:]:
 				url.append(j)
-			return url
+		get_url = url[0]
+		return "%s" %s(get_url)
 
 
 	
