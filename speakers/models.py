@@ -43,7 +43,7 @@ class Speaker(models.Model):
 		if self.speaker_photo:
 			for i in self.speaker_photo[0:12]:
 				url.append(i)
-			url.append(/test)
+			url.append('/test')
 			for j in self.speaker_photo[12:]:
 				url.append(j)
 			return url
