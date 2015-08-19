@@ -40,7 +40,7 @@ class Speaker(models.Model):
 
 	def save(self, *args, **kwargs):
 		if self.speaker_photo:
-			self.speaker_url = cloudinary.CloudinaryImage(self.speaker_photo).build_url(width = 100, height = 150, crop = 'fill')
+			self.speaker_url = str(cloudinary.CloudinaryImage(self.speaker_photo).build_url(width = 100, height = 150, crop = 'fill'))
 		super(Speaker, self).save(*args, **kwargs)
 
 	
