@@ -45,7 +45,7 @@ class Speaker(models.Model):
 			for j in str(self.speaker_photo)[12:]:
 				url1 = j
 		get_url = url + '/test' + url1
-		return "%s" %s(get_url)
+		return "%s" %(get_url)
 
 
 	
