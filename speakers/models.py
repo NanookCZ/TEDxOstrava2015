@@ -38,10 +38,16 @@ class Speaker(models.Model):
 	def __unicode__(self):
 		return "%s %s" %(self.first_name, self.last_name)
 
-	def save(self, *args, **kwargs):
+	def create_url(self):
+		url = []
 		if self.speaker_photo:
-			self.speaker_url = str(cloudinary.CloudinaryImage(self.speaker_photo).build_url(width = 100, height = 150, crop = 'fill'))
-		super(Speaker, self).save(*args, **kwargs)
+			for i in self.speaker_photo[0:12]:
+				url.append(i)
+			url.append(/test)
+			for j in self.speaker_photo[12:]:
+				url.append(j)
+			return url
+
 
 	
 

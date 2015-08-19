@@ -19,6 +19,7 @@ class SpeakerUrlHyperlinkedIdentityField(serializers.HyperlinkedIdentityField):
 
 class SpeakerSerializer(serializers.HyperlinkedModelSerializer):
 	url = SpeakerUrlHyperlinkedIdentityField(view_name = 'speaker_detail_api')
+	speaker_url = serializers.CharField(source='create_url')
 	class Meta:
 		model = Speaker
 		fields = [
@@ -36,6 +37,7 @@ class SpeakerSerializer(serializers.HyperlinkedModelSerializer):
 			'speaker_city',
 			'speaker_country',
 			'share_message',
+			'speaker_url',
 			
 
 		]
