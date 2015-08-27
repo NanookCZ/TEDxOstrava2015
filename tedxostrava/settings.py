@@ -51,7 +51,12 @@ INSTALLED_APPS = (
     'cloudinary',
     'mobile_settings',
     'rest_framework_swagger',
+    'django_crontab',
 )
+
+CRONJOBS = [
+    ('*/1 * * * *', 'tedxostrava.cron.my_scheduled_job')
+]
 
 USE_I18N = True
 

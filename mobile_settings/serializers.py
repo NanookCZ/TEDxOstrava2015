@@ -10,6 +10,7 @@ class MenuSerializer(serializers.HyperlinkedModelSerializer):
 		fields = [
 			'id',
 			'title',
+			'unique_key',
 			'icon',
 			'active',
 
