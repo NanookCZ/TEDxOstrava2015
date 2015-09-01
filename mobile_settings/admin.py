@@ -7,5 +7,6 @@ admin.site.register(Menu)
 
 class ImageAdmin(admin.ModelAdmin):
 	fields = ('image', 'active')
+	readonly_fields = ('image_tag',)
 
 admin.site.register(Image, ImageAdmin)
