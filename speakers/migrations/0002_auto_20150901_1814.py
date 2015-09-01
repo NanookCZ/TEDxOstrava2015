@@ -2,25 +2,24 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
-import cloudinary.models
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('speakers', '0004_remove_speaker_image'),
+        ('mobile_settings', '0002_auto_20150901_1814'),
+        ('speakers', '0001_initial'),
     ]
 
     operations = [
-        migrations.AddField(
+        migrations.RemoveField(
             model_name='speaker',
-            name='speaker_photo',
-            field=cloudinary.models.CloudinaryField(max_length=255, null=True, verbose_name='image', blank=True),
+            name='image',
         ),
         migrations.AddField(
             model_name='speaker',
-            name='speaker_url',
-            field=models.URLField(null=True, blank=True),
+            name='speaker_photo',
+            field=models.ForeignKey(blank=True, to='mobile_settings.Image', null=True),
         ),
         migrations.AlterField(
             model_name='speaker',

@@ -8,7 +8,7 @@ from django.conf import settings
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('events', '0003_auto_20150802_0714'),
+        ('events', '0001_initial'),
     ]
 
     operations = [
@@ -75,7 +75,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='event',
             name='share_message',
-            field=models.CharField(default='TEDxOstrava - Check our news', max_length=50, verbose_name='share_message'),
+            field=models.CharField(default='Share...', max_length=50, verbose_name='share_message'),
         ),
         migrations.AlterField(
             model_name='event',
@@ -116,6 +116,11 @@ class Migration(migrations.Migration):
             model_name='theme',
             name='active',
             field=models.BooleanField(default=True, verbose_name='active'),
+        ),
+        migrations.AlterField(
+            model_name='theme',
+            name='banner',
+            field=models.ForeignKey(blank=True, to='mobile_settings.Image', null=True),
         ),
         migrations.AlterField(
             model_name='theme',

@@ -8,13 +8,17 @@ import cloudinary.models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('partners', '0003_auto_20150802_0714'),
+        ('partners', '0001_initial'),
     ]
 
     operations = [
         migrations.RemoveField(
             model_name='partner',
             name='image',
+        ),
+        migrations.RemoveField(
+            model_name='partner',
+            name='language',
         ),
         migrations.AddField(
             model_name='partner',

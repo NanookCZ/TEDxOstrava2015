@@ -8,7 +8,7 @@ import cloudinary.models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('tedx', '0003_auto_20150802_0714'),
+        ('tedx', '0001_initial'),
     ]
 
     operations = [
@@ -18,7 +18,15 @@ class Migration(migrations.Migration):
         ),
         migrations.RemoveField(
             model_name='tedx',
+            name='description',
+        ),
+        migrations.RemoveField(
+            model_name='tedx',
             name='image',
+        ),
+        migrations.RemoveField(
+            model_name='tedx',
+            name='language',
         ),
         migrations.AddField(
             model_name='aboutapp',

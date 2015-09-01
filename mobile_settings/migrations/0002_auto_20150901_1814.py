@@ -8,7 +8,7 @@ import cloudinary.models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('mobile_settings', '0004_menu_unique_key'),
+        ('mobile_settings', '0001_initial'),
     ]
 
     operations = [
@@ -33,6 +33,16 @@ class Migration(migrations.Migration):
             model_name='menu',
             name='title_en',
             field=models.CharField(max_length=55, null=True, verbose_name='title_en', blank=True),
+        ),
+        migrations.AddField(
+            model_name='menu',
+            name='unique_key',
+            field=models.SlugField(unique=True, null=True, blank=True),
+        ),
+        migrations.AlterField(
+            model_name='language',
+            name='name',
+            field=models.CharField(default='English', max_length=50, verbose_name='name'),
         ),
         migrations.AlterField(
             model_name='menu',
