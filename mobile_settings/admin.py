@@ -4,4 +4,6 @@ from .models import Menu, Language, Image
 admin.site.register(Language)
 # Register your models here.
 admin.site.register(Menu)
-admin.site.register(Image)
+
+class ImageAdmin(admin.ModelAdmin):
+	fields = ('image', 'active')

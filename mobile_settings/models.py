@@ -38,8 +38,12 @@ class Image(models.Model):
 	round_image = models.URLField(blank = True, null = True)
 	active = models.BooleanField(default = True)
 
+	def __unicode__(self):
+		return "%s" %(self.image)
+
 	def create_url(self, *args, **kwargs):
-		return "%s%s%s" %('image/upload/w_100,h_100,c_fill,g_face,r_max/', self.image, '.png')
+		if self.image:
+			return "%s%s%s" %('image/upload/w_100,h_100,c_fill,g_face,r_max/', self.image, '.png')
 
 	class Meta:
 		verbose_name = 'Image'
