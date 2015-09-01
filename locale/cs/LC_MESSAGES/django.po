@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-09 16:57+0200\n"
+"POT-Creation-Date: 2015-09-01 13:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,37 +19,36 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: events/models.py:16 events/models.py:34 mobile_settings/models.py:16
-#: mobile_settings/models.py:23 news/models.py:15 news/models.py:27
-#: partners/models.py:14 speakers/models.py:16 tedx/models.py:15
-#: tedx/models.py:35
+#: news/models.py:15 news/models.py:27 partners/models.py:14
+#: speakers/models.py:18 tedx/models.py:15 tedx/models.py:35
 msgid "Language"
 msgstr "Jazyk"
 
-#: events/models.py:17 events/models.py:35 mobile_settings/models.py:24
+#: events/models.py:17 events/models.py:35 mobile_settings/models.py:23
 #: news/models.py:16 news/models.py:28 partners/models.py:15 tedx/models.py:16
 #: tedx/models.py:36
 msgid "title"
 msgstr "Nadpis"
 
 #: events/models.py:18 events/models.py:41 news/models.py:29
-#: speakers/models.py:25 tedx/models.py:17 tedx/models.py:37
+#: speakers/models.py:27 tedx/models.py:17 tedx/models.py:37
 msgid "description"
 msgstr "Popis"
 
 #: events/models.py:19 events/models.py:50 news/models.py:33
-#: partners/models.py:16 speakers/models.py:19 tedx/models.py:19
+#: partners/models.py:16 speakers/models.py:21 tedx/models.py:19
 #: tedx/models.py:39
 msgid "created_date"
 msgstr "Datum vytvoření"
 
 #: events/models.py:20 events/models.py:51 news/models.py:34
-#: partners/models.py:17 speakers/models.py:20 tedx/models.py:20
+#: partners/models.py:17 speakers/models.py:22 tedx/models.py:20
 #: tedx/models.py:40
 msgid "updated_date"
 msgstr "Datum úpravy"
 
 #: events/models.py:21 events/models.py:53 news/models.py:36
-#: partners/models.py:18 speakers/models.py:21 tedx/models.py:21
+#: partners/models.py:18 speakers/models.py:23 tedx/models.py:21
 #: tedx/models.py:41
 msgid "active"
 msgstr "Aktivní"
@@ -78,7 +77,7 @@ msgstr "Čas začátku akce"
 msgid "event_end_time"
 msgstr "Čas ukončení akce"
 
-#: events/models.py:40 news/models.py:32 speakers/models.py:32
+#: events/models.py:40 news/models.py:32 speakers/models.py:35
 #: venv/lib/python2.7/site-packages/suit/templates/admin/object_history.html:28
 msgid "User"
 msgstr "Uživatel"
@@ -107,7 +106,7 @@ msgstr "Stát"
 msgid "zip_code"
 msgstr "PSČ"
 
-#: events/models.py:54 news/models.py:31 speakers/models.py:38
+#: events/models.py:54 news/models.py:31 speakers/models.py:47
 msgid "Speaker"
 msgstr "Řečník"
 
@@ -115,7 +114,7 @@ msgstr "Řečník"
 msgid "Partner"
 msgstr "Partner"
 
-#: events/models.py:58 speakers/models.py:27
+#: events/models.py:58 speakers/models.py:29
 msgid "share_message"
 msgstr "Sdílení"
 
@@ -139,13 +138,15 @@ msgstr "Kód"
 msgid "name"
 msgstr "Jméno"
 
-
-
-
-
 #: mobile_settings/models.py:17
 msgid "Languages"
 msgstr "Jazyky"
+
+#: mobile_settings/models.py:24
+#, fuzzy
+#| msgid "title"
+msgid "title_en"
+msgstr "Nadpis anglicky"
 
 #: news/models.py:23 news/models.py:40
 msgid "Type"
@@ -179,39 +180,39 @@ msgstr "Webová stránka partnera"
 msgid "Partners"
 msgstr "Partneři"
 
-#: speakers/models.py:17
+#: speakers/models.py:19
 msgid "first_name"
 msgstr "Jméno"
 
-#: speakers/models.py:18
+#: speakers/models.py:20
 msgid "last_name"
 msgstr "Příjmení"
 
-#: speakers/models.py:22
+#: speakers/models.py:24
 msgid "published"
-msgstr "Publikováno" 
+msgstr "Publikováno"
 
-#: speakers/models.py:23
+#: speakers/models.py:25
 msgid "interests"
 msgstr "Zájmy"
 
-#: speakers/models.py:24
+#: speakers/models.py:26
 msgid "talk_name"
 msgstr "Název přednášky"
 
-#: speakers/models.py:28
+#: speakers/models.py:30
 msgid "position"
 msgstr "Pozice"
 
-#: speakers/models.py:30
+#: speakers/models.py:33
 msgid "speaker_city"
 msgstr "Město řečníka"
 
-#: speakers/models.py:31
+#: speakers/models.py:34
 msgid "speaker_country"
 msgstr "Kraj řečníka"
 
-#: speakers/models.py:39
+#: speakers/models.py:48
 msgid "Speakers"
 msgstr "Řečníci"
 
@@ -232,11 +233,11 @@ msgstr ""
 msgid "About app"
 msgstr "O aplikaci"
 
-#: tedxostrava/settings.py:141
+#: tedxostrava/settings.py:146
 msgid "Czech"
 msgstr "Česky"
 
-#: tedxostrava/settings.py:142
+#: tedxostrava/settings.py:147
 msgid "English"
 msgstr "Anglicky"
 
@@ -971,7 +972,57 @@ msgstr "Listopad"
 msgid "December"
 msgstr "Prosinec"
 
+#: venv/lib/python2.7/site-packages/django/utils/dates.py:23
+msgid "jan"
+msgstr ""
 
+#: venv/lib/python2.7/site-packages/django/utils/dates.py:23
+msgid "feb"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/django/utils/dates.py:23
+msgid "mar"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/django/utils/dates.py:23
+msgid "apr"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/django/utils/dates.py:23
+#, fuzzy
+#| msgid "May"
+msgid "may"
+msgstr "Květen"
+
+#: venv/lib/python2.7/site-packages/django/utils/dates.py:23
+#, fuzzy
+#| msgid "Sun"
+msgid "jun"
+msgstr "Ne"
+
+#: venv/lib/python2.7/site-packages/django/utils/dates.py:24
+msgid "jul"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/django/utils/dates.py:24
+msgid "aug"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/django/utils/dates.py:24
+msgid "sep"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/django/utils/dates.py:24
+msgid "oct"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/django/utils/dates.py:24
+msgid "nov"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/django/utils/dates.py:24
+msgid "dec"
+msgstr ""
 
 #: venv/lib/python2.7/site-packages/django/utils/dates.py:31
 msgctxt "abbrev. month"

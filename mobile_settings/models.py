@@ -21,7 +21,7 @@ class Language(models.Model):
 
 class Menu(models.Model):
 	title = models.CharField(_('title'), max_length = 55, blank = True, null = True)
-	title_en = models.CharField(_('title'), max_length = 55, blank = True, null = True)
+	title_en = models.CharField(_('title_en'), max_length = 55, blank = True, null = True)
 	unique_key = models.SlugField(unique = True, blank = True, null = True)
 	icon = CloudinaryField('image', blank = True, null = True)
 	active = models.BooleanField(default = True)
