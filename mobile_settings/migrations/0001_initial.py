@@ -12,11 +12,24 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
+            name='Image',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('image', cloudinary.models.CloudinaryField(max_length=255, null=True, verbose_name='image', blank=True)),
+                ('round_image', models.URLField(null=True, blank=True)),
+                ('active', models.BooleanField(default=True)),
+            ],
+            options={
+                'verbose_name': 'Image',
+                'verbose_name_plural': 'Images',
+            },
+        ),
+        migrations.CreateModel(
             name='Language',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('code', models.CharField(max_length=5, verbose_name='code')),
-                ('name', models.CharField(max_length=50, verbose_name='name')),
+                ('name', models.CharField(default='English', max_length=50, verbose_name='name')),
             ],
             options={
                 'verbose_name': 'Language',
@@ -27,10 +40,11 @@ class Migration(migrations.Migration):
             name='Menu',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('title', models.CharField(max_length=55, verbose_name='title')),
+                ('title', models.CharField(max_length=55, null=True, verbose_name='title', blank=True)),
+                ('title_en', models.CharField(max_length=55, null=True, verbose_name='title_en', blank=True)),
+                ('unique_key', models.SlugField(unique=True, null=True, blank=True)),
                 ('icon', cloudinary.models.CloudinaryField(max_length=255, null=True, verbose_name='image', blank=True)),
                 ('active', models.BooleanField(default=True)),
-                ('language', models.ForeignKey(verbose_name='Language', blank=True, to='mobile_settings.Language', null=True)),
             ],
             options={
                 'verbose_name': 'Menu',

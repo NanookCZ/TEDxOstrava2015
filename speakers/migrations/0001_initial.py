@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 
 from django.db import models, migrations
 from django.conf import settings
-import cloudinary.models
 
 
 class Migration(migrations.Migration):
@@ -28,13 +27,13 @@ class Migration(migrations.Migration):
                 ('talk_name', models.CharField(max_length=25, null=True, verbose_name='talk_name', blank=True)),
                 ('description', models.TextField(verbose_name='description')),
                 ('twitter_url', models.CharField(max_length=50, null=True, blank=True)),
-                ('share_message', models.CharField(default='Nov\xfd re\u010dn\xedk', max_length=25, verbose_name='share_message')),
+                ('share_message', models.CharField(default='Share...', max_length=25, verbose_name='share_message')),
                 ('position', models.CharField(max_length=50, null=True, verbose_name='position', blank=True)),
-                ('image', cloudinary.models.CloudinaryField(max_length=255, null=True, verbose_name='speaker_photo', blank=True)),
                 ('speaker_city', models.CharField(max_length=50, null=True, verbose_name='speaker_city', blank=True)),
                 ('speaker_country', models.CharField(max_length=50, null=True, verbose_name='speaker_country', blank=True)),
                 ('added_by', models.ForeignKey(verbose_name='User', blank=True, to=settings.AUTH_USER_MODEL, null=True)),
                 ('language', models.ForeignKey(verbose_name='Language', blank=True, to='mobile_settings.Language', null=True)),
+                ('speaker_photo', models.ForeignKey(blank=True, to='mobile_settings.Image', null=True)),
             ],
             options={
                 'verbose_name': 'Speaker',

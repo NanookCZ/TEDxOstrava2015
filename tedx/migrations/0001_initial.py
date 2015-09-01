@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 ('created_date', models.DateTimeField(auto_now_add=True, verbose_name='created_date')),
                 ('updated_date', models.DateTimeField(auto_now=True, verbose_name='updated_date')),
                 ('active', models.BooleanField(default=True, verbose_name='active')),
-                ('image', cloudinary.models.CloudinaryField(max_length=255, null=True, verbose_name='logo', blank=True)),
+                ('logo', cloudinary.models.CloudinaryField(max_length=255, null=True, verbose_name='image', blank=True)),
                 ('language', models.ForeignKey(verbose_name='Language', blank=True, to='mobile_settings.Language', null=True)),
             ],
             options={
@@ -35,15 +35,13 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('title', models.CharField(max_length=50, verbose_name='title')),
-                ('description', models.TextField(null=True, verbose_name='description', blank=True)),
                 ('website', models.URLField(null=True, verbose_name='website', blank=True)),
                 ('created_date', models.DateTimeField(auto_now_add=True, verbose_name='created_date')),
                 ('updated_date', models.DateTimeField(auto_now=True, verbose_name='updated_date')),
                 ('active', models.BooleanField(default=True, verbose_name='active')),
                 ('is_published', models.BooleanField(default=False)),
-                ('image', cloudinary.models.CloudinaryField(max_length=255, null=True, verbose_name='tedx_logo', blank=True)),
+                ('tedx_logo', cloudinary.models.CloudinaryField(max_length=255, null=True, verbose_name='image', blank=True)),
                 ('event_start', models.DateField(null=True, verbose_name='event_start', blank=True)),
-                ('language', models.ForeignKey(verbose_name='Language', blank=True, to='mobile_settings.Language', null=True)),
             ],
             options={
                 'verbose_name': 'TEDx',

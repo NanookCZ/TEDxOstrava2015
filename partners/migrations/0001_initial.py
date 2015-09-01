@@ -8,7 +8,6 @@ import cloudinary.models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('mobile_settings', '0001_initial'),
     ]
 
     operations = [
@@ -20,9 +19,8 @@ class Migration(migrations.Migration):
                 ('created_date', models.DateTimeField(auto_now_add=True, verbose_name='created_date')),
                 ('updated_date', models.DateTimeField(auto_now=True, verbose_name='updated_date')),
                 ('active', models.BooleanField(default=True, verbose_name='active')),
-                ('image', cloudinary.models.CloudinaryField(max_length=255, null=True, verbose_name='partner_logo', blank=True)),
+                ('partner_logo', cloudinary.models.CloudinaryField(max_length=255, null=True, verbose_name='image', blank=True)),
                 ('partner_website', models.URLField(null=True, verbose_name='partner_website', blank=True)),
-                ('language', models.ForeignKey(verbose_name='Language', blank=True, to='mobile_settings.Language', null=True)),
             ],
             options={
                 'verbose_name': 'Partner',

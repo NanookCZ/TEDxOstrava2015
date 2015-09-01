@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 
 from django.db import models, migrations
 from django.conf import settings
-import cloudinary.models
 
 
 class Migration(migrations.Migration):
@@ -20,26 +19,26 @@ class Migration(migrations.Migration):
             name='Event',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('title', models.CharField(max_length=50)),
-                ('event_start', models.DateField(help_text='Start of the event.', null=True, blank=True)),
-                ('event_end', models.DateField(help_text='End of the event.', null=True, blank=True)),
-                ('event_start_time', models.CharField(help_text='Start time of the event.', max_length=50, null=True, blank=True)),
-                ('event_end_time', models.CharField(help_text='End time of the event.', max_length=50, null=True, blank=True)),
-                ('description', models.TextField()),
-                ('about_ted', models.TextField(null=True, blank=True)),
-                ('street_address', models.CharField(max_length=50, null=True, blank=True)),
-                ('street_number', models.CharField(max_length=10, null=True, blank=True)),
-                ('city', models.CharField(max_length=25)),
-                ('state', models.CharField(max_length=25)),
-                ('zip_code', models.CharField(max_length=10, null=True, blank=True)),
+                ('title', models.CharField(max_length=50, verbose_name='title')),
+                ('event_start', models.DateField(null=True, verbose_name='event_start', blank=True)),
+                ('event_end', models.DateField(null=True, verbose_name='event_end', blank=True)),
+                ('event_start_time', models.CharField(max_length=50, null=True, verbose_name='event_start_time', blank=True)),
+                ('event_end_time', models.CharField(max_length=50, null=True, verbose_name='event_end_time', blank=True)),
+                ('description', models.TextField(verbose_name='description')),
+                ('about_ted', models.TextField(null=True, verbose_name='about_ted', blank=True)),
+                ('street_address', models.CharField(max_length=50, null=True, verbose_name='street_address', blank=True)),
+                ('street_number', models.CharField(max_length=10, null=True, verbose_name='street_number', blank=True)),
+                ('city', models.CharField(max_length=25, verbose_name='city')),
+                ('state', models.CharField(max_length=25, verbose_name='state')),
+                ('zip_code', models.CharField(max_length=10, null=True, verbose_name='zip_code', blank=True)),
                 ('latitude', models.CharField(max_length=10, null=True, blank=True)),
                 ('longtitude', models.CharField(max_length=10, null=True, blank=True)),
-                ('created_date', models.DateTimeField(auto_now_add=True)),
-                ('updated_date', models.DateTimeField(auto_now=True)),
-                ('active', models.BooleanField(default=True)),
+                ('created_date', models.DateTimeField(auto_now_add=True, verbose_name='created_date')),
+                ('updated_date', models.DateTimeField(auto_now=True, verbose_name='updated_date')),
+                ('active', models.BooleanField(default=True, verbose_name='active')),
                 ('facebook_url', models.CharField(max_length=50, null=True, blank=True)),
                 ('twitter_url', models.CharField(max_length=50, null=True, blank=True)),
-                ('share_message', models.CharField(default='TEDxOstrava - Check our news', max_length=50)),
+                ('share_message', models.CharField(default='Share...', max_length=50, verbose_name='share_message')),
             ],
             options={
                 'verbose_name': 'Event',
@@ -50,12 +49,12 @@ class Migration(migrations.Migration):
             name='Theme',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('title', models.CharField(max_length=50)),
-                ('description', models.TextField(null=True, blank=True)),
-                ('created_date', models.DateTimeField(auto_now_add=True)),
-                ('updated_date', models.DateTimeField(auto_now=True)),
-                ('active', models.BooleanField(default=True)),
-                ('banner', cloudinary.models.CloudinaryField(max_length=255, null=True, verbose_name='image', blank=True)),
+                ('title', models.CharField(max_length=50, verbose_name='title')),
+                ('description', models.TextField(null=True, verbose_name='description', blank=True)),
+                ('created_date', models.DateTimeField(auto_now_add=True, verbose_name='created_date')),
+                ('updated_date', models.DateTimeField(auto_now=True, verbose_name='updated_date')),
+                ('active', models.BooleanField(default=True, verbose_name='active')),
+                ('banner', models.ForeignKey(blank=True, to='mobile_settings.Image', null=True)),
                 ('language', models.ForeignKey(verbose_name='Language', blank=True, to='mobile_settings.Language', null=True)),
             ],
             options={
@@ -66,12 +65,12 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='event',
             name='event_theme',
-            field=models.ForeignKey(blank=True, to='events.Theme', null=True),
+            field=models.ForeignKey(verbose_name='Theme', blank=True, to='events.Theme', null=True),
         ),
         migrations.AddField(
             model_name='event',
             name='hosted_by',
-            field=models.ForeignKey(to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(verbose_name='User', to=settings.AUTH_USER_MODEL),
         ),
         migrations.AddField(
             model_name='event',
@@ -81,11 +80,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='event',
             name='partners',
-            field=models.ManyToManyField(to='partners.Partner', null=True, blank=True),
+            field=models.ManyToManyField(to='partners.Partner', null=True, verbose_name='Partner', blank=True),
         ),
         migrations.AddField(
             model_name='event',
             name='speakers',
-            field=models.ManyToManyField(to='speakers.Speaker', null=True, blank=True),
+            field=models.ManyToManyField(to='speakers.Speaker', null=True, verbose_name='Speaker', blank=True),
         ),
     ]
