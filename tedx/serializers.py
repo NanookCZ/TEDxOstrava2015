@@ -10,7 +10,6 @@ class TEDxSerializer(serializers.HyperlinkedModelSerializer):
 		fields = [
 			'id',
 			'title',
-			'description',
 			'website',
 			'active',
 			'is_published',
