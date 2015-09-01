@@ -52,6 +52,7 @@ INSTALLED_APPS = (
     'mobile_settings',
     'rest_framework_swagger',
     'django_crontab',
+    'sorl.thumbnail',
 )
 
 CRONJOBS = [

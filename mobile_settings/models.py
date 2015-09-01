@@ -5,6 +5,7 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 from cloudinary.models import CloudinaryField
+from sorl.thumbnail.main import DjangoThumbnail
 from django.utils.translation import ugettext_lazy as _
 
 
@@ -38,16 +39,20 @@ class Image(models.Model):
 	round_image = models.URLField(blank = True, null = True)
 	active = models.BooleanField(default = True)
 
-	def __unicode__(self):
-		return "%s" %(self.image)
 
 	def create_url(self, *args, **kwargs):
 		if self.image:
 			return "%s%s%s" %('image/upload/w_100,h_100,c_fill,g_face,r_max/', self.image, '.png')
 
-	def image_tag(self):
-		return u'<img src="%s%s%s" />' % ('http://res.cloudinary.com/hydqixw1j/image/upload/v1441133107/', self.image, '.png')
-	image_tag.allow_tags = True
+	def slide_thumbnail(self):
+		if self.image:
+			thumb = DjangoThumbnail(self.image)
+			return '{img src="%s" /}' % thumb.absolute_url
+		return '{img src="/media/img/admin/icon-no.gif" alt="False"}'
+	slide_thumbnail.allow_tags = True
+
+	def __unicode__(self):
+		return u'Slide: %s - %sx%s' % (self.image)
 
 	class Meta:
 		verbose_name = 'Image'
