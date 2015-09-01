@@ -8,7 +8,7 @@ import cloudinary.models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('mobile_settings', '0005_auto_20150901_1153'),
+        ('mobile_settings', '0004_menu_unique_key'),
     ]
 
     operations = [
@@ -25,9 +25,18 @@ class Migration(migrations.Migration):
                 'verbose_name_plural': 'Images',
             },
         ),
-        migrations.AlterField(
+        migrations.RemoveField(
+            model_name='menu',
+            name='language',
+        ),
+        migrations.AddField(
             model_name='menu',
             name='title_en',
             field=models.CharField(max_length=55, null=True, verbose_name='title_en', blank=True),
+        ),
+        migrations.AlterField(
+            model_name='menu',
+            name='title',
+            field=models.CharField(max_length=55, null=True, verbose_name='title', blank=True),
         ),
     ]
