@@ -8,7 +8,7 @@ import cloudinary.uploader
 import cloudinary.api
 from cloudinary.models import CloudinaryField
 from django.utils.translation import ugettext_lazy as _
-from mobile_settings.models import Language
+from mobile_settings.models import Language, Image
 from cloudinary.utils import cloudinary_url
 
 
@@ -28,8 +28,7 @@ class Speaker(models.Model):
 	twitter_url = models.CharField(max_length = 50, blank = True, null = True)
 	share_message = models.CharField(_('share_message'), max_length = 25, default = SHARE_MESSAGE)
 	position = models.CharField(_('position'), max_length = 50, blank = True, null = True)
-	speaker_photo = CloudinaryField('image', blank = True, null = True)
-	speaker_url = models.URLField(blank = True, null = True)
+	speaker_photo = models.ForeignKey(Image, blank = True, null = True)
 	speaker_city = models.CharField(_('speaker_city'), max_length = 50, blank = True, null = True)
 	speaker_country = models.CharField(_('speaker_country'), max_length = 50, blank = True, null = True)
 	added_by = models.ForeignKey(User, verbose_name=_("User"), blank = True, null = True)
@@ -37,8 +36,6 @@ class Speaker(models.Model):
 	def __unicode__(self):
 		return "%s %s" %(self.first_name, self.last_name)
 
-	def create_url(self, *args, **kwargs):
-		return "%s%s%s" %('image/upload/w_100,h_100,c_fill,g_face,r_max/', self.speaker_photo, '.png')
 
 
 	
