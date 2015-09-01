@@ -11,7 +11,7 @@ from partners.views import PartnerListAPIView, PartnerListEAPIView
 from speakers.views import SpeakerListAPIView, SpeakerDetailAPIView, SpeakerListEAPIView, SpeakerDetailEAPIView
 from tedx.views import TEDxListAPIView, AboutAppListAPIView, TEDxListEAPIView, AboutAppListEAPIView
 from news.views import NewsListAPIView, TypeListAPIView, NewsDetailAPIView, NewsListEAPIView, TypeListEAPIView, NewsDetailEAPIView
-from mobile_settings.views import MenuListAPIView, MenuListEAPIView
+from mobile_settings.views import MenuListAPIView
 from django.views.generic.base import RedirectView
 from django.conf.urls.i18n import i18n_patterns
 
@@ -47,7 +47,6 @@ urlpatterns = [
     url(r'^api/en/events/themes', ThemeListEAPIView.as_view(), name='theme_list_api_e'),
     url(r'^api/en/tedx', TEDxListEAPIView.as_view(), name='tedx_list_api_e'),
     url(r'^api/en/about', AboutAppListEAPIView.as_view(), name='about_list_api_e'),
-    url(r'^api/en/menu', MenuListEAPIView.as_view(), name='menu_list_api_e'),
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^docs/', include('rest_framework_swagger.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

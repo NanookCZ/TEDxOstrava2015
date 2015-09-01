@@ -94,7 +94,7 @@ def tedx_api_home_english(request):
 			},
 		"menu" : {
 			"count" : Menu.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("menu_list_api_e")
+			"url" : DOMAIN_NAME + api_reverse("menu_list_api")
 		},
 
 
