@@ -9,7 +9,7 @@ import cloudinary.uploader
 import cloudinary.api
 from cloudinary.models import CloudinaryField
 from django.utils.translation import ugettext_lazy as _
-from mobile_settings.models import Language, Image
+from mobile_settings.models import Language
 
 class Type(models.Model):
 	language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"))
@@ -35,7 +35,7 @@ class News(models.Model):
 	publication_date = models.DateField(_('publication_date'), null = True, blank = True)
 	active = models.BooleanField(_('active'), default = True)
 	is_published = models.BooleanField(_('is_published'), default = False)
-	news_image = models.ForeignKey(Image, blank = True, null = True)
+	news_image = CloudinaryField('image', blank = True, null = True)
 	main_news = models.BooleanField(_('main_news'), default = False)
 	news_type = models.ForeignKey(Type, verbose_name=_("Type"))
 
