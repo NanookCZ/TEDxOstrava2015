@@ -14,6 +14,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='theme',
             name='banner',
-            field=models.ForeignKey(verbose_name='images', blank=True, to='mobile_settings.Image', null=True),
+            field=models.ForeignKey(verbose_name='Image', blank=True, to='mobile_settings.Image', null=True),
         ),
     ]
