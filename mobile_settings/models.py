@@ -33,3 +33,12 @@ class Menu(models.Model):
 	def __unicode__(self):
 		return "%s" %(self.title)
 
+class Image(models.Model):
+	image = CloudinaryField('image', blank = True, null = True)
+	round_image = models.URLField(blank = True, null = True)
+	active = models.BooleanField(default = True)
+
+	def create_url(self, *args, **kwargs):
+		return "%s%s%s" %('image/upload/w_100,h_100,c_fill,g_face,r_max/', self.image, '.png')
+
+

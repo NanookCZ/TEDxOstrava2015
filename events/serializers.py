@@ -4,6 +4,7 @@ from rest_framework import routers, serializers, viewsets, permissions
 from rest_framework.reverse import reverse
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from partners.serializers import PartnerSerializer
+from mobile_settings.serializers import ImageSerializer
 
 from django.contrib.auth.models import User
 
@@ -16,6 +17,7 @@ class UserSerialzer(serializers.HyperlinkedModelSerializer):
 		]
 
 class ThemeSerializer(serializers.HyperlinkedModelSerializer):
+	banner = ImageSerializer(many = False, read_only = True)
 	class Meta:
 		model = Theme
 		fields = [

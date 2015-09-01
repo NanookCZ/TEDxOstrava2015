@@ -4,6 +4,7 @@ from rest_framework import routers, serializers, viewsets, permissions
 from rest_framework.reverse import reverse
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from speakers.serializers import SpeakerSerializer
+from mobile_settings.serializers import ImageSerializer
 
 class TypeSerializer(serializers.HyperlinkedModelSerializer):
 	class Meta:
@@ -23,6 +24,7 @@ class NewsSerializer(serializers.HyperlinkedModelSerializer):
 	speaker = SpeakerSerializer(many = False, read_only = True)
 	news_type = TypeSerializer(many = False, read_only = True)
 	news_title = serializers.CharField(source = 'news_type.title', read_only = True)
+	news_image = ImageSerializer(many = False)
 	icon = serializers.CharField(source = 'news_type.icon', read_only = True)
 	class Meta:
 		model = News

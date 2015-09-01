@@ -3,6 +3,7 @@ from rest_framework.authentication import SessionAuthentication, BasicAuthentica
 from rest_framework import routers, serializers, viewsets, permissions
 from rest_framework.reverse import reverse
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
+from mobile_settings.serializers import ImageSerializer
 
 
 
@@ -19,7 +20,7 @@ class SpeakerUrlHyperlinkedIdentityField(serializers.HyperlinkedIdentityField):
 
 class SpeakerSerializer(serializers.HyperlinkedModelSerializer):
 	url = SpeakerUrlHyperlinkedIdentityField(view_name = 'speaker_detail_api')
-	speaker_url = serializers.CharField(source='create_url')
+	speaker_photo = ImageSerializer(many = False)
 	class Meta:
 		model = Speaker
 		fields = [
@@ -37,7 +38,6 @@ class SpeakerSerializer(serializers.HyperlinkedModelSerializer):
 			'speaker_city',
 			'speaker_country',
 			'share_message',
-			'speaker_url',
 			
 
 		]

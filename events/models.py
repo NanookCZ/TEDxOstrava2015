@@ -10,7 +10,7 @@ import cloudinary.uploader
 import cloudinary.api
 from cloudinary.models import CloudinaryField
 from django.utils.translation import ugettext_lazy as _
-from mobile_settings.models import Language
+from mobile_settings.models import Language, Image 
 
 class Theme(models.Model):
 	language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"))
@@ -19,7 +19,7 @@ class Theme(models.Model):
 	created_date = models.DateTimeField(_('created_date'), auto_now_add = True, auto_now = False)
 	updated_date = models.DateTimeField(_('updated_date'), auto_now_add = False, auto_now = True)
 	active = models.BooleanField(_('active'), default = True)
-	banner = CloudinaryField('image', blank = True, null = True)
+	banner = models.ForeignKey(Image, blank = True, null = True)
 
 	def __unicode__(self):
 		return "%s" %(self.title)
