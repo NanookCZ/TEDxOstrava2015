@@ -82,11 +82,11 @@ def tedx_api_home_english(request):
 			},
 		"partners" : {
 			"count" : Partner.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("partner_list_api_e")
+			"url" : DOMAIN_NAME + api_reverse("partner_list_api")
 			},
 		"tedx" : {
 			"count" : TEDx.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("tedx_list_api_e")
+			"url" : DOMAIN_NAME + api_reverse("tedx_list_api")
 			},
 		"about" : {
 			"count" : AboutApp.objects.all().count(),

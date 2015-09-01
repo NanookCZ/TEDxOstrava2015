@@ -6,13 +6,7 @@ from rest_framework.authentication import SessionAuthentication, BasicAuthentica
 from mobile_settings.models import Language
 
 class PartnerListAPIView(generics.ListAPIView):
-	language = Language.objects.get(code = 'CS')
-	queryset = Partner.objects.filter(active = True, language = language)
+	queryset = Partner.objects.filter(active = True)
 	serializer_class = PartnerSerializer
 	paginate_by = 10
 
-class PartnerListEAPIView(generics.ListAPIView):
-	language = Language.objects.get(code = 'EN')
-	queryset = Partner.objects.filter(active = True, language = language)
-	serializer_class = PartnerSerializer
-	paginate_by = 10

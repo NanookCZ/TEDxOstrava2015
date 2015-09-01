@@ -7,9 +7,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
 from events.views import ThemeListAPIView, EventListAPIView, ThemeListEAPIView, EventListEAPIView
-from partners.views import PartnerListAPIView, PartnerListEAPIView
+from partners.views import PartnerListAPIView
 from speakers.views import SpeakerListAPIView, SpeakerDetailAPIView, SpeakerListEAPIView, SpeakerDetailEAPIView
-from tedx.views import TEDxListAPIView, AboutAppListAPIView, TEDxListEAPIView, AboutAppListEAPIView
+from tedx.views import TEDxListAPIView, AboutAppListAPIView, AboutAppListEAPIView
 from news.views import NewsListAPIView, TypeListAPIView, NewsDetailAPIView, NewsListEAPIView, TypeListEAPIView, NewsDetailEAPIView
 from mobile_settings.views import MenuListAPIView
 from django.views.generic.base import RedirectView
@@ -38,14 +38,12 @@ urlpatterns = [
     url(r'^api/cs/menu', MenuListAPIView.as_view(), name='menu_list_api'),
     url(r'^api/en/$', 'tedxostrava.views.tedx_api_home_english', name="api_home"),
     url(r'^api/en/events', EventListEAPIView.as_view(), name='event_list_api_e'),
-    url(r'^api/en/partners', PartnerListEAPIView.as_view(), name='partner_list_api_e'),
     url(r'^api/en/speakers/$', SpeakerListEAPIView.as_view(), name='speaker_list_api_e'),
     url(r'^api/en/speakers/(?P<id>\d+)/', SpeakerDetailEAPIView.as_view(), name='speaker_detail_api_e'),
     url(r'^api/en/news/$', NewsListEAPIView.as_view(), name='news_list_api_e'),
     url(r'^api/en/news/(?P<id>\d+)/', NewsDetailEAPIView.as_view(), name='news_detail_api_e'),
     url(r'^api/en/types/', TypeListEAPIView.as_view(), name='type_list_api_e'),
     url(r'^api/en/events/themes', ThemeListEAPIView.as_view(), name='theme_list_api_e'),
-    url(r'^api/en/tedx', TEDxListEAPIView.as_view(), name='tedx_list_api_e'),
     url(r'^api/en/about', AboutAppListEAPIView.as_view(), name='about_list_api_e'),
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^docs/', include('rest_framework_swagger.urls')),
