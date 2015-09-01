@@ -6,7 +6,7 @@ admin.site.register(Language)
 admin.site.register(Menu)
 
 class ImageAdmin(admin.ModelAdmin):
-	fields = ('image', 'active', 'slide_thumbnail',)
+	fields = ('image', 'active',)
 	
 
 admin.site.register(Image, ImageAdmin)
