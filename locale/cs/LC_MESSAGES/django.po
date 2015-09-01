@@ -568,7 +568,7 @@ msgstr ""
 
 #: venv/lib/python2.7/site-packages/django/db/models/fields/files.py:389
 msgid "Image"
-msgstr ""
+msgstr "Obrazek"
 
 #: venv/lib/python2.7/site-packages/django/db/models/fields/related.py:1807
 #, python-format

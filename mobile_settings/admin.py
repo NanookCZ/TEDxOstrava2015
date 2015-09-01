@@ -7,3 +7,5 @@ admin.site.register(Menu)
 
 class ImageAdmin(admin.ModelAdmin):
 	fields = ('image', 'active')
+
+admin.site.register(Image, ImageAdmin)
