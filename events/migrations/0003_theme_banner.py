@@ -7,8 +7,7 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('mobile_settings', '0001_initial'),
-        ('events', '0002_remove_theme_banner'),
+        ('events', '0001_initial'),
     ]
 
     operations = [
