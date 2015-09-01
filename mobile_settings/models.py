@@ -41,4 +41,8 @@ class Image(models.Model):
 	def create_url(self, *args, **kwargs):
 		return "%s%s%s" %('image/upload/w_100,h_100,c_fill,g_face,r_max/', self.image, '.png')
 
+	class Meta:
+		verbose_name = 'Image'
+		verbose_name_plural = 'Images'
+
 
