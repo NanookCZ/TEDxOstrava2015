@@ -10,3 +10,7 @@ class MenuListAPIView(generics.ListAPIView):
 	serializer_class = MenuSerializer
 	paginate_by = 10
 
+
+class Test:
+	def test(self):
+		return "test"
