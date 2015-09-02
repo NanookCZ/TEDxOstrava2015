@@ -6,6 +6,7 @@ from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 
 
 class MenuSerializer(serializers.HyperlinkedModelSerializer):
+	status_display = serializers.SerializerMethodField('get_status_display')
 	class Meta:
 		model = Menu
 		fields = [
@@ -15,8 +16,12 @@ class MenuSerializer(serializers.HyperlinkedModelSerializer):
 			'unique_key',
 			'icon',
 			'active',
+			'status_display',
 
 		]
+
+		def get_status_display(self, obj):
+			return obj.get_status_display()
 
 class ImageSerializer(serializers.HyperlinkedModelSerializer):
 	round_image = serializers.CharField(source = 'create_url', read_only = True)
