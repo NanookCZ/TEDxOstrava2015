@@ -6,7 +6,7 @@ from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 
 
 class MenuSerializer(serializers.HyperlinkedModelSerializer):
-	status_display = serializers.SerializerMethodField('get_status_display')
+	status_display = serializers.SerializerMethodField()
 	class Meta:
 		model = Menu
 		fields = [
