@@ -11,6 +11,3 @@ class MenuListAPIView(generics.ListAPIView):
 	paginate_by = 10
 
 
-class Test:
-	def test(self):
-		return "test"
