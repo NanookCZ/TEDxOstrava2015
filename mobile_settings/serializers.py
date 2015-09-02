@@ -3,7 +3,7 @@ from rest_framework.authentication import SessionAuthentication, BasicAuthentica
 from rest_framework import routers, serializers, viewsets, permissions
 from rest_framework.reverse import reverse
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
-from .views import test 
+from .views import Test
 
 class MenuSerializer(serializers.HyperlinkedModelSerializer):
 	title = serializers.CharField(source = 'test', read_only = True)
