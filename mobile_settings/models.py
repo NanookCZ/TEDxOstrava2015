@@ -43,6 +43,10 @@ class Image(models.Model):
 		if self.image:
 			return "%s%s%s" %('image/upload/w_100,h_100,c_fill,g_face,r_max/', self.image, '.png')
 
+	def image_thumb(self):
+		return '<img src="http://res.cloudinary.com/hydqixw1j/image/upload/v1441136781/yf2x57gurv9yndw5eiuo.jpg" />'
+	image_thumb.allow_tags = True
+
 	class Meta:
 		verbose_name = 'Image'
 		verbose_name_plural = 'Images'
