@@ -38,8 +38,6 @@ class Image(models.Model):
 	round_image = models.URLField(blank = True, null = True)
 	active = models.BooleanField(default = True)
 
-	def __unicode__(self):
-		return "%s" %(self.image)
 
 
 	def create_url(self, *args, **kwargs):
@@ -49,6 +47,10 @@ class Image(models.Model):
 	def image_thumb(self):
 		return '<img src="http://res.cloudinary.com/hydqixw1j/image/upload/v1441136781/%s.png" width="100" height="100" />' % (self.image)
 	image_thumb.allow_tags = True
+
+	def __unicode__(self):
+		return "%s" %(self.image_thumb)
+
 
 	class Meta:
 		verbose_name = 'Image'
