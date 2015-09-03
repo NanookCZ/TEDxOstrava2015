@@ -44,7 +44,7 @@ class Image(models.Model):
 			return "%s%s%s" %('image/upload/w_100,h_100,c_fill,g_face,r_max/', self.image, '.png')
 
 	def image_thumb(self):
-		return '<img src="http://res.cloudinary.com/hydqixw1j/image/upload/v1441136781/yf2x57gurv9yndw5eiuo.jpg" />'
+		return '<img src="http://res.cloudinary.com/hydqixw1j/image/upload/v1441136781/%s.png" width="100" height="100" />' % (self.image)
 	image_thumb.allow_tags = True
 
 	class Meta:
