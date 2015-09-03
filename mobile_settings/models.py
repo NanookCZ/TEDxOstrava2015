@@ -49,7 +49,7 @@ class Image(models.Model):
 	image_thumb.allow_tags = True
 
 	def __unicode__(self):
-		return "%s" %(self.image_thumb)
+		return "%s" %(image_thumb())
 
 
 	class Meta:
