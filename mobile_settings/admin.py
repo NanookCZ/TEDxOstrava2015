@@ -6,9 +6,9 @@ admin.site.register(Language)
 admin.site.register(Menu)
 
 class ImageAdmin(admin.ModelAdmin):
-	fields = ('image', 'active', 'image_thumb')
+	fields = ('image_title', 'image', 'active', 'image_thumb')
 	readonly_fields = ['image_thumb']
-	list_display = ('image', 'active', 'image_thumb')
+	list_display = ('image_title', 'active', 'image_thumb')
 	
 
 admin.site.register(Image, ImageAdmin)
