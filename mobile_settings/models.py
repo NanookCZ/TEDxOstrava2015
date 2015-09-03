@@ -38,6 +38,9 @@ class Image(models.Model):
 	round_image = models.URLField(blank = True, null = True)
 	active = models.BooleanField(default = True)
 
+	def __unicode__(self):
+		return "%s" %(self.image)
+
 
 	def create_url(self, *args, **kwargs):
 		if self.image:
