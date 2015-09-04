@@ -33,6 +33,7 @@ class Menu(models.Model):
 	def __unicode__(self):
 		return "%s" %(self.title)
 
+
 class Image(models.Model):
 	image_title = models.CharField(_('title'), max_length = 55, blank = True, null = True)
 	image = CloudinaryField('image', blank = True, null = True)
@@ -56,5 +57,6 @@ class Image(models.Model):
 	class Meta:
 		verbose_name = 'Image'
 		verbose_name_plural = 'Images'
+
 
 

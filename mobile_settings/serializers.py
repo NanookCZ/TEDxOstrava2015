@@ -18,6 +18,7 @@ class MenuSerializer(serializers.HyperlinkedModelSerializer):
 
 		]
 
+
 		
 class ImageSerializer(serializers.HyperlinkedModelSerializer):
 	round_image = serializers.CharField(source = 'create_url', read_only = True)
@@ -28,3 +29,4 @@ class ImageSerializer(serializers.HyperlinkedModelSerializer):
 			'image',
 			'round_image',
 		]
+
