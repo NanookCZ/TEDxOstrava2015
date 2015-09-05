@@ -33,7 +33,6 @@ class Migration(migrations.Migration):
                 ('speaker_country', models.CharField(max_length=50, null=True, verbose_name='speaker_country', blank=True)),
                 ('added_by', models.ForeignKey(verbose_name='User', blank=True, to=settings.AUTH_USER_MODEL, null=True)),
                 ('language', models.ForeignKey(verbose_name='Language', blank=True, to='mobile_settings.Language', null=True)),
-                ('speaker_photo', models.ForeignKey(blank=True, to='mobile_settings.Image', null=True)),
             ],
             options={
                 'verbose_name': 'Speaker',

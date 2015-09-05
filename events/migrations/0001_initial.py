@@ -54,7 +54,6 @@ class Migration(migrations.Migration):
                 ('created_date', models.DateTimeField(auto_now_add=True, verbose_name='created_date')),
                 ('updated_date', models.DateTimeField(auto_now=True, verbose_name='updated_date')),
                 ('active', models.BooleanField(default=True, verbose_name='active')),
-                ('banner', models.ForeignKey(blank=True, to='mobile_settings.Image', null=True)),
                 ('language', models.ForeignKey(verbose_name='Language', blank=True, to='mobile_settings.Language', null=True)),
             ],
             options={

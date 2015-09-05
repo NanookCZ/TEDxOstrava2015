@@ -30,7 +30,6 @@ class Migration(migrations.Migration):
                 ('main_news', models.BooleanField(default=False, verbose_name='main_news')),
                 ('author', models.ForeignKey(verbose_name='User', to=settings.AUTH_USER_MODEL)),
                 ('language', models.ForeignKey(verbose_name='Language', blank=True, to='mobile_settings.Language', null=True)),
-                ('news_image', models.ForeignKey(blank=True, to='mobile_settings.Image', null=True)),
             ],
             options={
                 'verbose_name': 'News',
