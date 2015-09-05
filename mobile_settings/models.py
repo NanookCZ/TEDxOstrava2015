@@ -37,7 +37,7 @@ class Menu(models.Model):
 class Image(models.Model):
 	image_title = models.CharField(_('title'), max_length = 55, blank = True, null = True)
 	image = CloudinaryField('image', blank = True, null = True)
-	round_image = models.URLField(blank = True, null = True)
+	#round_image = models.URLField(blank = True, null = True)
 	active = models.BooleanField(default = True)
 
 
