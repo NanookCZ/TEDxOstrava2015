@@ -7,7 +7,7 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('mobile_settings', '0002_remove_image_round_image'),
+        ('mobile_settings', '0001_initial'),
     ]
 
     operations = [
