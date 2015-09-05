@@ -172,6 +172,8 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "media")
 #)
 
 #STATIC_ROOT = os.path.join(BASE_DIR, "static", "static_root")
+
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
@@ -183,12 +185,18 @@ DATABASES = {
         'PORT': '5432',                      # Set to empty string for default.
     }
 }
-
+"""
 
 # Parse database configuration from $DATABASE_URL
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+#import dj_database_url
+#DATABASES['default'] =  dj_database_url.config()
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()

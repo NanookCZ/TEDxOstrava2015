@@ -8,13 +8,11 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('mobile_settings', '0001_initial'),
-        ('news', '0001_initial'),
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='news',
-            name='news_image',
-            field=models.ForeignKey(blank=True, to='mobile_settings.Image', null=True),
+        migrations.RemoveField(
+            model_name='image',
+            name='image',
         ),
     ]
