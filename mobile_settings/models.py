@@ -31,7 +31,7 @@ class Menu(models.Model):
 		verbose_name_plural = 'Menu'
 
 	def __unicode__(self):
-		return "%s" %(self.title)
+		return "%s" %(self.title_en)
 
 class Image(models.Model):
 	image_title = models.CharField(_('title'), max_length = 55, blank = True, null = True)
