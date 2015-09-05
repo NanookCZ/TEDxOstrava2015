@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
+import cloudinary.models
 
 
 class Migration(migrations.Migration):
@@ -13,7 +14,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddField(
             model_name='image',
-            name='round_image',
-            field=models.URLField(null=True, blank=True),
+            name='image',
+            field=cloudinary.models.CloudinaryField(max_length=255, null=True, verbose_name='image', blank=True),
         ),
     ]
