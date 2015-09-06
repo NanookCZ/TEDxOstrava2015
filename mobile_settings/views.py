@@ -1,4 +1,4 @@
-from .serializers import MenuSerializer, MPNSDeviceSerializer, MPNSDeviceCreateSerializer
+from .serializers import MenuSerializer, MPNSDeviceSerializer
 from .models import Menu, Language, MPNSDevice
 from rest_framework import generics,  permissions, mixins
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication

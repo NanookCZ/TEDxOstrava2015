@@ -32,7 +32,6 @@ class ImageSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class MPNSDeviceSerializer(serializers.HyperlinkedModelSerializer):
-	id = MPNSDeviceUrlHyperlinkedIdentityField(view_name = 'mpns_detail_api', lookup_field = 'id')
 	class Meta:
 		model = MPNSDevice
 
