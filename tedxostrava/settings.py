@@ -53,7 +53,15 @@ INSTALLED_APPS = (
     'rest_framework_swagger',
     'django_crontab',
     'sorl.thumbnail',
+    'push_notifications',
 )
+
+
+PUSH_NOTIFICATIONS_SETTINGS = {
+        "GCM_API_KEY": "<your api key>",
+        "APNS_CERTIFICATE": "/path/to/your/certificate.pem",
+}
+
 
 CRONJOBS = [
     ('*/1 * * * *', 'tedxostrava.cron.my_scheduled_job')

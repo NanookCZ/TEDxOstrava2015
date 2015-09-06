@@ -14,13 +14,18 @@ from news.views import NewsListAPIView, TypeListAPIView, NewsDetailAPIView, News
 from mobile_settings.views import MenuListAPIView
 from django.views.generic.base import RedirectView
 from django.conf.urls.i18n import i18n_patterns
+from push_notifications.api.rest_framework import APNSDeviceAuthorizedViewSet, GCMDeviceAuthorizedViewSet
+
 
 
 router = routers.DefaultRouter()
+router.register(r'device/apns', APNSDeviceViewSet)
+router.register(r'device/gcm', GCMDeviceViewSet)
 
 
 urlpatterns = [
     #url(r'^admin/', include(admin.site.urls), name='admin'),
+    url(r'^push/', include(router.urls)),
     url(r'^$', RedirectView.as_view(url='admin/', permanent=False), name='index'),
     url(r'^api/auth/token/$', 'rest_framework_jwt.views.obtain_jwt_token'),
     url(r'^api/auth/', include('rest_framework.urls', namespace='rest_framework')),
