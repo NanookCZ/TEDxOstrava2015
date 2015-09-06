@@ -33,3 +33,8 @@ class ImageSerializer(serializers.HyperlinkedModelSerializer):
 class MPNSDeviceSerializer(serializers.HyperlinkedModelSerializer):
 	class Meta:
 		model = MPNSDevice
+
+class MPNSDeviceCreateSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = MPNSDevice
+
