@@ -1,5 +1,5 @@
 from .serializers import MenuSerializer, MPNSDeviceSerializer
-from .models import Menu, Language
+from .models import Menu, Language, MPNSDevice
 from rest_framework import generics,  permissions
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
@@ -11,7 +11,7 @@ class MenuListAPIView(generics.ListAPIView):
 	paginate_by = 10
 
 class MPNSDeviceAPIView(generics.ListAPIView):
-	queryset = Menu.objects.all()
+	queryset = MPNSDevice.objects.all()
 	serializer_class = MPNSDeviceSerializer
 	paginate_by = 10
 
