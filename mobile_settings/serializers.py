@@ -1,4 +1,4 @@
-from .models import Menu, Image
+from .models import Menu, Image, MPNSDevice
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework import routers, serializers, viewsets, permissions
 from rest_framework.reverse import reverse
@@ -30,3 +30,6 @@ class ImageSerializer(serializers.HyperlinkedModelSerializer):
 			'round_image',
 		]
 
+class MPNSDeviceSerializer(serializers.HyperlinkedModelSerializer):
+	class Meta:
+		model = MPNSDevice

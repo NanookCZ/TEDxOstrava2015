@@ -11,7 +11,7 @@ from partners.views import PartnerListAPIView
 from speakers.views import SpeakerListAPIView, SpeakerDetailAPIView, SpeakerListEAPIView, SpeakerDetailEAPIView
 from tedx.views import TEDxListAPIView, AboutAppListAPIView, AboutAppListEAPIView
 from news.views import NewsListAPIView, TypeListAPIView, NewsDetailAPIView, NewsListEAPIView, TypeListEAPIView, NewsDetailEAPIView
-from mobile_settings.views import MenuListAPIView
+from mobile_settings.views import MenuListAPIView, MPNSDeviceAPIView
 from django.views.generic.base import RedirectView
 from django.conf.urls.i18n import i18n_patterns
 from push_notifications.api.rest_framework import APNSDeviceViewSet, GCMDeviceViewSet
@@ -26,6 +26,7 @@ router.register(r'device/gcm', GCMDeviceViewSet)
 urlpatterns = [
     #url(r'^admin/', include(admin.site.urls), name='admin'),
     url(r'^push/', include(router.urls)),
+    url(r'^push/device/mpns', MPNSDeviceAPIView.as_view(), name='mpns_list_api'),
     url(r'^$', RedirectView.as_view(url='admin/', permanent=False), name='index'),
     url(r'^api/auth/token/$', 'rest_framework_jwt.views.obtain_jwt_token'),
     url(r'^api/auth/', include('rest_framework.urls', namespace='rest_framework')),

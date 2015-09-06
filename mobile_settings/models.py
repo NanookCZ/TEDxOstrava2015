@@ -58,3 +58,16 @@ class Image(models.Model):
 		verbose_name_plural = 'Images'
 
 
+class MPNSDevice(models.Model):
+	name = models.CharField(max_length = 255, blank = True, null  = True)
+	is_active = models.BooleanField(default = True)
+	user = models.ForeignKey(User, blank = True, null = True)
+	device_id = models.CharField(max_length = 255, blank = True, null  = True)
+	registration_id = models.CharField(max_length = 255, blank = True, null  = True)
+
+	def __unicode__(self):
+		return "%s" %(self.name)
+
+	class Meta:
+		verbose_name = 'MPNS device'
+		verbose_name_plural = 'MPNS devices'
