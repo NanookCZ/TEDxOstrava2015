@@ -15,18 +15,7 @@ class MPNSDeviceAPIView(generics.ListAPIView):
 	serializer_class = MPNSDeviceSerializer
 	paginate_by = 10
 
-class MPNSDetailAPIView(mixins.DestroyModelMixin, mixins.UpdateModelMixin, generics.RetrieveAPIView):
-	queryset = MPNSDevice.objects.all()
-	serializer_class = MPNSDeviceSerializer
-	lookup_field = 'id'
 
-	def get_object(self):
-		id = self.kwargs.pop("id")
-		obj = get_object_or_404(MPNSDevice, id = id)
-		return obj
-
-class MPNSDeviceCreateAPIView(generics.CreateAPIView):
-	serializer_class = MPNSDeviceCreateSerializer
 	
 
 
