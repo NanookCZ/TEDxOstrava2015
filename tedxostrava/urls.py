@@ -14,7 +14,7 @@ from news.views import NewsListAPIView, TypeListAPIView, NewsDetailAPIView, News
 from mobile_settings.views import MenuListAPIView
 from django.views.generic.base import RedirectView
 from django.conf.urls.i18n import i18n_patterns
-from push_notifications.api.rest_framework import APNSDeviceAuthorizedViewSet, GCMDeviceAuthorizedViewSet
+from push_notifications.api.rest_framework import APNSDeviceViewSet, GCMDeviceViewSet
 
 
 
