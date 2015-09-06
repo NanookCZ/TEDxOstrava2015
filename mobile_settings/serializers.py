@@ -37,8 +37,5 @@ class MPNSDeviceSerializer(serializers.HyperlinkedModelSerializer):
 class MPNSDeviceCreateSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = MPNSDevice
-		fields = [
-			'id',
-			'name',
-		]
+		
 
