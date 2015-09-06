@@ -15,5 +15,11 @@ class MPNSDeviceAPIView(generics.ListAPIView):
 	serializer_class = MPNSDeviceSerializer
 	paginate_by = 10
 
+class MPNSDeviceCreateAPIView(generics.CreateAPIView):
+	serializer_class = MPNSDeviceSerializer
+	
+
+
+
 
 
