@@ -56,6 +56,7 @@ urlpatterns = [
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += i18n_patterns('',
-    url(r'^admin/', include(admin.site.urls), name='admin'),
+    url(r'^cs/admin', include(admin.site.urls), name='admin_cs'),
+    url(r'^en/admin', include(admin.site.urls), name='admin_en'),
 )
 
