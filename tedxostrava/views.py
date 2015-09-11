@@ -10,46 +10,46 @@ from mobile_settings.models import Menu
 from django.contrib.sites.models import Site
 
 
-DOMAIN_NAME = 'http://tedxbrixton.thebrainity.com'
+
 
 @api_view(["GET"])
 def tedx_api_home_czech(request):
 	data = {
 		"events" : {
 			"count" : Event.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("event_list_api"),
+			"url" :  api_reverse("event_list_api"),
 			},
 		"themes" : {
 			"count" : Theme.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("theme_list_api")
+			"url" : api_reverse("theme_list_api")
 			},
 		"speakers" : {
 			"count" : Speaker.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("speaker_list_api")
+			"url" : api_reverse("speaker_list_api")
 			},
 		"news" : {
 			"count" : News.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("news_list_api")
+			"url" : api_reverse("news_list_api")
 			},
 		"types" : {
 			"count" : Type.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("type_list_api")
+			"url" : api_reverse("type_list_api")
 			},
 		"partners" : {
 			"count" : Partner.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("partner_list_api")
+			"url" : api_reverse("partner_list_api")
 			},
 		"tedx" : {
 			"count" : TEDx.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("tedx_list_api")
+			"url" : api_reverse("tedx_list_api")
 			},
 		"about" : {
 			"count" : AboutApp.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("about_list_api")
+			"url" : api_reverse("about_list_api")
 			},
 		"menu" : {
 			"count" : Menu.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("menu_list_api")
+			"url" : api_reverse("menu_list_api")
 		},
 
 
@@ -58,45 +58,45 @@ def tedx_api_home_czech(request):
 
 	return RestResponse(data)
 
-DOMAIN_NAME = 'https://demoevent.herokuapp.com'
+
 @api_view(["GET"])
 def tedx_api_home_english(request):
 	data = {
 		"events" : {
 			"count" : Event.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("event_list_api_e"),
+			"url" : api_reverse("event_list_api_e"),
 			},
 		"themes" : {
 			"count" : Theme.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("theme_list_api_e")
+			"url" : api_reverse("theme_list_api_e")
 			},
 		"speakers" : {
 			"count" : Speaker.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("speaker_list_api_e")
+			"url" : api_reverse("speaker_list_api_e")
 			},
 		"news" : {
 			"count" : News.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("news_list_api_e")
+			"url" : api_reverse("news_list_api_e")
 			},
 		"types" : {
 			"count" : Type.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("type_list_api_e")
+			"url" : api_reverse("type_list_api_e")
 			},
 		"partners" : {
 			"count" : Partner.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("partner_list_api")
+			"url" : api_reverse("partner_list_api")
 			},
 		"tedx" : {
 			"count" : TEDx.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("tedx_list_api")
+			"url" : api_reverse("tedx_list_api")
 			},
 		"about" : {
 			"count" : AboutApp.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("about_list_api_e")
+			"url" : api_reverse("about_list_api_e")
 			},
 		"menu" : {
 			"count" : Menu.objects.all().count(),
-			"url" : DOMAIN_NAME + api_reverse("menu_list_api")
+			"url" : api_reverse("menu_list_api")
 		},
 
 
