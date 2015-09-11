@@ -10,8 +10,9 @@ from mobile_settings.models import Menu
 from django.contrib.sites.models import Site
 
 def get_name():
-	current_site = Site.objects.get_current()
+	current_site = Site.objects.get(id = 1)
 	url = current_site.domain
+	print(url)
 	return url
 
 DOMAIN_NAME = get_name()
