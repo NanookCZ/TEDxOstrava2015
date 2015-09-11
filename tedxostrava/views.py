@@ -9,9 +9,13 @@ from tedx.models import TEDx, AboutApp
 from mobile_settings.models import Menu
 from django.contrib.sites.models import Site
 
+def get_name():
+	current_site = Site.objects.get_current()
+	url = current_site.domain
+	return url
 
+DOMAIN_NAME = get_name()
 
-DOMAIN_NAME = 'https://demoevent.herokuapp.com'
 @api_view(["GET"])
 def tedx_api_home_czech(request):
 	data = {
