@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'suit',
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -56,6 +57,7 @@ INSTALLED_APPS = (
     'push_notifications',
 )
 
+SITE_ID = 1
 
 PUSH_NOTIFICATIONS_SETTINGS = {
         "GCM_API_KEY": "<your api key>",
