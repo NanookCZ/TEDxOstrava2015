@@ -9,13 +9,8 @@ from tedx.models import TEDx, AboutApp
 from mobile_settings.models import Menu
 from django.contrib.sites.models import Site
 
-def get_name():
-	current_site = Site.objects.get(id = 1)
-	url = current_site.domain
-	print(url)
-	return url
 
-DOMAIN_NAME = get_name()
+DOMAIN_NAME = 'http://tedxbrixton.thebrainity.com'
 
 @api_view(["GET"])
 def tedx_api_home_czech(request):
