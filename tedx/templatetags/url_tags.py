@@ -1,4 +1,5 @@
 from django import template
+from django.core.urlresolvers import request 
 
 register = template.Library()
 
