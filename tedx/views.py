@@ -7,7 +7,7 @@ from rest_framework.authentication import SessionAuthentication, BasicAuthentica
 from mobile_settings.models import Language
 
 class TEDxListAPIView(generics.ListAPIView):
-	queryset = TEDx.objects.filter(active = True, is_published = True, event_start__lte = datetime.datetime.now())
+	queryset = TEDx.objects.filter(active = True, is_published = True, event_start__gte = datetime.datetime.now())
 	serializer_class = TEDxSerializer
 	paginate_by = 10
 

@@ -35,3 +35,4 @@ django-rest-swagger
 django-crontab
 sorl-thumbnail
 django-push-notifications
+django-markupfield

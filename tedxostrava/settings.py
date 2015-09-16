@@ -49,12 +49,15 @@ INSTALLED_APPS = (
     'partners',
     'news',
     'tedx',
+    'program',
     'cloudinary',
     'mobile_settings',
     'rest_framework_swagger',
     'django_crontab',
     'sorl.thumbnail',
     'push_notifications',
+    'markupfield',
+
 )
 
 SITE_ID = 1
@@ -240,3 +243,16 @@ JWT_AUTH = {
 
       'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=933300),
 }
+
+
+import markdown
+
+
+def render_rest(markup):
+    parts = publish_parts(source=markup, writer_name="html4css1")
+    return parts["fragment"]
+
+MARKUP_FIELD_TYPES = (
+    ('markdown', markdown.markdown),
+    ('ReST', render_rest),
+)
