@@ -25,7 +25,7 @@ class Type(models.Model):
 
 class News(models.Model):
 	language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"))
-	title = models.CharField(_('title'), max_length = 50)
+	title = models.CharField(_('title'), max_length = 250)
 	description = models.TextField(_('description'))
 	link = models.URLField(null = True, blank = True)
 	speaker = models.ForeignKey(Speaker, verbose_name=_("Speaker"), blank = True, null = True)

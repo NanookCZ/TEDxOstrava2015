@@ -8,7 +8,7 @@ from mobile_settings.models import Language
 class Section(models.Model):
 	language = models.ForeignKey(Language, blank = True, null = True)
 	event = models.ForeignKey(Event)
-	name = models.CharField(max_length=100)
+	name = models.CharField(max_length=100, help_text="Section name, i.e. TEDx Talk, Worskhops,...")
 
 
 	def __unicode__(self):
@@ -26,7 +26,7 @@ class Schedule(models.Model):
 class SlotKind(models.Model):
 	language = models.ForeignKey(Language, blank = True, null = True)
 	schedule = models.ForeignKey(Schedule)
-	slot_name = models.CharField(max_length=50)
+	slot_name = models.CharField(max_length=150, help_text="Sloat name - i. e. Talk, Lunch, Break, ..")
 
 	def __unicode__(self):
 		return "%s" %(self.slot_name)

@@ -53,8 +53,6 @@ class Event(models.Model):
 	active = models.BooleanField(_('active'), default = True)
 	speakers = models.ManyToManyField(Speaker, blank = True, null = True, verbose_name=_("Speaker"))
 	partners = models.ManyToManyField(Partner, blank = True, null = True, verbose_name=_("Partner"))
-	facebook_url = models.CharField(max_length = 50, blank = True, null = True)
-	twitter_url = models.CharField(max_length = 50, blank = True, null = True)
 	share_message = models.CharField(_('share_message'), max_length = 50, default = SHARE_MESSAGE)
 
 	def __unicode__(self):

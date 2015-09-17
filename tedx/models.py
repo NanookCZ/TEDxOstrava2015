@@ -12,7 +12,7 @@ from mobile_settings.models import Language
 
 
 class TEDx(models.Model):
-	title = models.CharField(_('title'), max_length = 50)
+	title = models.CharField(_('title'), max_length = 150)
 	website = models.URLField(_('website'), null = True, blank = True)
 	created_date = models.DateTimeField(_('created_date'), auto_now_add = True, auto_now = False)
 	updated_date = models.DateTimeField(_('updated_date'), auto_now_add = False, auto_now = True)
