@@ -23,7 +23,7 @@ class Speaker(models.Model):
 	active = models.BooleanField(_('active'), default = True)	
 	published = models.BooleanField(_('published'), default = False)
 	interests = models.CharField(_('interests'), max_length = 100, blank = True, null = True)
-	talk_name = models.CharField(_('talk_name'), max_length = 25, blank = True, null = True)
+	talk_name = models.CharField(_('talk_name'), max_length = 225, blank = True, null = True)
 	description = models.TextField(_('description'))
 	twitter_url = models.CharField(max_length = 50, blank = True, null = True, help_text="Twitter of the speaker")
 	share_message = models.CharField(_('share_message'), max_length = 25, default = SHARE_MESSAGE)
