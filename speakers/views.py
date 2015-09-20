@@ -7,7 +7,7 @@ from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from mobile_settings.models import Language
 
-
+"""
 class SpeakerListAPIView(generics.ListAPIView):
 	try:
 		language = Language.objects.get(code = 'CS')
@@ -62,3 +62,4 @@ class SpeakerDetailEAPIView(generics.RetrieveAPIView):
 			return obj
 		except:
 			pass
+"""
