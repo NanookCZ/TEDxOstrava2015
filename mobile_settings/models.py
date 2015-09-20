@@ -12,14 +12,6 @@ class Language(models.Model):
 	code = models.CharField(_("code"), max_length = 5, default = 'EN')
 	name = models.CharField(_("name"), max_length = 50, default = 'English')
 
-	"""
-	def save(self, *args, **kwargs):
-		if not self.pk:
-			self.code = 'EN'
-			self.name = 'English'
-		super(Language, self).save(*args, **kwargs)
-	"""
-
 	class Meta:
 		verbose_name = _('Language')
 		verbose_name_plural = _('Languages')
