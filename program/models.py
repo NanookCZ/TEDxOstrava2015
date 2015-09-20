@@ -6,7 +6,7 @@ from markupfield.fields import MarkupField
 from mobile_settings.models import Language
 
 class Section(models.Model):
-	language = models.ForeignKey(Language, blank = True, null = True)
+	language = models.ForeignKey(Language, blank = True, null = True, default = 'EN')
 	event = models.ForeignKey(Event)
 	name = models.CharField(max_length=100, help_text="Section name, i.e. TEDx Talk, Worskhops,...")
 
@@ -15,7 +15,7 @@ class Section(models.Model):
 		return "%s - %s" % (self.event, self.name)
 
 class Schedule(models.Model):
-	language = models.ForeignKey(Language, blank = True, null = True)
+	language = models.ForeignKey(Language, blank = True, null = True, default = 'EN')
 	section = models.OneToOneField(Section)
 	active = models.BooleanField(default=True)
 
@@ -24,7 +24,7 @@ class Schedule(models.Model):
 
 
 class SlotKind(models.Model):
-	language = models.ForeignKey(Language, blank = True, null = True)
+	language = models.ForeignKey(Language, blank = True, null = True, default = 'EN')
 	schedule = models.ForeignKey(Schedule)
 	slot_name = models.CharField(max_length=150, help_text="Sloat name - i. e. Talk, Lunch, Break, ..")
 
@@ -33,7 +33,7 @@ class SlotKind(models.Model):
 
 
 class Slot(models.Model):
-	language = models.ForeignKey(Language, blank = True, null = True)
+	language = models.ForeignKey(Language, blank = True, null = True, default = 'EN')
 	kind = models.ForeignKey(SlotKind) 
 	start = models.TimeField()
 	end = models.TimeField()
@@ -42,7 +42,7 @@ class Slot(models.Model):
 		return "%s" %(self.kind)
 
 class Presentation(models.Model):
-	language = models.ForeignKey(Language, blank = True, null = True)
+	language = models.ForeignKey(Language, blank = True, null = True, default = 'EN')
 	slot = models.OneToOneField(Slot, null=True, blank=True)
 	title = models.CharField(max_length=100)
 	description = MarkupField(blank = True, null = True)

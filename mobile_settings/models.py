@@ -9,7 +9,7 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Language(models.Model):
-	code = models.CharField(_("code"), max_length = 5)
+	code = models.CharField(_("code"), max_length = 5, default = 'EN')
 	name = models.CharField(_("name"), max_length = 50, default = 'English')
 
 	class Meta:

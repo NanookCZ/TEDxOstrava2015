@@ -14,15 +14,21 @@ class TEDxListAPIView(generics.ListAPIView):
 
 
 class AboutAppListAPIView(generics.ListAPIView):
-	language = Language.objects.get(code = 'CS')
-	queryset = AboutApp.objects.filter(active = True, language = language)
+	try:
+		language = Language.objects.get(code = 'CS')
+		queryset = AboutApp.objects.filter(active = True, language = language)
+	except:
+		pass
 	serializer_class = AboutAppSerializer
 	paginate_by = 10
 
 
 
 class AboutAppListEAPIView(generics.ListAPIView):
-	language = Language.objects.get(code = 'EN')
-	queryset = AboutApp.objects.filter(active = True, language = language)
+	try:
+		language = Language.objects.get(code = 'EN')
+		queryset = AboutApp.objects.filter(active = True, language = language)
+	except:
+		pass
 	serializer_class = AboutAppSerializer
 	paginate_by = 10
