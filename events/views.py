@@ -6,8 +6,11 @@ from rest_framework.authentication import SessionAuthentication, BasicAuthentica
 from mobile_settings.models import Language
 
 class ThemeListAPIView(generics.ListAPIView):
-	language = Language.objects.get(code = 'CS')
-	queryset = Theme.objects.filter(active = True, language = language)
+	try:
+		language = Language.objects.get(code = 'CS')
+		queryset = Theme.objects.filter(active = True, language = language)
+	except:
+		pass 
 	serializer_class = ThemeSerializer
 	paginate_by = 10
 
