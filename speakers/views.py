@@ -13,10 +13,7 @@ class SpeakerListAPIView(generics.ListAPIView):
 		language = Language.objects.get(code = 'CS')
 		queryset = Speaker.objects.filter(active = True, published = True, language = language)
 	except:
-		speaker = Speaker.objects.create(language = 2)
-		speaker.save()
-		language = Language.objects.get(code = 'CS')
-		queryset = Speaker.objects.filter(active = True, published = True, language = language)
+		pass 
 	serializer_class = SpeakerSerializer
 	filter_backends = (filters.DjangoFilterBackend,)
 	filter_fields = ('first_name', 'last_name')
