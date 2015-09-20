@@ -17,23 +17,32 @@ class ThemeListAPIView(generics.ListAPIView):
 class EventListAPIView(generics.ListAPIView):
 	authentication_classes = [SessionAuthentication, BasicAuthentication, JSONWebTokenAuthentication]
 	permissions_classes = [permissions.IsAuthenticated, ]
-	language = Language.objects.get(code = 'CS')
-	queryset = Event.objects.filter(active = True, language = language)
+	try:
+		language = Language.objects.get(code = 'CS')
+		queryset = Event.objects.filter(active = True, language = language)
+	except:
+		pass
 	serializer_class = EventSerializer
 	paginate_by = 10
 
 
 class ThemeListEAPIView(generics.ListAPIView):
-	language = Language.objects.get(code = 'EN')
-	queryset = Theme.objects.filter(active = True, language = language)
+	try:
+		language = Language.objects.get(code = 'EN')
+		queryset = Theme.objects.filter(active = True, language = language)
+	except:
+		pass
 	serializer_class = ThemeSerializer
 	paginate_by = 10
 
 class EventListEAPIView(generics.ListAPIView):
 	authentication_classes = [SessionAuthentication, BasicAuthentication, JSONWebTokenAuthentication]
 	permissions_classes = [permissions.IsAuthenticated, ]
-	language = Language.objects.get(code = 'EN')
-	queryset = Event.objects.filter(active = True, language = language)
+	try:
+		language = Language.objects.get(code = 'EN')
+		queryset = Event.objects.filter(active = True, language = language)
+	except:
+		pass
 	serializer_class = EventSerializer
 	paginate_by = 10
 
