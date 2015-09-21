@@ -13,7 +13,7 @@ from django.utils.translation import ugettext_lazy as _
 from mobile_settings.models import Language, Image 
 
 class Theme(models.Model):
-	language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"), default = 'EN')
+	language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"), default = 1)
 	title = models.CharField(_('title'), max_length = 50)
 	description = models.TextField(_('description'), blank = True, null = True)
 	created_date = models.DateTimeField(_('created_date'), auto_now_add = True, auto_now = False)
@@ -31,7 +31,7 @@ class Theme(models.Model):
 
 SHARE_MESSAGE = 'Share...'
 class Event(models.Model):
-	language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"), default = 'EN')
+	language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"), default = 1)
 	title = models.CharField(_('title'), max_length = 50)
 	event_start = models.DateField(_('event_start'), blank = True, null = True)
 	event_end = models.DateField(_('event_end'), blank = True, null = True)

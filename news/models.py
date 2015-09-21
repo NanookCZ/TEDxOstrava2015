@@ -12,7 +12,7 @@ from django.utils.translation import ugettext_lazy as _
 from mobile_settings.models import Language, Image
 
 class Type(models.Model):
-	language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"), default = 'EN')
+	language = models.ForeignKey(Language, blank = True, null = True, verbose_name=_("Language"), default = 1)
 	title = models.CharField(_('title'), max_length = 50)
 	icon = CloudinaryField('image', blank = True, null = True)
 
