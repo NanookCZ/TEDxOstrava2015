@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='section',
             name='language',
-            field=models.ForeignKey(default='EN', blank=True, to='mobile_settings.Language', null=True),
+            field=models.ForeignKey(default=1, blank=True, to='mobile_settings.Language', null=True),
         ),
         migrations.AlterField(
             model_name='slot',
