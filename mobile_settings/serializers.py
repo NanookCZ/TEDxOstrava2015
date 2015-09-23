@@ -15,6 +15,7 @@ class MenuSerializer(serializers.HyperlinkedModelSerializer):
 			'unique_key',
 			'icon',
 			'active',
+			'order',
 
 		]
 
