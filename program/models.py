@@ -6,7 +6,7 @@ from markupfield.fields import MarkupField
 from mobile_settings.models import Language
 
 class Section(models.Model):
-	language = models.ForeignKey(Language, blank = True, null = True, default = 'EN')
+	language = models.ForeignKey(Language, blank = True, null = True, default = 1)
 	event = models.ForeignKey(Event)
 	name = models.CharField(max_length=100, help_text="Section name, i.e. TEDx Talk, Worskhops,...")
 
