@@ -11,6 +11,11 @@ class TEDxListAPIView(generics.ListAPIView):
 	serializer_class = TEDxSerializer
 	paginate_by = 10
 
+class TEDxListEAPIView(generics.ListAPIView):
+	queryset = TEDx.objects.filter(active = True, is_published = True, event_start__gte = datetime.datetime.now())
+	serializer_class = TEDxSerializer
+	paginate_by = 10
+
 
 
 class AboutAppListAPIView(generics.ListAPIView):

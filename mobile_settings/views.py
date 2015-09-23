@@ -6,7 +6,12 @@ from rest_framework.authentication import SessionAuthentication, BasicAuthentica
 
 
 class MenuListAPIView(generics.ListAPIView):
-	queryset = Menu.objects.filter(active = True)
+	queryset = Menu.objects.filter(active = True).order_by('order')
+	serializer_class = MenuSerializer
+	paginate_by = 10
+
+class MenuListEAPIView(generics.ListAPIView):
+	queryset = Menu.objects.filter(active = True).order_by('order')
 	serializer_class = MenuSerializer
 	paginate_by = 10
 

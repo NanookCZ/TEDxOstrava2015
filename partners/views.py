@@ -10,3 +10,8 @@ class PartnerListAPIView(generics.ListAPIView):
 	serializer_class = PartnerSerializer
 	paginate_by = 10
 
+	
+class PartnerListEAPIView(generics.ListAPIView):
+	queryset = Partner.objects.filter(active = True)
+	serializer_class = PartnerSerializer
+	paginate_by = 10

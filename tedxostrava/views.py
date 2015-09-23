@@ -84,11 +84,11 @@ def tedx_api_home_english(request):
 			},
 		"partners" : {
 			"count" : Partner.objects.all().count(),
-			"url" : api_reverse("partner_list_api")
+			"url" : api_reverse("partner_list_api_e")
 			},
 		"tedx" : {
 			"count" : TEDx.objects.all().count(),
-			"url" : api_reverse("tedx_list_api")
+			"url" : api_reverse("tedx_list_api_e")
 			},
 		"about" : {
 			"count" : AboutApp.objects.all().count(),
@@ -96,7 +96,7 @@ def tedx_api_home_english(request):
 			},
 		"menu" : {
 			"count" : Menu.objects.all().count(),
-			"url" : api_reverse("menu_list_api")
+			"url" : api_reverse("menu_list_api_e")
 		},
 
 

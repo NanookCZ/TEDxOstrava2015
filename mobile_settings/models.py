@@ -25,6 +25,7 @@ class Menu(models.Model):
 	unique_key = models.SlugField(unique = True, blank = True, null = True)
 	icon = CloudinaryField('image', blank = True, null = True)
 	active = models.BooleanField(default = True)
+	order = models.IntegerField(blank = True, null = True)
 
 	class Meta:
 		verbose_name = 'Menu'

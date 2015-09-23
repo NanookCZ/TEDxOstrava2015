@@ -7,11 +7,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
 from events.views import ThemeListAPIView, EventListAPIView, ThemeListEAPIView, EventListEAPIView
-from partners.views import PartnerListAPIView
+from partners.views import PartnerListAPIView, PartnerListEAPIView
 from speakers.views import SpeakerListAPIView, SpeakerDetailAPIView, SpeakerListEAPIView, SpeakerDetailEAPIView
-from tedx.views import TEDxListAPIView, AboutAppListAPIView, AboutAppListEAPIView
+from tedx.views import TEDxListAPIView, TEDxListEAPIView, AboutAppListAPIView, AboutAppListEAPIView
 from news.views import NewsListAPIView, TypeListAPIView, NewsDetailAPIView, NewsListEAPIView, TypeListEAPIView, NewsDetailEAPIView
-from mobile_settings.views import MenuListAPIView, MPNSDeviceAPIView
+from mobile_settings.views import MenuListAPIView, MPNSDeviceAPIView, MenuListEAPIView
 from django.views.generic.base import RedirectView
 from django.conf.urls.i18n import i18n_patterns
 from push_notifications.api.rest_framework import APNSDeviceViewSet, GCMDeviceViewSet
@@ -52,6 +52,9 @@ urlpatterns = [
     url(r'^api/en/types/', TypeListEAPIView.as_view(), name='type_list_api_e'),
     url(r'^api/en/events/themes', ThemeListEAPIView.as_view(), name='theme_list_api_e'),
     url(r'^api/en/about', AboutAppListEAPIView.as_view(), name='about_list_api_e'),
+    url(r'^api/en/menu', MenuListEAPIView.as_view(), name='menu_list_api_e'),
+    url(r'^api/en/partners', PartnerListEAPIView.as_view(), name='partner_list_api_e'),
+    url(r'^api/en/tedx', TEDxListEAPIView.as_view(), name='tedx_list_api_e'),
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^docs/', include('rest_framework_swagger.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
