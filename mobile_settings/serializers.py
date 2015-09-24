@@ -30,6 +30,7 @@ class ImageSerializer(serializers.HyperlinkedModelSerializer):
 			'id',
 			'image',
 			'round_image',
+			#'speaker_image',
 		]
 
 
