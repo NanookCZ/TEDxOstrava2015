@@ -42,7 +42,7 @@ class Image(models.Model):
 
 	def speaker_url(self, *args, **kwargs):
 		if self.image:
-			return "%s%s%s" %('image/upload/h_300,c_thumb,g_face/', self.image, '.png')
+			return "%s%s%s" %('image/upload/h_300,w_500,c_thumb,g_face/', self.image, '.png')
 
 	def create_url(self, *args, **kwargs):
 		if self.image:
