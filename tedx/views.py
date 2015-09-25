@@ -9,12 +9,12 @@ from mobile_settings.models import Language
 class TEDxListAPIView(generics.ListAPIView):
 	queryset = TEDx.objects.filter(active = True, is_published = True, event_start__gte = datetime.datetime.now())
 	serializer_class = TEDxSerializer
-	paginate_by = 10
+	
 
 class TEDxListEAPIView(generics.ListAPIView):
 	queryset = TEDx.objects.filter(active = True, is_published = True, event_start__gte = datetime.datetime.now())
 	serializer_class = TEDxSerializer
-	paginate_by = 10
+	
 
 
 
@@ -25,7 +25,7 @@ class AboutAppListAPIView(generics.ListAPIView):
 	except:
 		pass
 	serializer_class = AboutAppSerializer
-	paginate_by = 10
+	
 
 
 
@@ -36,4 +36,4 @@ class AboutAppListEAPIView(generics.ListAPIView):
 	except:
 		pass
 	serializer_class = AboutAppSerializer
-	paginate_by = 10
+	

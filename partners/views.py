@@ -8,10 +8,10 @@ from mobile_settings.models import Language
 class PartnerListAPIView(generics.ListAPIView):
 	queryset = Partner.objects.filter(active = True)
 	serializer_class = PartnerSerializer
-	paginate_by = 10
+	
 
 	
 class PartnerListEAPIView(generics.ListAPIView):
 	queryset = Partner.objects.filter(active = True)
 	serializer_class = PartnerSerializer
-	paginate_by = 10
+	

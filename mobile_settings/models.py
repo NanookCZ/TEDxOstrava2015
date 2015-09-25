@@ -37,13 +37,12 @@ class Menu(models.Model):
 class Image(models.Model):
 	image_title = models.CharField(_('title'), max_length = 55, blank = True, null = True)
 	image = CloudinaryField('image', blank = True, null = True)
-	#speaker_image = models.URLField(blank = True, null = True)
 	round_image = models.URLField(blank = True, null = True)
 	active = models.BooleanField(default = True)
 
 	def speaker_url(self, *args, **kwargs):
 		if self.image:
-			return "%s%s%s" %('image/upload/h_300,c_thumb,g_face/', self.image, '.jpg')
+			return "%s%s%s" %('image/upload/h_300,c_fit/', self.image, '.jpg')
 
 	def create_url(self, *args, **kwargs):
 		if self.image:

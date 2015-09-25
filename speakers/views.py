@@ -17,7 +17,7 @@ class SpeakerListAPIView(generics.ListAPIView):
 	serializer_class = SpeakerSerializer
 	filter_backends = (filters.DjangoFilterBackend,)
 	filter_fields = ('first_name', 'last_name')
-	paginate_by = 10
+	
 
 class SpeakerDetailAPIView(generics.RetrieveAPIView):
 	try:
@@ -42,7 +42,7 @@ class SpeakerListEAPIView(generics.ListAPIView):
 	except:
 		pass
 	serializer_class = SpeakerSerializer
-	paginate_by = 10
+	
 
 class SpeakerDetailEAPIView(generics.RetrieveAPIView):
 	try:
