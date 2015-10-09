@@ -7,6 +7,7 @@ from news.models import News, Type
 from partners.models import Partner
 from tedx.models import TEDx, AboutApp
 from mobile_settings.models import Menu
+from program.models import Presentation
 from django.contrib.sites.models import Site
 
 
@@ -50,6 +51,10 @@ def tedx_api_home_czech(request):
 		"menu" : {
 			"count" : Menu.objects.all().count(),
 			"url" : api_reverse("menu_list_api")
+		},
+		"program" : {
+			"count" : Presentation.objects.all().count(),
+			"url" : api_reverse("program_list_api")
 		},
 
 

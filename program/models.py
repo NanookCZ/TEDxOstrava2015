@@ -3,7 +3,7 @@ from django.db import models
 from events.models import Event
 from speakers.models import Speaker
 from markupfield.fields import MarkupField
-from mobile_settings.models import Language
+from mobile_settings.models import Language, Image 
 
 class Section(models.Model):
 	language = models.ForeignKey(Language, blank = True, null = True, default = 1)
@@ -45,9 +45,13 @@ class Presentation(models.Model):
 	language = models.ForeignKey(Language, blank = True, null = True, default = 1)
 	slot = models.OneToOneField(Slot, null=True, blank=True)
 	title = models.CharField(max_length=100)
+	start = models.TimeField(blank=True, null = True)
+	end = models.TimeField(blank=True, null = True)
 	description = MarkupField(blank = True, null = True)
+	cover_image = models.ForeignKey(Image, blank = True, null = True)
 	speakers = models.ManyToManyField(Speaker, blank=True, null = True)
-	section = models.ForeignKey(Section)
+	ted_talk_video = models.URLField(blank = True, null = True)
+	active = models.BooleanField(default=True)
 
 	def __unicode__(self):
 		return "%s - %s" %(self.title, self.speaker)
