@@ -24,7 +24,7 @@ class SlotKindSerializer(serializers.HyperlinkedModelSerializer):
 class SlotSerializer(serializers.HyperlinkedModelSerializer):
 	kind = SlotKindSerializer(read_only = True, many = False)
 	class Meta:
-		model = SlotKind
+		model = Slot
 		fields = [
 			'id',
 			'language',
