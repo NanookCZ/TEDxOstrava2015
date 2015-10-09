@@ -22,12 +22,12 @@ class SlotKindSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class SlotSerializer(serializers.HyperlinkedModelSerializer):
-	kind = SlotKindSerializer(read_only = True, many = False)
+	#kind = SlotKindSerializer(read_only = True, many = False)
 	class Meta:
 		model = Slot
 		fields = [
 			'id',
-			'kind',
+			#'kind',
 			'start',
 			'end',
 
