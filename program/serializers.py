@@ -27,7 +27,6 @@ class SlotSerializer(serializers.HyperlinkedModelSerializer):
 		model = Slot
 		fields = [
 			'id',
-			'language',
 			'kind',
 			'start',
 			'end',
