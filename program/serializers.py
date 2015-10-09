@@ -42,7 +42,7 @@ class PresentationSerializer(serializers.HyperlinkedModelSerializer):
 		model = Presentation
 		fields = [
 			'id',
-			'url',
+			#'url',
 			'slot',
 			'title',
 			'start',
