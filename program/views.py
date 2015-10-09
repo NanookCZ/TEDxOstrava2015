@@ -8,7 +8,7 @@ from mobile_settings.models import Language
 
 class ProgramListAPIView(generics.ListAPIView):
 	try:
-		language = Language.objects.get(code = 'CS')
+		language = Language.objects.get(code = 'EN')
 		queryset = Presentation.objects.filter(active = True, language = language)
 	except:
 		pass 
