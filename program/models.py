@@ -54,5 +54,5 @@ class Presentation(models.Model):
 	active = models.BooleanField(default=True)
 
 	def __unicode__(self):
-		return "%s - %s" %(self.title)
+		return "%s" %(self.title)
 
