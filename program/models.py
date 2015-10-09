@@ -43,7 +43,7 @@ class Slot(models.Model):
 
 class Presentation(models.Model):
 	language = models.ForeignKey(Language, blank = True, null = True, default = 1)
-	slot = models.OneToOneField(Slot, null=True, blank=True)
+	slot = models.ForeignKey(Slot, null=True, blank=True)
 	title = models.CharField(max_length=100)
 	start = models.TimeField(blank=True, null = True)
 	end = models.TimeField(blank=True, null = True)
