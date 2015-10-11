@@ -4,6 +4,7 @@ from events.models import Event
 from speakers.models import Speaker
 from markupfield.fields import MarkupField
 from mobile_settings.models import Language, Image 
+from django.core.exceptions import ValidationError
 
 class Section(models.Model):
 	language = models.ForeignKey(Language, blank = True, null = True, default = 1)
@@ -41,11 +42,15 @@ class Slot(models.Model):
 	def __unicode__(self):
 		return "%s" %(self.kind)
 
+def validate_date(date):
+	if date != Slot.start:
+		raise ValidationError("Error")
+
 class Presentation(models.Model):
 	language = models.ForeignKey(Language, blank = True, null = True, default = 1)
 	slot = models.ForeignKey(Slot, null=True, blank=True)
 	title = models.CharField(max_length=100)
-	start = models.TimeField(blank=True, null = True)
+	start = models.TimeField(blank=True, null = True, validators=[validate_date])
 	end = models.TimeField(blank=True, null = True)
 	description = MarkupField(blank = True, null = True)
 	cover_image = models.ForeignKey(Image, blank = True, null = True)
