@@ -42,10 +42,10 @@ class Slot(models.Model):
 	def __unicode__(self):
 		return "%s" %(self.kind)
 
-def validate_date(date):
-	presentation = Presentation.objects.get(id = self.id)
-	if date != presentation.slot.start:
-		raise ValidationError("Error")
+	def validate_date(date):
+		slot = Slot.objects.get(id = self.id)
+		if date != slot.start:
+			raise ValidationError("Error")
 
 class Presentation(models.Model):
 	language = models.ForeignKey(Language, blank = True, null = True, default = 1)
