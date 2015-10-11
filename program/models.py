@@ -43,8 +43,8 @@ class Slot(models.Model):
 		return "%s" %(self.kind)
 
 def validate_date(date):
-	slots = Slot.objects.get(id = 1)
-	if date != slots.start:
+	presentation = Presentation.objects.get(id = self.id)
+	if date != presentation.slot.start:
 		raise ValidationError("Error")
 
 class Presentation(models.Model):
