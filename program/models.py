@@ -44,8 +44,7 @@ class Slot(models.Model):
 
 
 def validate_date(date):
-	slot_id = Slot._meta.get_field('id')
-	slot = Slot.objects.get(id = slot_id[0])
+	slot = Slot.objects.all()
 	if date != slot.start:
 		raise ValidationError("Error")
 
