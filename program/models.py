@@ -42,17 +42,16 @@ class Slot(models.Model):
 	def __unicode__(self):
 		return "%s" %(self.kind)
 
-
-def validate_date(date):
-	slot = Slot.objects.all()
-	if date != slot.start:
-		raise ValidationError("Error")
+	def clean(self):
+		if self.end <= self.start:
+			raise ValidationError(_("End comes before start"))
+		super(Slot, self).clean()
 
 class Presentation(models.Model):
 	language = models.ForeignKey(Language, blank = True, null = True, default = 1)
 	slot = models.ForeignKey(Slot, null=True, blank=True)
 	title = models.CharField(max_length=100)
-	start = models.TimeField(blank=True, null = True, validators=[validate_date])
+	start = models.TimeField(blank=True, null = True)
 	end = models.TimeField(blank=True, null = True)
 	description = MarkupField(blank = True, null = True)
 	cover_image = models.ForeignKey(Image, blank = True, null = True)
@@ -62,4 +61,5 @@ class Presentation(models.Model):
 
 	def __unicode__(self):
 		return "%s" %(self.title)
+
 
