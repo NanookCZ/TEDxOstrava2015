@@ -20,7 +20,6 @@ class SlotKindSerializer(serializers.HyperlinkedModelSerializer):
 		model = SlotKind
 		fields = [
 			'id',
-			'schedule',
 			'slot_name',
 
 		]
