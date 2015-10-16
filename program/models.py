@@ -63,7 +63,7 @@ class Presentation(models.Model):
 		return "%s" %(self.title)
 
 	def clean(self):
-		if self.end <= self.start and self.start <= self.slot.start and self.end >= self.slot.end:
+		if self.end <= self.start or self.start <= self.slot.start or self.end >= self.slot.end:
 			raise ValidationError("End comes before start")
 		super(Presentation, self).clean()
 
