@@ -9,7 +9,7 @@ from mobile_settings.models import Language
 class ProgramListAPIView(generics.ListAPIView):
 	try:
 		language = Language.objects.get(code = 'EN')
-		queryset = Presentation.objects.filter(active = True, language = language)
+		queryset = Presentation.objects.filter(active = True, language = language).order_by('slot')
 	except:
 		pass 
 	serializer_class = PresentationSerializer
