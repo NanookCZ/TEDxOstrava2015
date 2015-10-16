@@ -18,16 +18,22 @@ class ScheduleSerializer(serializers.HyperlinkedModelSerializer):
 class SlotKindSerializer(serializers.HyperlinkedModelSerializer):
 	class Meta:
 		model = SlotKind
+		fields = [
+			'id',
+			'schedule',
+			'slot_name',
+
+		]
 
 
 
 class SlotSerializer(serializers.HyperlinkedModelSerializer):
-	#kind = SlotKindSerializer(read_only = True, many = False)
+	kind = SlotKindSerializer(read_only = True, many = False)
 	class Meta:
 		model = Slot
 		fields = [
 			'id',
-			#'kind',
+			'kind',
 			'start',
 			'end',
 
