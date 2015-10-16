@@ -44,7 +44,7 @@ class Slot(models.Model):
 
 	def clean(self):
 		if self.end <= self.start:
-			raise ValidationError(_("End comes before start"))
+			raise ValidationError("End comes before start")
 		super(Slot, self).clean()
 
 class Presentation(models.Model):
