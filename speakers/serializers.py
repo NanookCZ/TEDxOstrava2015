@@ -31,7 +31,6 @@ class SpeakerSerializer(serializers.HyperlinkedModelSerializer):
 			'active',
 			'published',
 			'interests',
-			'talk_name',
 			'description',
 			'position',
 			'speaker_photo',

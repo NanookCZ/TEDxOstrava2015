@@ -34,6 +34,7 @@ class PresentationSerializer(serializers.HyperlinkedModelSerializer):
 		fields = [
 			'id',
 			'title',
+			'presentation_language',
 			'start',
 			'end',
 			'description',
