@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .serializers import PresentationSerializer
+from .serializers import PresentationSerializer, SlotSerializer
 from .models import Presentation
 from rest_framework import generics,  permissions
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
@@ -13,3 +13,11 @@ class ProgramListAPIView(generics.ListAPIView):
 	except:
 		pass 
 	serializer_class = PresentationSerializer
+
+class SlotListAPIView(generics.ListAPIView):
+	try:
+		language = Language.objects.get(code = 'EN')
+		queryset = Slot.objects.filter(language = language)
+	except:
+		pass 
+	serializer_class = SlotSerializer
