@@ -72,6 +72,9 @@ class Presentation(models.Model):
 			raise ValidationError("End comes before start")
 		super(Presentation, self).clean()
 
+	def get_speaker_count(self):
+		return self.speakers.count()
+
 	
 
 
