@@ -57,7 +57,7 @@ urlpatterns = [
     url(r'^api/en/about', AboutAppListEAPIView.as_view(), name='about_list_api_e'),
     url(r'^api/en/menu', MenuListEAPIView.as_view(), name='menu_list_api_e'),
     url(r'^api/en/program', ProgramListEAPIView.as_view(), name='program_list_api_e'),
-    url(r'^api/cs/slots', SlotListEAPIView.as_view(), name='slot_list_api_e'),
+    url(r'^api/en/slots', SlotListEAPIView.as_view(), name='slot_list_api_e'),
     url(r'^api/en/partners', PartnerListEAPIView.as_view(), name='partner_list_api_e'),
     url(r'^api/en/tedx', TEDxListEAPIView.as_view(), name='tedx_list_api_e'),
     url(r'^i18n/', include('django.conf.urls.i18n')),
