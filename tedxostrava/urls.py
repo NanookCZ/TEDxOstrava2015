@@ -12,7 +12,7 @@ from speakers.views import SpeakerListAPIView, SpeakerDetailAPIView, SpeakerList
 from tedx.views import TEDxListAPIView, TEDxListEAPIView, AboutAppListAPIView, AboutAppListEAPIView
 from news.views import NewsListAPIView, TypeListAPIView, NewsDetailAPIView, NewsListEAPIView, TypeListEAPIView, NewsDetailEAPIView
 from mobile_settings.views import MenuListAPIView, MPNSDeviceAPIView, MenuListEAPIView
-from program.views import ProgramListAPIView, SlotListAPIView
+from program.views import ProgramListAPIView, SlotListAPIView, ProgramListEAPIView, SlotListEAPIView
 from django.views.generic.base import RedirectView
 from django.conf.urls.i18n import i18n_patterns
 from push_notifications.api.rest_framework import APNSDeviceViewSet, GCMDeviceViewSet
@@ -56,6 +56,8 @@ urlpatterns = [
     url(r'^api/en/events/themes', ThemeListEAPIView.as_view(), name='theme_list_api_e'),
     url(r'^api/en/about', AboutAppListEAPIView.as_view(), name='about_list_api_e'),
     url(r'^api/en/menu', MenuListEAPIView.as_view(), name='menu_list_api_e'),
+    url(r'^api/en/program', ProgramListEAPIView.as_view(), name='program_list_api_e'),
+    url(r'^api/cs/slots', SlotListEAPIView.as_view(), name='slot_list_api_e'),
     url(r'^api/en/partners', PartnerListEAPIView.as_view(), name='partner_list_api_e'),
     url(r'^api/en/tedx', TEDxListEAPIView.as_view(), name='tedx_list_api_e'),
     url(r'^i18n/', include('django.conf.urls.i18n')),

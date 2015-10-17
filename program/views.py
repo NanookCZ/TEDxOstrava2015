@@ -8,7 +8,7 @@ from mobile_settings.models import Language
 
 class ProgramListAPIView(generics.ListAPIView):
 	try:
-		language = Language.objects.get(code = 'EN')
+		language = Language.objects.get(code = 'CS')
 		queryset = Presentation.objects.filter(active = True, language = language).order_by('slot')
 	except:
 		pass 
@@ -16,13 +16,38 @@ class ProgramListAPIView(generics.ListAPIView):
 
 class SlotListAPIView(generics.ListAPIView):
 	try:
-		language = Language.objects.get(code = 'EN')
+		language = Language.objects.get(code = 'CS')
 		queryset = Slot.objects.filter(language = language)
 	except:
 		pass 
 	serializer_class = SlotSerializer
 
 class SlotDetailAPIView(generics.RetrieveAPIView):
+	try:
+		language = Language.objects.get(code = 'CS')
+		queryset = Slot.objects.filter(language = language)
+	except:
+		pass 
+	serializer_class = SlotSerializer
+
+
+class ProgramListEAPIView(generics.ListAPIView):
+	try:
+		language = Language.objects.get(code = 'EN')
+		queryset = Presentation.objects.filter(active = True, language = language).order_by('slot')
+	except:
+		pass 
+	serializer_class = PresentationSerializer
+
+class SlotListEAPIView(generics.ListAPIView):
+	try:
+		language = Language.objects.get(code = 'EN')
+		queryset = Slot.objects.filter(language = language)
+	except:
+		pass 
+	serializer_class = SlotSerializer
+
+class SlotDetailEAPIView(generics.RetrieveAPIView):
 	try:
 		language = Language.objects.get(code = 'EN')
 		queryset = Slot.objects.filter(language = language)

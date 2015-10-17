@@ -49,6 +49,7 @@ class Slot(models.Model):
 
 class Presentation(models.Model):
 	language = models.ForeignKey(Language, blank = True, null = True, default = 1)
+	presentation_language = models.CharField(max_length=100, blank = True, null = True)
 	slot = models.ForeignKey(Slot, null=True, blank=True)
 	title = models.CharField(max_length=100)
 	start = models.TimeField(blank=True, null = True)
@@ -69,7 +70,7 @@ class Presentation(models.Model):
 
 	def clean(self):
 		if self.start <= self.slot.start or self.end >= self.slot.end:
-			raise ValidationError("End comes before start")
+			raise ValidationError("Time is not in session time interval")
 		super(Presentation, self).clean()
 
 	def get_speaker_count(self):
