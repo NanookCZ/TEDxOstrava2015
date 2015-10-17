@@ -28,7 +28,7 @@ class SlotKindSerializer(serializers.HyperlinkedModelSerializer):
 
 class SlotSerializer(serializers.HyperlinkedModelSerializer):
 	kind = SlotKindSerializer(read_only = True, many = False)
-	presentation_set = serializers.PrimaryKeyRelatedField(queryset = Presentation.objects.all())
+	presentation_set = PresentationSerializer(many = True, read_only = True)
 	class Meta:
 		model = Slot
 		fields = [
