@@ -26,10 +26,9 @@ class SlotKindSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class PresentationSerializer(serializers.HyperlinkedModelSerializer):
-	speakers = serializers.IntegerField(source='presentation.get_speaker_count', read_only = True)
 	#slot = SlotSerializer(many = False)
 	cover_image = ImageSerializer(many = False)
-	#speakers = SpeakerSerializer(many = True)
+	speakers = SpeakerSerializer(many = True)
 	class Meta:
 		model = Presentation
 		fields = [
