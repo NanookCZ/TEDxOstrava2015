@@ -21,3 +21,11 @@ class SlotListAPIView(generics.ListAPIView):
 	except:
 		pass 
 	serializer_class = SlotSerializer
+
+class SlotDetailAPIView(generics.RetrieveAPIView):
+	try:
+		language = Language.objects.get(code = 'EN')
+		queryset = Slot.objects.filter(language = language)
+	except:
+		pass 
+	serializer_class = SlotSerializer
