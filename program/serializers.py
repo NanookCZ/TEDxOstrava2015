@@ -28,12 +28,11 @@ class SlotKindSerializer(serializers.HyperlinkedModelSerializer):
 
 class SlotSerializer(serializers.HyperlinkedModelSerializer):
 	kind = SlotKindSerializer(read_only = True, many = False)
-	url = serializers.PrimaryKeyRelatedField(queryset = Presentation.objects.all())
+	start = serializers.PrimaryKeyRelatedField(queryset = Presentation.objects.all())
 	class Meta:
 		model = Slot
 		fields = [
 			'id',
-			'url',
 			'kind',
 			'start',
 			'end',
