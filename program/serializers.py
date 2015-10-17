@@ -25,7 +25,22 @@ class SlotKindSerializer(serializers.HyperlinkedModelSerializer):
 		]
 
 
+class PresentationSerializer(serializers.HyperlinkedModelSerializer):
+	slot = SlotSerializer(many = False)
+	cover_image = ImageSerializer(many = False)
+	speakers = SpeakerSerializer(many = True)
+	class Meta:
+		model = Presentation
+		fields = [
+			'id',
+			#'url',
+			'slot',
+			'cover_image',
+			'speakers',
+			
+		]
 
+		
 class SlotSerializer(serializers.HyperlinkedModelSerializer):
 	kind = SlotKindSerializer(read_only = True, many = False)
 	presentation_set = PresentationSerializer(many = True, read_only = True)
@@ -41,17 +56,3 @@ class SlotSerializer(serializers.HyperlinkedModelSerializer):
 		]
 
 
-class PresentationSerializer(serializers.HyperlinkedModelSerializer):
-	slot = SlotSerializer(many = False)
-	cover_image = ImageSerializer(many = False)
-	speakers = SpeakerSerializer(many = True)
-	class Meta:
-		model = Presentation
-		fields = [
-			'id',
-			#'url',
-			'slot',
-			'cover_image',
-			'speakers',
-			
-		]
