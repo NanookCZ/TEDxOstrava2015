@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .serializers import PresentationSerializer, SlotSerializer, SectionSerializer, ScheduleSerializer, SlotKindSerializer
-from .models import Presentation, Slot, Section, SlotKind
+from .models import Presentation, Slot, Section, SlotKind, Schedule
 from rest_framework import generics,  permissions
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
@@ -34,10 +34,10 @@ class SlotDetailAPIView(generics.RetrieveAPIView):
 class ProgramListEAPIView(generics.ListAPIView):
 	try:
 		language = Language.objects.get(code = 'EN')
-		queryset = SlotKind.objects.filter(language = language)
+		queryset = Schedule.objects.filter(language = language)
 	except:
 		pass
-	serializer_class = SlotKindSerializer
+	serializer_class = ScheduleSerializer
 
 
 class SlotListEAPIView(generics.ListAPIView):
