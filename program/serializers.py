@@ -5,6 +5,7 @@ from rest_framework.reverse import reverse
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from speakers.serializers import SpeakerSerializer
 from mobile_settings.serializers import ImageSerializer
+from events.models import Event
 
 
 
@@ -88,9 +89,15 @@ class SectionSerializer(serializers.HyperlinkedModelSerializer):
 		]
 
 
-
-
-
+class SectionSerializer(serializers.HyperlinkedModelSerializer):
+	section_set = SectionSerializer(many = True, read_only=True)
+	class Meta:
+		model = Event 
+		fields = [
+			'id',
+			'title',
+			'section_set',
+		]
 
 
 
