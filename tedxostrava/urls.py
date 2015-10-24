@@ -12,7 +12,7 @@ from speakers.views import SpeakerListAPIView, SpeakerDetailAPIView, SpeakerList
 from tedx.views import TEDxListAPIView, TEDxListEAPIView, AboutAppListAPIView, AboutAppListEAPIView
 from news.views import NewsListAPIView, TypeListAPIView, NewsDetailAPIView, NewsListEAPIView, TypeListEAPIView, NewsDetailEAPIView
 from mobile_settings.views import MenuListAPIView, MenuListEAPIView
-from program.views import ProgramListAPIView, SlotListAPIView, ProgramListEAPIView, SlotListEAPIView
+from program.views import ProgramListAPIView, SlotListAPIView, ProgramListEAPIView, SlotListEAPIView, ProgramDetailEAPIView
 from django.views.generic.base import RedirectView
 from django.conf.urls.i18n import i18n_patterns
 

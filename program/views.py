@@ -36,8 +36,15 @@ class ProgramListEAPIView(generics.ListAPIView):
 		language = Language.objects.get(code = 'EN')
 		queryset = Section.objects.filter(language = language)
 	except:
+		pass
+	serializer_class = SectionSerializer
+
+class ProgramDetailEAPIView(generics.RetrieveAPIView):
+	try:
 		language = Language.objects.get(code = 'EN')
 		queryset = Section.objects.filter(language = language)
+	except:
+		pass 
 	serializer_class = SectionSerializer
 
 class SlotListEAPIView(generics.ListAPIView):
