@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .serializers import PresentationSerializer, SlotSerializer, SectionSerializer, ScheduleSerializer, SlotKindSerializer
-from .models import Presentation, Slot
+from .models import Presentation, Slot, Section
 from rest_framework import generics,  permissions
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
