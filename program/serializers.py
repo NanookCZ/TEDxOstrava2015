@@ -63,6 +63,17 @@ class SlotKindSerializer(serializers.HyperlinkedModelSerializer):
 		]
 
 
+class ScheduleSerializer(serializers.HyperlinkedModelSerializer):
+	slotkind_set = SlotKindSerializer(many = True, read_only = True)
+	#section = SectionSerializer(many = False, read_only = True)
+	class Meta:
+		model = Schedule
+		fields = [
+			'id',
+			#'section',
+			'slotkind_set',
+
+		]
 
 class SectionSerializer(serializers.HyperlinkedModelSerializer):
 	schedule_set = ScheduleSerializer(many = False, read_only = True)
@@ -76,17 +87,7 @@ class SectionSerializer(serializers.HyperlinkedModelSerializer):
 
 		]
 
-class ScheduleSerializer(serializers.HyperlinkedModelSerializer):
-	slotkind_set = SlotKindSerializer(many = True, read_only = True)
-	section = SectionSerializer(many = False, read_only = True)
-	class Meta:
-		model = Schedule
-		fields = [
-			'id',
-			'section',
-			'slotkind_set',
 
-		]
 
 
 		
