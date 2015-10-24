@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-24 13:41+0200\n"
+"POT-Creation-Date: 2015-10-24 14:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -129,6 +129,18 @@ msgstr "Akce"
 msgid "Events"
 msgstr "Akce"
 
+#: mobile_settings/admin.py:10 mobile_settings/models.py:38
+#, fuzzy
+#| msgid "title"
+msgid "image_title"
+msgstr "Nadpis"
+
+#: mobile_settings/admin.py:10
+#, fuzzy
+#| msgid "title"
+msgid "image_thumb"
+msgstr "Nahled obrazku"
+
 #: mobile_settings/apps.py:6
 msgid "Mobile settings"
 msgstr "Mobilní nastavení"
@@ -150,12 +162,6 @@ msgstr "Jazyky"
 #| msgid "title"
 msgid "title_en"
 msgstr "Nadpis anglicky"
-
-#: mobile_settings/models.py:38
-#, fuzzy
-#| msgid "title"
-msgid "image_title"
-msgstr "Nadpis"
 
 #: mobile_settings/models.py:40
 msgid "round_image"
@@ -319,11 +325,11 @@ msgstr "TEDx"
 msgid "About app"
 msgstr "O aplikaci"
 
-#: tedxostrava/settings.py:160
+#: tedxostrava/settings.py:155
 msgid "English"
 msgstr "Anglicky"
 
-#: tedxostrava/settings.py:161
+#: tedxostrava/settings.py:156
 msgid "Czech"
 msgstr "Česky"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-24 13:41+0200\n"
+"POT-Creation-Date: 2015-10-24 14:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -128,6 +128,16 @@ msgstr ""
 msgid "Events"
 msgstr ""
 
+#: mobile_settings/admin.py:10 mobile_settings/models.py:38
+msgid "image_title"
+msgstr "Nadpis obrazku"
+
+#: mobile_settings/admin.py:10
+#, fuzzy
+#| msgid "image_title"
+msgid "image_thumb"
+msgstr "Nadpis obrazku"
+
 #: mobile_settings/apps.py:6
 msgid "Mobile settings"
 msgstr "Mobilni nastaveni"
@@ -148,10 +158,6 @@ msgstr ""
 msgid "title_en"
 msgstr ""
 
-#: mobile_settings/models.py:38
-msgid "image_title"
-msgstr ""
-
 #: mobile_settings/models.py:40
 msgid "round_image"
 msgstr ""
@@ -159,11 +165,11 @@ msgstr ""
 #: mobile_settings/models.py:60
 #: venv/lib/python2.7/site-packages/django/db/models/fields/files.py:389
 msgid "Image"
-msgstr ""
+msgstr "Obrazek"
 
 #: mobile_settings/models.py:61
 msgid "Images"
-msgstr ""
+msgstr "Obrazky"
 
 #: news/models.py:23 news/models.py:40
 msgid "Type"
@@ -199,11 +205,11 @@ msgstr ""
 
 #: program/models.py:20
 msgid "Section"
-msgstr ""
+msgstr "Sekce"
 
 #: program/models.py:21
 msgid "Sections"
-msgstr ""
+msgstr "Sekce"
 
 #: program/models.py:32 program/models.py:33
 msgid "Schedule"
@@ -302,11 +308,11 @@ msgstr ""
 msgid "About app"
 msgstr ""
 
-#: tedxostrava/settings.py:160
+#: tedxostrava/settings.py:155
 msgid "English"
 msgstr ""
 
-#: tedxostrava/settings.py:161
+#: tedxostrava/settings.py:156
 msgid "Czech"
 msgstr ""
 

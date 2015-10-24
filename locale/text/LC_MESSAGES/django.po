@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-24 13:41+0200\n"
+"POT-Creation-Date: 2015-10-24 14:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -128,6 +128,14 @@ msgstr "Akce"
 msgid "Events"
 msgstr ""
 
+#: mobile_settings/admin.py:10 mobile_settings/models.py:38
+msgid "image_title"
+msgstr ""
+
+#: mobile_settings/admin.py:10
+msgid "image_thumb"
+msgstr ""
+
 #: mobile_settings/apps.py:6
 msgid "Mobile settings"
 msgstr "Mobilni nastaveni"
@@ -148,10 +156,6 @@ msgstr "Jazyky"
 
 #: mobile_settings/models.py:24
 msgid "title_en"
-msgstr ""
-
-#: mobile_settings/models.py:38
-msgid "image_title"
 msgstr ""
 
 #: mobile_settings/models.py:40
@@ -306,11 +310,11 @@ msgstr ""
 msgid "About app"
 msgstr ""
 
-#: tedxostrava/settings.py:160
+#: tedxostrava/settings.py:155
 msgid "English"
 msgstr ""
 
-#: tedxostrava/settings.py:161
+#: tedxostrava/settings.py:156
 msgid "Czech"
 msgstr ""
 
