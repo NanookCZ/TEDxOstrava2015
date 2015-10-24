@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .serializers import PresentationSerializer, SlotSerializer
+from .serializers import PresentationSerializer, SlotSerializer, SectionSerializer, ScheduleSerializer, SlotKindSerializer
 from .models import Presentation, Slot
 from rest_framework import generics,  permissions
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
@@ -9,10 +9,10 @@ from mobile_settings.models import Language
 class ProgramListAPIView(generics.ListAPIView):
 	try:
 		language = Language.objects.get(code = 'CS')
-		queryset = Presentation.objects.filter(active = True, language = language).order_by('slot')
+		queryset = Section.objects.filter(language = language)
 	except:
 		pass 
-	serializer_class = PresentationSerializer
+	serializer_class = SectionSerializer
 
 class SlotListAPIView(generics.ListAPIView):
 	try:
@@ -34,10 +34,10 @@ class SlotDetailAPIView(generics.RetrieveAPIView):
 class ProgramListEAPIView(generics.ListAPIView):
 	try:
 		language = Language.objects.get(code = 'EN')
-		queryset = Presentation.objects.filter(active = True, language = language).order_by('slot')
+		queryset = Section.objects.filter(language = language)
 	except:
 		pass 
-	serializer_class = PresentationSerializer
+	serializer_class = SectionSerializer
 
 class SlotListEAPIView(generics.ListAPIView):
 	try:
