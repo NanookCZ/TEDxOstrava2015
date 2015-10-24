@@ -130,11 +130,11 @@ msgstr ""
 
 #: mobile_settings/admin.py:10 mobile_settings/models.py:38
 msgid "image_title"
-msgstr ""
+msgstr "Nadpis"
 
 #: mobile_settings/admin.py:10
 msgid "image_thumb"
-msgstr ""
+msgstr "Nahled obrazku"
 
 #: mobile_settings/apps.py:6
 msgid "Mobile settings"
@@ -207,11 +207,11 @@ msgstr ""
 
 #: program/models.py:20
 msgid "Section"
-msgstr ""
+msgstr "Sekce"
 
 #: program/models.py:21
 msgid "Sections"
-msgstr ""
+msgstr "Sekce"
 
 #: program/models.py:32 program/models.py:33
 msgid "Schedule"
