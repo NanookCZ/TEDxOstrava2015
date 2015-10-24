@@ -55,17 +55,12 @@ INSTALLED_APPS = (
     'rest_framework_swagger',
     'django_crontab',
     'sorl.thumbnail',
-    'push_notifications',
     'markupfield',
 
 )
 
 SITE_ID = 1
 
-PUSH_NOTIFICATIONS_SETTINGS = {
-        "GCM_API_KEY": "<your api key>",
-        "APNS_CERTIFICATE": "/path/to/your/certificate.pem",
-}
 
 
 CRONJOBS = [
