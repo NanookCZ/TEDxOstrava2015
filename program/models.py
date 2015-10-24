@@ -22,7 +22,7 @@ class Section(models.Model):
 
 class Schedule(models.Model):
 	language = models.ForeignKey(Language, blank = True, null = True, default = 1, verbose_name=_("Language"))
-	section = models.OneToOneField(Section)
+	section = models.OneToOneField(Section, related_name='section')
 	active = models.BooleanField(_('active'), default=True)
 
 	def __unicode__(self):
