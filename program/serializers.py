@@ -89,7 +89,7 @@ class SectionSerializer(serializers.HyperlinkedModelSerializer):
 		]
 
 
-class SectionSerializer(serializers.HyperlinkedModelSerializer):
+class EventSerializer(serializers.HyperlinkedModelSerializer):
 	section_set = SectionSerializer(many = True, read_only=True)
 	class Meta:
 		model = Event 
