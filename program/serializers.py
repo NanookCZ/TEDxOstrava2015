@@ -36,6 +36,21 @@ class PresentationSerializer(serializers.HyperlinkedModelSerializer):
 		]
 
 
+
+
+class SlotSerializer(serializers.HyperlinkedModelSerializer):
+	presentation_set = PresentationSerializer(many = True, read_only = True)
+	class Meta:
+		model = Slot
+		fields = [
+			'id',
+			#'kind',
+			'start',
+			'end',
+			'presentation_set',
+
+		]
+
 class SlotKindSerializer(serializers.HyperlinkedModelSerializer):
 	slot_set = SlotSerializer(many = True, read_only = True)
 	class Meta:
@@ -46,21 +61,6 @@ class SlotKindSerializer(serializers.HyperlinkedModelSerializer):
 			'slot_set',
 
 		]
-
-class SlotSerializer(serializers.HyperlinkedModelSerializer):
-	kind = SlotKindSerializer(read_only = True, many = False)
-	presentation_set = PresentationSerializer(many = True, read_only = True)
-	class Meta:
-		model = Slot
-		fields = [
-			'id',
-			'kind',
-			'start',
-			'end',
-			'presentation_set',
-
-		]
-
 
 		
 class ScheduleSerializer(serializers.HyperlinkedModelSerializer):
