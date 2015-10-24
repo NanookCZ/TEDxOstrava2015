@@ -69,7 +69,7 @@ class ScheduleSerializer(serializers.HyperlinkedModelSerializer):
 		model = Schedule
 		fields = [
 			'id',
-			'slot_name',
+			#'section',
 			'slotkind_set',
 
 		]
@@ -78,7 +78,7 @@ class ScheduleSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class SectionSerializer(serializers.HyperlinkedModelSerializer):
-	schedule_set = SlotKindSerializer(many = True, read_only = True)
+	schedule_set = ScheduleSerializer(many = True, read_only = True)
 	class Meta:
 		model = Section 
 		fields = [
