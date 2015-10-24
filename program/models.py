@@ -94,8 +94,8 @@ class Presentation(models.Model):
 		return self.speakers.count()
 
 	class Meta:
-		verbose_name = _('Speaker')
-		verbose_name_plural = _('Speakers')
+		verbose_name = _('Presentation')
+		verbose_name_plural = _('Presentations')
 
 	
 

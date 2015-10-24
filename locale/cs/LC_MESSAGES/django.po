@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-24 14:48+0200\n"
+"POT-Creation-Date: 2015-10-24 18:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -108,8 +108,7 @@ msgstr "Stát"
 msgid "zip_code"
 msgstr "PSČ"
 
-#: events/models.py:54 news/models.py:31 program/models.py:97
-#: speakers/models.py:43
+#: events/models.py:54 news/models.py:31 speakers/models.py:43
 msgid "Speaker"
 msgstr "Řečník"
 
@@ -266,9 +265,13 @@ msgstr "Video TED talk"
 msgid "Time is not in session time interval"
 msgstr "Cas nie je intervale danej sekcie"
 
-#: program/models.py:98 speakers/models.py:44
-msgid "Speakers"
-msgstr "Řečníci"
+#: program/models.py:97
+msgid "Presentation"
+msgstr "Prezentace"
+
+#: program/models.py:98
+msgid "Presentations"
+msgstr "Prezentace"
 
 #: speakers/models.py:19
 msgid "first_name"
@@ -297,6 +300,10 @@ msgstr "Město řečníka"
 #: speakers/models.py:32
 msgid "speaker_country"
 msgstr "Kraj řečníka"
+
+#: speakers/models.py:44
+msgid "Speakers"
+msgstr "Řečníci"
 
 #: static/templates/admin/base_site.html:3
 #: venv/lib/python2.7/site-packages/suit/templates/admin/base_site.html:5
