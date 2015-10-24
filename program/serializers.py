@@ -64,7 +64,7 @@ class SlotKindSerializer(serializers.HyperlinkedModelSerializer):
 
 		
 class ScheduleSerializer(serializers.HyperlinkedModelSerializer):
-	slotkind_set = SlotSerializer(many = True, read_only = True)
+	slotkind_set = SlotKindSerializer(many = True, read_only = True)
 	class Meta:
 		model = Schedule
 		fields = [
