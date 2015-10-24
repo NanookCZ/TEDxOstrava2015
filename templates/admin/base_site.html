@@ -4,7 +4,6 @@
 
 <head> content here, some extra meta tags or favicon #}
 {% block extrahead %}
-<link rel="icon" type="image/png" sizes="192x192"  href="https://trello-attachments.s3.amazonaws.com/54b8ff42b5f46a60ad33f838/144x144/e45d899febedcf7206fda157480c8ab1/android-icon-144x144.png">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:700italic,400,600,700&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
 <title>Tedx Admin</title>
 {% endblock %}
@@ -234,7 +233,7 @@ span.daily-visitors img {display:block;float:right;position:static!important;lef
 {#  <script type="text/javascript" src="{% static 'js/my_project.js' %}"></script>#}
 {#{% endblock %}#}
 
-{% block branding %}<img class="logo" src="https://trello-attachments.s3.amazonaws.com/54b8ff42b5f46a60ad33f838/180x40/70b01346df3a41b47010e27c3dbeb1f5/logo.png" />
+{% block branding %}
 <ul class="languages list-inline pull-right">
 <li class="list-inline lang"><a class="lang" href="{% url 'index' %}">CS</a></li>
 <li class="list-inline lang"><a class="lang" href="{% url 'index_en' %}">EN</a></li>

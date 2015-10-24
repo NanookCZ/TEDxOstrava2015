@@ -35,10 +35,10 @@ class Menu(models.Model):
 		return "%s" %(self.title_en)
 
 class Image(models.Model):
-	image_title = models.CharField(_('title'), max_length = 55, blank = True, null = True)
+	image_title = models.CharField(_('image_title'), max_length = 55, blank = True, null = True)
 	image = CloudinaryField('image', blank = True, null = True)
-	round_image = models.URLField(blank = True, null = True)
-	active = models.BooleanField(default = True)
+	round_image = models.URLField(_('round_image'), blank = True, null = True)
+	active = models.BooleanField(_('active'), default = True)
 
 	def speaker_url(self, *args, **kwargs):
 		if self.image:
@@ -57,20 +57,6 @@ class Image(models.Model):
 
 
 	class Meta:
-		verbose_name = 'Image'
-		verbose_name_plural = 'Images'
+		verbose_name = _('Image')
+		verbose_name_plural = _('Images')
 
-
-class MPNSDevice(models.Model):
-	name = models.CharField(max_length = 255, blank = True, null  = True)
-	is_active = models.BooleanField(default = True)
-	user = models.ForeignKey(User, blank = True, null = True)
-	device_id = models.CharField(max_length = 255, blank = True, null  = True)
-	registration_id = models.CharField(max_length = 255, blank = True, null  = True)
-
-	def __unicode__(self):
-		return "%s" %(self.name)
-
-	class Meta:
-		verbose_name = 'MPNS device'
-		verbose_name_plural = 'MPNS devices'

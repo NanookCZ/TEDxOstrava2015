@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-01 13:57+0200\n"
+"POT-Creation-Date: 2015-10-24 13:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,37 +18,39 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: events/models.py:16 events/models.py:34 mobile_settings/models.py:16
-#: news/models.py:15 news/models.py:27 partners/models.py:14
-#: speakers/models.py:18 tedx/models.py:15 tedx/models.py:35
+#: news/models.py:15 news/models.py:27 program/models.py:11
+#: program/models.py:24 program/models.py:37 program/models.py:50
+#: program/models.py:68 speakers/models.py:18 tedx/models.py:33
 msgid "Language"
 msgstr ""
 
 #: events/models.py:17 events/models.py:35 mobile_settings/models.py:23
-#: news/models.py:16 news/models.py:28 partners/models.py:15 tedx/models.py:16
-#: tedx/models.py:36
+#: news/models.py:16 news/models.py:28 partners/models.py:14
+#: program/models.py:71 tedx/models.py:15 tedx/models.py:34
 msgid "title"
 msgstr ""
 
 #: events/models.py:18 events/models.py:41 news/models.py:29
-#: speakers/models.py:27 tedx/models.py:17 tedx/models.py:37
+#: program/models.py:74 speakers/models.py:26 tedx/models.py:35
 msgid "description"
 msgstr ""
 
 #: events/models.py:19 events/models.py:50 news/models.py:33
-#: partners/models.py:16 speakers/models.py:21 tedx/models.py:19
-#: tedx/models.py:39
+#: partners/models.py:15 speakers/models.py:21 tedx/models.py:17
+#: tedx/models.py:37
 msgid "created_date"
 msgstr ""
 
 #: events/models.py:20 events/models.py:51 news/models.py:34
-#: partners/models.py:17 speakers/models.py:22 tedx/models.py:20
-#: tedx/models.py:40
+#: partners/models.py:16 speakers/models.py:22 tedx/models.py:18
+#: tedx/models.py:38
 msgid "updated_date"
 msgstr ""
 
-#: events/models.py:21 events/models.py:53 news/models.py:36
-#: partners/models.py:18 speakers/models.py:23 tedx/models.py:21
-#: tedx/models.py:41
+#: events/models.py:21 events/models.py:53 mobile_settings/models.py:41
+#: news/models.py:36 partners/models.py:17 program/models.py:26
+#: program/models.py:78 speakers/models.py:23 tedx/models.py:19
+#: tedx/models.py:39
 msgid "active"
 msgstr ""
 
@@ -60,7 +62,7 @@ msgstr ""
 msgid "Themes"
 msgstr ""
 
-#: events/models.py:36 tedx/models.py:24
+#: events/models.py:36 tedx/models.py:22
 msgid "event_start"
 msgstr ""
 
@@ -76,7 +78,7 @@ msgstr ""
 msgid "event_end_time"
 msgstr ""
 
-#: events/models.py:40 news/models.py:32 speakers/models.py:35
+#: events/models.py:40 news/models.py:32 speakers/models.py:33
 #: venv/lib/python2.7/site-packages/suit/templates/admin/object_history.html:28
 msgid "User"
 msgstr ""
@@ -105,23 +107,24 @@ msgstr ""
 msgid "zip_code"
 msgstr ""
 
-#: events/models.py:54 news/models.py:31 speakers/models.py:47
+#: events/models.py:54 news/models.py:31 program/models.py:97
+#: speakers/models.py:43
 msgid "Speaker"
 msgstr ""
 
-#: events/models.py:55 partners/models.py:26
+#: events/models.py:55 partners/models.py:25
 msgid "Partner"
 msgstr ""
 
-#: events/models.py:58 speakers/models.py:29
+#: events/models.py:56 speakers/models.py:28
 msgid "share_message"
 msgstr ""
 
-#: events/models.py:65
+#: events/models.py:63
 msgid "Event"
 msgstr ""
 
-#: events/models.py:66
+#: events/models.py:64
 msgid "Events"
 msgstr ""
 
@@ -133,7 +136,7 @@ msgstr "Mobilni nastaveni"
 msgid "code"
 msgstr ""
 
-#: mobile_settings/models.py:13
+#: mobile_settings/models.py:13 program/models.py:13
 msgid "name"
 msgstr ""
 
@@ -143,6 +146,23 @@ msgstr ""
 
 #: mobile_settings/models.py:24
 msgid "title_en"
+msgstr ""
+
+#: mobile_settings/models.py:38
+msgid "image_title"
+msgstr ""
+
+#: mobile_settings/models.py:40
+msgid "round_image"
+msgstr ""
+
+#: mobile_settings/models.py:60
+#: venv/lib/python2.7/site-packages/django/db/models/fields/files.py:389
+msgid "Image"
+msgstr ""
+
+#: mobile_settings/models.py:61
+msgid "Images"
 msgstr ""
 
 #: news/models.py:23 news/models.py:40
@@ -169,12 +189,72 @@ msgstr ""
 msgid "News"
 msgstr ""
 
-#: partners/models.py:20
+#: partners/models.py:19
 msgid "partner_website"
 msgstr ""
 
-#: partners/models.py:27
+#: partners/models.py:26
 msgid "Partners"
+msgstr ""
+
+#: program/models.py:20
+msgid "Section"
+msgstr ""
+
+#: program/models.py:21
+msgid "Sections"
+msgstr ""
+
+#: program/models.py:32 program/models.py:33
+msgid "Schedule"
+msgstr ""
+
+#: program/models.py:39
+msgid "slot_name"
+msgstr ""
+
+#: program/models.py:45
+msgid "Slot Kind"
+msgstr ""
+
+#: program/models.py:46
+msgid "Slot Kinds"
+msgstr ""
+
+#: program/models.py:52 program/models.py:72
+msgid "start"
+msgstr ""
+
+#: program/models.py:53 program/models.py:73
+msgid "end"
+msgstr ""
+
+#: program/models.py:60 program/models.py:85
+msgid "End comes before start"
+msgstr ""
+
+#: program/models.py:64
+msgid "Slot"
+msgstr ""
+
+#: program/models.py:65
+msgid "Slots"
+msgstr ""
+
+#: program/models.py:69
+msgid "presentation_language"
+msgstr ""
+
+#: program/models.py:77
+msgid "ted_talk_video"
+msgstr ""
+
+#: program/models.py:90
+msgid "Time is not in session time interval"
+msgstr ""
+
+#: program/models.py:98 speakers/models.py:44
+msgid "Speakers"
 msgstr ""
 
 #: speakers/models.py:19
@@ -193,24 +273,16 @@ msgstr ""
 msgid "interests"
 msgstr ""
 
-#: speakers/models.py:26
-msgid "talk_name"
-msgstr ""
-
-#: speakers/models.py:30
+#: speakers/models.py:29
 msgid "position"
 msgstr ""
 
-#: speakers/models.py:33
+#: speakers/models.py:31
 msgid "speaker_city"
 msgstr ""
 
-#: speakers/models.py:34
+#: speakers/models.py:32
 msgid "speaker_country"
-msgstr ""
-
-#: speakers/models.py:48
-msgid "Speakers"
 msgstr ""
 
 #: static/templates/admin/base_site.html:3
@@ -218,24 +290,24 @@ msgstr ""
 msgid "Django site admin"
 msgstr ""
 
-#: tedx/models.py:18 tedx/models.py:38
+#: tedx/models.py:16 tedx/models.py:36
 msgid "website"
 msgstr ""
 
-#: tedx/models.py:30 tedx/models.py:31
+#: tedx/models.py:28 tedx/models.py:29
 msgid "TEDx"
 msgstr ""
 
-#: tedx/models.py:48 tedx/models.py:49
+#: tedx/models.py:46 tedx/models.py:47
 msgid "About app"
 msgstr ""
 
-#: tedxostrava/settings.py:146
-msgid "Czech"
+#: tedxostrava/settings.py:160
+msgid "English"
 msgstr ""
 
-#: tedxostrava/settings.py:147
-msgid "English"
+#: tedxostrava/settings.py:161
+msgid "Czech"
 msgstr ""
 
 #: venv/lib/python2.7/site-packages/cloudinary/forms.py:45
@@ -563,10 +635,6 @@ msgstr ""
 msgid "File"
 msgstr ""
 
-#: venv/lib/python2.7/site-packages/django/db/models/fields/files.py:389
-msgid "Image"
-msgstr ""
-
 #: venv/lib/python2.7/site-packages/django/db/models/fields/related.py:1807
 #, python-format
 msgid "%(model)s instance with %(field)s %(value)r does not exist."
@@ -663,6 +731,7 @@ msgid "Please either submit a file or check the clear checkbox, not both."
 msgstr ""
 
 #: venv/lib/python2.7/site-packages/django/forms/fields.py:660
+#: venv/lib/python2.7/site-packages/sorl/thumbnail/fields.py:52
 msgid ""
 "Upload a valid image. The file you uploaded was either not an image or a "
 "corrupted image."
@@ -1500,6 +1569,80 @@ msgstr ""
 msgid "'%s' is not a valid JSON string."
 msgstr ""
 
+#: venv/lib/python2.7/site-packages/push_notifications/admin.py:28
+#, python-format
+msgid "Some messages could not be processed: %r"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/push_notifications/admin.py:30
+#: venv/lib/python2.7/site-packages/push_notifications/admin.py:35
+#, python-format
+msgid "All messages were sent: %s"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/push_notifications/admin.py:31
+msgid "Send test message"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/push_notifications/admin.py:36
+msgid "Send test message in bulk"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/push_notifications/admin.py:40
+msgid "Enable selected devices"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/push_notifications/admin.py:44
+msgid "Disable selected devices"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/push_notifications/fields.py:25
+msgid "Enter a valid hexadecimal number"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/push_notifications/models.py:8
+#: venv/lib/python2.7/site-packages/suit/templates/admin/filer/folder/directory_table.html:13
+msgid "Name"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/push_notifications/models.py:9
+msgid "Is active"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/push_notifications/models.py:10
+msgid "Inactive devices will not be sent notifications"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/push_notifications/models.py:12
+msgid "Creation date"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/push_notifications/models.py:45
+#: venv/lib/python2.7/site-packages/push_notifications/models.py:76
+msgid "Device ID"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/push_notifications/models.py:46
+msgid "ANDROID_ID / TelephonyManager.getDeviceId() (always as hex)"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/push_notifications/models.py:47
+#: venv/lib/python2.7/site-packages/push_notifications/models.py:78
+msgid "Registration ID"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/push_notifications/models.py:52
+msgid "GCM device"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/push_notifications/models.py:83
+msgid "APNS device"
+msgstr ""
+
+#: venv/lib/python2.7/site-packages/sorl/thumbnail/admin/compat.py:61
+msgid "Clear image"
+msgstr ""
+
 #: venv/lib/python2.7/site-packages/suit/templates/admin/actions.html:4
 msgid "Run the selected action"
 msgstr ""
@@ -1677,10 +1820,6 @@ msgstr ""
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/edit_inline/tabular.html:19
 msgid "Delete?"
-msgstr ""
-
-#: venv/lib/python2.7/site-packages/suit/templates/admin/filer/folder/directory_table.html:13
-msgid "Name"
 msgstr ""
 
 #: venv/lib/python2.7/site-packages/suit/templates/admin/filer/folder/directory_table.html:23
