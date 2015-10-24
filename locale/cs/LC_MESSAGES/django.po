@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-24 14:31+0200\n"
+"POT-Creation-Date: 2015-10-24 14:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -130,14 +130,10 @@ msgid "Events"
 msgstr "Akce"
 
 #: mobile_settings/admin.py:10 mobile_settings/models.py:38
-#, fuzzy
-#| msgid "title"
 msgid "image_title"
 msgstr "Nadpis"
 
 #: mobile_settings/admin.py:10
-#, fuzzy
-#| msgid "title"
 msgid "image_thumb"
 msgstr "Nahled obrazku"
 
@@ -173,8 +169,6 @@ msgid "Image"
 msgstr "Obrazek"
 
 #: mobile_settings/models.py:61
-#, fuzzy
-#| msgid "Image"
 msgid "Images"
 msgstr "Obrazek"
 
@@ -211,14 +205,10 @@ msgid "Partners"
 msgstr "Partneři"
 
 #: program/models.py:20
-#, fuzzy
-#| msgid "description"
 msgid "Section"
 msgstr "Popis"
 
 #: program/models.py:21
-#, fuzzy
-#| msgid "description"
 msgid "Sections"
 msgstr "Popis"
 
