@@ -35,3 +35,6 @@ django-rest-swagger
 django-crontab
 sorl-thumbnail
 django-markupfield
+pyOpenSSL
+django-fields
+django-ios-notifications

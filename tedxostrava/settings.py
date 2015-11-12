@@ -56,6 +56,7 @@ INSTALLED_APPS = (
     'django_crontab',
     'sorl.thumbnail',
     'markupfield',
+    'ios_notifications',
 
 )
 

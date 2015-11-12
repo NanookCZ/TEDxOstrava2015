@@ -26,6 +26,7 @@ urlpatterns = [
     #url(r'^admin/', include(admin.site.urls), name='admin'),
     url(r'^$', RedirectView.as_view(url='admin/', permanent=False), name='index'),
     url(r'^en/$', RedirectView.as_view(url='admin/', permanent=False), name='index_en'),
+    url(r'^ios-notifications/', include('ios_notifications.urls')),
     url(r'^api/auth/token/$', 'rest_framework_jwt.views.obtain_jwt_token'),
     url(r'^api/auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api/cs/$', 'tedxostrava.views.tedx_api_home_czech', name="api_home"),
